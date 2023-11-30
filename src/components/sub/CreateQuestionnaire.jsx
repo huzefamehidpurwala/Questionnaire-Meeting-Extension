@@ -233,6 +233,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
   // console.log("global value", idArrOfQues);
   return (
     <>
+      {/* loading */}
       <SmallPopUp
         className="loading"
         msg={"Updating..."}
@@ -242,6 +243,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         modalType="alert"
       />
 
+      {/* success popup */}
       <SmallPopUp
         open={successCreate}
         onOpenChange={(e, data) => {
@@ -265,6 +267,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         </div>
       </SmallPopUp>
 
+      {/* questionnaire exist popup */}
       <SmallPopUp
         open={questionnaireExists}
         onOpenChange={(e, data) => setQuestionnaireExists(data.open)}
