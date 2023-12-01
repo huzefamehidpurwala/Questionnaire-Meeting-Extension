@@ -12,8 +12,12 @@ import {
   Textarea,
   Tooltip,
 } from "@fluentui/react-components";
-import { Add16Filled, Delete24Regular } from "@fluentui/react-icons";
-import { useContext, useEffect, useState } from "react";
+import {
+  Add24Filled,
+  Calendar20Filled,
+  Delete24Regular,
+} from "@fluentui/react-icons";
+import { useContext, useState } from "react";
 import { TeamsFxContext } from "../Context";
 import {
   createQuestionnaire,
@@ -222,12 +226,13 @@ const CreateQuestionnaire = ({ persnolTab }) => {
   const [successCreate, setSuccessCreate] = useState(false);
   const [nameOfQuestionnaire, setNameOfQuestionnaire] = useState("");
 
-  const setIsQuestionnaireSitePresent =
-    useContext(TeamsFxContext).setIsQuestionnaireSitePresent;
-  useEffect(() => {
-    setIsQuestionnaireSitePresent(false);
-    // eslint-disable-next-line
-  }, []);
+  // *create site in sharepoint
+  // const setIsQuestionnaireSitePresent =
+  //   useContext(TeamsFxContext).setIsQuestionnaireSitePresent;
+  // useEffect(() => {
+  //   setIsQuestionnaireSitePresent(false);
+  //   // eslint-disable-next-line
+  // }, []);
 
   // console.log("global id1", valueArrOfQues);
   // console.log("global value", idArrOfQues);
@@ -288,17 +293,22 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         </div>
       </SmallPopUp>
 
-      <header>
-        <Text size={800}>Create Questionnaire</Text>
+      <header className="m-5 underline">
+        <Text size={800} weight="semibold">
+          Create Questionnaire
+        </Text>
       </header>
 
       {persnolTab && (
         <div className="fixed bottom-8 left-8 z-10">
           <Button
             appearance="primary"
+            // size="large"
+            // shape="circular"
             onClick={() =>
               executeDeepLink("https://teams.microsoft.com/_#/scheduling-form/")
             }
+            icon={<Calendar20Filled />}
           >
             Schedule Meeting
           </Button>
@@ -308,32 +318,16 @@ const CreateQuestionnaire = ({ persnolTab }) => {
       {!!idArrOfQues && !!valueArrOfQues && (
         <form action="" onSubmit={handleFormSubmit}>
           <div className="questionnaire-form-flex">
-            <div className="questionnaire-form-inputs">
-              <div className="questionnaire-name">
-                <Field
-                  label="Name of the Questionnaire:"
+            <div className="w-1/2 max-w-xl">
+              <Field label="Name of the Questionnaire:" required size="large">
+                <Input
                   required
-                  size="medium"
-                >
-                  <Input
-                    required
-                    type="text"
-                    placeholder="Type here..."
-                    value={nameOfQuestionnaire}
-                    onChange={(e) => setNameOfQuestionnaire(e.target.value)}
-                  />
-                </Field>
-              </div>
-              <div>
-                <Button
-                  icon={<Add16Filled />}
-                  size="medium"
-                  onClick={handleAddQuest}
-                  appearance="primary"
-                >
-                  Add Question
-                </Button>
-              </div>
+                  type="text"
+                  placeholder="Type here..."
+                  value={nameOfQuestionnaire}
+                  onChange={(e) => setNameOfQuestionnaire(e.target.value)}
+                />
+              </Field>
             </div>
 
             <div className="question-card-flex">
@@ -445,7 +439,11 @@ const CreateQuestionnaire = ({ persnolTab }) => {
                       <CardFooter>
                         <div className="card-footer-flex">
                           <div>
-                            <Tooltip withArrow content="Delete this Question?">
+                            <Tooltip
+                              withArrow
+                              content="Delete this Question?"
+                              positioning="below-end"
+                            >
                               <Button
                                 id={idOfQues}
                                 icon={<Delete24Regular id={idOfQues} />}
@@ -469,6 +467,25 @@ const CreateQuestionnaire = ({ persnolTab }) => {
                   </Card>
                 </div>
               ))}
+
+              <div className="flex flex-col justify-center items-center gap-2">
+                <Tooltip withArrow content="Add Question">
+                  {/* <div> */}
+                  <Button
+                    icon={<Add24Filled />}
+                    size="large"
+                    shape="circular"
+                    // className="min-w-full h-full"
+                    onClick={handleAddQuest}
+                    appearance="primary"
+                  />
+                  {/* </div> */}
+                </Tooltip>
+
+                {/* <div className="">
+                  <Text>Add Question</Text>
+                </div> */}
+              </div>
             </div>
 
             <div className="questionnaire-submit-btn">

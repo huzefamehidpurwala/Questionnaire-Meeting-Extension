@@ -17,7 +17,6 @@ import config from "./lib/config";
 import TabConfig from "./components/TabConfig";
 import Questionnaire from "./components/sub/Questionnaire";
 import Analysis from "./components/sub/Analysis";
-import { useState } from "react";
 
 /**
  * The main app which handles the initialization and routing
@@ -30,17 +29,10 @@ export default function App() {
       clientId: config.clientId,
     });
 
-  const [isQuestionnaireSitePresent, setIsQuestionnaireSitePresent] =
-    useState(true);
-
-  // const isQuestionnaireSitePresent =
-  //   useContext(TeamsFxContext).isQuestionnaireSitePresent;
-  // const setIsQuestionnaireSitePresent =
-  //   useContext(TeamsFxContext).setIsQuestionnaireSitePresent;
-  // setIsQuestionnaireSitePresent();
-  // console.log("in app.jsx trial ==", isQuestionnaireSitePresent);
-  console.log("hello app.jsx", isQuestionnaireSitePresent);
-
+  // *create site in sharepoint
+  // const [isQuestionnaireSitePresent, setIsQuestionnaireSitePresent] =
+  //   useState(true);
+  // console.log("hello app.jsx", isQuestionnaireSitePresent);
   // const teamsPageType = useRef("");
   // useEffect(() => {
   //   // Initialize teams app
@@ -79,7 +71,7 @@ export default function App() {
         theme,
         themeString,
         teamsUserCredential,
-        setIsQuestionnaireSitePresent,
+        // setIsQuestionnaireSitePresent,
       }}
     >
       <FluentProvider
