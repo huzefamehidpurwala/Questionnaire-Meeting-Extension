@@ -12,6 +12,10 @@ const optionChars = ["A", "B", "C", "D"];
 const exactDateTime = new Date();
 
 const Questionnaire = () => {
+  window.onbeforeunload = function () {
+    return "Your saved answers will be lost!";
+  };
+
   const [searchParams] = useSearchParams();
   const questionnaireListId = searchParams.get("listId");
   /* useEffect(() => {
@@ -21,7 +25,7 @@ const Questionnaire = () => {
 
   // const [pageLoading, setPageLoading] = useState(false);
   const [needConsent, setNeedConsent] = useState(false);
-  const [counter, setCounter] = useState(2);
+  const [counter, setCounter] = useState(10);
   const [currentQues, setCurrentQues] = useState(0);
   const [showQuitPopUp, setShowQuitPopUp] = useState(false);
   const [showQuitContent, setShowQuitContent] = useState(false);
@@ -170,9 +174,7 @@ const Questionnaire = () => {
     }
   };
 
-  const updateArrOfAnsGiven = async (
-    /* quesNumArgv, */ selectedOptionColValueArgv
-  ) => {
+  const updateArrOfAnsGiven = async (selectedOptionColValueArgv) => {
     // const quesNum = quesNumArgv ? quesNumArgv - 1 : currentQues;
     const currentQuestionFields =
       data.graphClientMessage.value[currentQues].fields;
@@ -297,12 +299,12 @@ const Questionnaire = () => {
           {/* {console.log("check ansert status", selectedOptionColValue === question?.fields[colNames[5]])} */}
           {question &&
             (!showQuitContent ? (
-              <div className="custom-container question-container">
+              <div className="flex-container question-container">
                 {currentQues > 0 &&
                 (userMeetingRole === UserMeetingRole.organizer ||
                   userMeetingRole === UserMeetingRole.presenter) ? (
                   <div
-                    className="custom-container question-navigation-btn"
+                    className="flex-container question-navigation-btn"
                     id="left"
                     onClick={(e) => handleNav(e.target.id)}
                   >
@@ -317,7 +319,7 @@ const Questionnaire = () => {
                     }}
                   ></div>
                 )}
-                <div className="custom-container question-area">
+                <div className="flex-container question-area">
                   {isAnsGiven && (
                     <div
                       className={
@@ -338,7 +340,7 @@ const Questionnaire = () => {
                     </div>
                   )}
 
-                  <div className="custom-container timer-box">
+                  <div className="flex-container timer-box">
                     <Text size={900} weight="semibold">
                       {(counter / 100).toFixed(2)}
                     </Text>
@@ -365,8 +367,8 @@ const Questionnaire = () => {
                         <div
                           className={
                             !isAnsGiven
-                              ? "custom-container grid-item"
-                              : `custom-container grid-item disable-option ${
+                              ? "flex-container grid-item"
+                              : `flex-container grid-item disable-option ${
                                   currOptionIsCorrectAns
                                     ? "correct-ans"
                                     : "incorrect-ans"
@@ -395,7 +397,7 @@ const Questionnaire = () => {
                 {userMeetingRole === UserMeetingRole.organizer ||
                 userMeetingRole === UserMeetingRole.presenter ? (
                   <div
-                    className="custom-container question-navigation-btn"
+                    className="flex-container question-navigation-btn"
                     id="right"
                     onClick={(e) => handleNav(e.target.id)}
                   >

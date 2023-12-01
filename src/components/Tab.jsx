@@ -199,7 +199,7 @@ export default function Tab() {
           : themeString === "dark"
           ? "dark"
           : "contrast",
-        "custom-container"
+        "flex-container"
       )}
     >
       <SmallPopUp

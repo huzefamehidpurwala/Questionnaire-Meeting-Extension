@@ -193,28 +193,22 @@ const HChart = ({
     </SmallPopUp>
   ) : (
     <>
-      {/* <div className="mr-10 mb-10"> */}
-        <div className="relative flex flex-col justify-center items-center">
-          <div className={loading ? "opacity-80" : ""}>
-            <HighchartsReact
-              // containerProps={{ style: { outerWidth: "100%" } }}
-              highcharts={Highcharts}
-              options={options}
-            />
-          </div>
-          {loading && (
-            <div className="absolute z-10">
-              {/* <Spinner size="huge" /> */}
-              {/* <Image src={WhiteBgLoading} /> */}
-              <div className="flex justify-center items-center">
-                <div className="w-1/5">
-                  <Image alt="Loading..." src={NoBgLoading} />
-                </div>
-              </div>
-            </div>
-          )}
+      <div className="relative flex flex-col justify-center items-center">
+        <div className={loading ? "opacity-70" : ""}>
+          <HighchartsReact
+            // containerProps={{ style: { outerWidth: "100%" } }}
+            highcharts={Highcharts}
+            options={options}
+          />
         </div>
-      {/* </div> */}
+        {loading && (
+          <div className="absolute top-28 right-56 w-28 h-28">
+            {/* <Spinner size="huge" /> */}
+            {/* <Image src={WhiteBgLoading} /> */}
+            <Image alt="Loading..." src={NoBgLoading} />
+          </div>
+        )}
+      </div>
     </>
   );
 };

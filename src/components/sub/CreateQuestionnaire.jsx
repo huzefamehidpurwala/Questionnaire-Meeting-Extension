@@ -293,7 +293,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         </div>
       </SmallPopUp>
 
-      <header className="m-5 underline">
+      <header className="header-bg w-full text-center text-white mb-5 p-5">
         <Text size={800} weight="semibold">
           Create Questionnaire
         </Text>
@@ -332,140 +332,127 @@ const CreateQuestionnaire = ({ persnolTab }) => {
 
             <div className="question-card-flex">
               {idArrOfQues.map((idOfQues, indexOfMap) => (
-                <div className="question-card" key={indexOfMap}>
-                  <Card
-                    className=""
-                    id={`card-${idOfQues}`} /* style={{width: "35%"}} */
-                  >
-                    <div className="in-question-card">
-                      <Body1>
-                        <Field
-                          label={`Question ${indexOfMap + 1}:`}
-                          required
-                          size="medium"
+                <Card
+                  key={idOfQues}
+                  className=""
+                  id={`card-${idOfQues}`} /* style={{width: "35%"}} */
+                >
+                  <Body1>
+                    <Field
+                      label={`Question ${indexOfMap + 1}:`}
+                      required
+                      size="medium"
+                    >
+                      <Textarea
+                        required
+                        placeholder="Type here..."
+                        value={getValFromValueArrOfQues(
+                          idOfQues,
+                          propsOfStateObj[1]
+                        )}
+                        onChange={(e) =>
+                          setValForValueArrOfQues(
+                            idOfQues,
+                            propsOfStateObj[1],
+                            e.target.value
+                          )
+                        }
+                      />
+                    </Field>
+
+                    <Body2>
+                      <RadioGroup
+                        required
+                        value={getValFromValueArrOfQues(
+                          idOfQues,
+                          propsOfStateObj[6]
+                        )}
+                        onChange={(e, data) =>
+                          setValForValueArrOfQues(
+                            idOfQues,
+                            propsOfStateObj[6]?.toString().replace(/\s/gm, ""),
+                            data.value
+                          )
+                        }
+                      >
+                        <div className="question-card-grid-container">
+                          {numOfOptions.map((elem, key) => (
+                            <div className="grid-item" key={key}>
+                              <div className="options-field">
+                                <Field
+                                  label={
+                                    <>
+                                      <Text>
+                                        {toTitleCase(propsOfStateObj[elem + 1])}
+                                      </Text>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      <Radio
+                                        label={
+                                          <Text size={200}>Correct Ans!</Text>
+                                        }
+                                        value={propsOfStateObj[elem + 1]}
+                                      />
+                                    </>
+                                  }
+                                  required
+                                  size="medium"
+                                  key={key}
+                                  className="options-field"
+                                >
+                                  <Input
+                                    required
+                                    className="options-field"
+                                    type="text"
+                                    placeholder="Type here..."
+                                    value={getValFromValueArrOfQues(
+                                      idOfQues,
+                                      propsOfStateObj[elem + 1]
+                                    )}
+                                    onChange={(e) =>
+                                      setValForValueArrOfQues(
+                                        idOfQues,
+                                        propsOfStateObj[elem + 1],
+                                        e.target.value
+                                      )
+                                    }
+                                  />
+                                </Field>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </RadioGroup>
+                    </Body2>
+                  </Body1>
+
+                  <CardFooter>
+                    <div className="card-footer-flex">
+                      <div>
+                        <Tooltip
+                          withArrow
+                          content="Delete this Question?"
+                          positioning="below-end"
                         >
-                          <Textarea
-                            required
-                            placeholder="Type here..."
-                            value={getValFromValueArrOfQues(
-                              idOfQues,
-                              propsOfStateObj[1]
-                            )}
-                            onChange={(e) =>
-                              setValForValueArrOfQues(
-                                idOfQues,
-                                propsOfStateObj[1],
-                                e.target.value
+                          <Button
+                            id={idOfQues}
+                            icon={<Delete24Regular id={idOfQues} />}
+                            className="justify-self-end"
+                            // appearance="transparent"
+                            onClick={handleDeleteQuest}
+                            // ?need to solve the error that null or undefined is not iterable
+                            disabled={
+                              idArrOfQues.length === 1 &&
+                              valueArrOfQues.length === 1 &&
+                              !checkObjElemHasValue(
+                                getValFromValueArrOfQues(idOfQues)
                               )
                             }
                           />
-                        </Field>
-
-                        <Body2>
-                          <RadioGroup
-                            required
-                            value={getValFromValueArrOfQues(
-                              idOfQues,
-                              propsOfStateObj[6]
-                            )}
-                            onChange={(e, data) =>
-                              setValForValueArrOfQues(
-                                idOfQues,
-                                propsOfStateObj[6]
-                                  ?.toString()
-                                  .replace(/\s/gm, ""),
-                                data.value
-                              )
-                            }
-                          >
-                            <div className="question-card-grid-container">
-                              {numOfOptions.map((elem, key) => (
-                                <div className="grid-item" key={key}>
-                                  <div className="options-field">
-                                    <Field
-                                      label={
-                                        <>
-                                          <Text>
-                                            {toTitleCase(
-                                              propsOfStateObj[elem + 1]
-                                            )}
-                                          </Text>
-                                          &nbsp;&nbsp;&nbsp;&nbsp;
-                                          <Radio
-                                            label={
-                                              <Text size={200}>
-                                                Correct Ans!
-                                              </Text>
-                                            }
-                                            value={propsOfStateObj[elem + 1]}
-                                          />
-                                        </>
-                                      }
-                                      required
-                                      size="medium"
-                                      key={key}
-                                      className="options-field"
-                                    >
-                                      <Input
-                                        required
-                                        className="options-field"
-                                        type="text"
-                                        placeholder="Type here..."
-                                        value={getValFromValueArrOfQues(
-                                          idOfQues,
-                                          propsOfStateObj[elem + 1]
-                                        )}
-                                        onChange={(e) =>
-                                          setValForValueArrOfQues(
-                                            idOfQues,
-                                            propsOfStateObj[elem + 1],
-                                            e.target.value
-                                          )
-                                        }
-                                      />
-                                      {/* <Radio
-                                        label="This is the correct ans!"
-                                        value={propsOfStateObj[elem + 1]}
-                                      /> */}
-                                    </Field>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </RadioGroup>
-                        </Body2>
-                      </Body1>
-
-                      <CardFooter>
-                        <div className="card-footer-flex">
-                          <div>
-                            <Tooltip
-                              withArrow
-                              content="Delete this Question?"
-                              positioning="below-end"
-                            >
-                              <Button
-                                id={idOfQues}
-                                icon={<Delete24Regular id={idOfQues} />}
-                                className="justify-self-end"
-                                // appearance="transparent"
-                                onClick={handleDeleteQuest}
-                                // ?need to solve the error that null or undefined is not iterable
-                                disabled={
-                                  idArrOfQues.length === 1 &&
-                                  valueArrOfQues.length === 1 &&
-                                  !checkObjElemHasValue(
-                                    getValFromValueArrOfQues(idOfQues)
-                                  )
-                                }
-                              />
-                            </Tooltip>
-                          </div>
-                        </div>
-                      </CardFooter>
+                        </Tooltip>
+                      </div>
                     </div>
-                  </Card>
-                </div>
+                  </CardFooter>
+                </Card>
               ))}
 
               <div className="flex flex-col justify-center items-center gap-2">
