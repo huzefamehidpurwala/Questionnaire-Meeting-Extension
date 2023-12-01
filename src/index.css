@@ -69,7 +69,8 @@ body {
 }
 
 .header-bg {
-  background: hsla(237, 86%, 73%, 1);
+  background: rgb(68, 71, 145);
+  /* background: hsla(237, 86%, 73%, 1);
   background: radial-gradient(
     circle,
     hsla(237, 86%, 73%, 1) 0%,
@@ -85,7 +86,11 @@ body {
     hsla(237, 86%, 73%, 1) 0%,
     hsla(238, 39%, 50%, 1) 89%
   );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7F85F5", endColorstr="#4F52B2", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7F85F5", endColorstr="#4F52B2", GradientType=1 ); */
+}
+
+.light .header-bg {
+  background: rgb(100, 104, 212);
 }
 
 .question-container {

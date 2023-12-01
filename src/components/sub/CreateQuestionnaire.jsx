@@ -293,7 +293,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         </div>
       </SmallPopUp>
 
-      <header className="header-bg w-full text-center text-black mb-5 p-5">
+      <header className="header-bg w-full text-center text-white mb-5 p-5">
         <span className="font-serif text-4xl underline">
           Create Questionnaire
         </span>
