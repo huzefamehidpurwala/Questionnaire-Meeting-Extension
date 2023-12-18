@@ -17,6 +17,8 @@ import config from "./lib/config";
 import TabConfig from "./components/TabConfig";
 import Questionnaire from "./components/sub/Questionnaire";
 import Analysis from "./components/sub/Analysis";
+import ListQuestionnaire from "./components/sub/ListQuestionnaire";
+import CreateQuestionnaire from "./components/sub/CreateQuestionnaire";
 
 /**
  * The main app which handles the initialization and routing
@@ -104,6 +106,8 @@ export default function App() {
               <Route path="/tab" element={<Tab />} />
               <Route path="/config" element={<TabConfig />} />
               <Route path="/analytics" element={<Analysis />} />
+              <Route path="/listQuestionnaire" element={<ListQuestionnaire />} />
+              <Route path="/createQuestionnaire" element={<CreateQuestionnaire />} />
               <Route path="/questionnaire" element={<Questionnaire />} />
               {/* <Route path="*" element={<Navigate to={"/tab"} />}></Route> */}
             </Routes>

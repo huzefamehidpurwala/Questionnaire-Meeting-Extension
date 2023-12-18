@@ -343,7 +343,7 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  /* width: 90vw; */
   /* padding: 0 4rem; */
   gap: 2rem;
 }
@@ -354,6 +354,7 @@ strong {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem 3rem;
+  align-items: center;
 }
 
 .question-card-grid-container {
@@ -374,10 +375,8 @@ strong {
   width: fit-content !important;
 }
 
-.card-footer-flex {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+.cursor-drag-btn:hover {
+  cursor: row-resize !important;
 }
 
 /* .questionnaire-submit-btn {
@@ -390,6 +389,7 @@ strong {
   display: flex;
   flex-direction: row;
   padding: 2rem;
+  gap: 3rem;
   /* border: 1px dotted red; */
   min-height: 100vh;
   width: 100%;
@@ -401,6 +401,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
+  min-width: fit-content;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -410,10 +411,12 @@ strong {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
   align-items: center;
   gap: 3rem;
+  overflow: auto;
+  /* max-width: min-content; */
   /* max-height: 100%; */
 }
 
@@ -434,3 +437,15 @@ strong {
   position: absolute;
   z-index: 2;
 } */
+
+.in-draggable-wrapper:hover .question-action-btn {
+  display: flex !important;
+}
+
+.light .bg-for-in-draggable-wrapper {
+  background-color: rgb(254 226 226);
+}
+
+.bg-for-in-draggable-wrapper {
+  background-color: rgb(69 10 10);
+}

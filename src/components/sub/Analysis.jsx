@@ -1,7 +1,12 @@
 import { useData } from "@microsoft/teamsfx-react";
 import { TeamsFxContext } from "../Context";
 import { useContext, useState, useEffect } from "react";
-import { compareObjects, getListItems, toTitleCase } from "../../lib/utils";
+import {
+  compareObjects,
+  getListItems,
+  handleStringSort,
+  toTitleCase,
+} from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
 import { Button, Checkbox, Text } from "@fluentui/react-components";
 import HChart from "./HChart";
@@ -92,7 +97,11 @@ const Analysis = () => {
         : ""
     );
     // console.log("tempSet", tempSet);
-    setQuestionnaireObjArr([...tempSet]);
+    setQuestionnaireObjArr(
+      [...tempSet].sort((a, b) =>
+        handleStringSort(a.questionnaireName, b.questionnaireName)
+      )
+    );
   };
 
   const updateAttendeeNameArr = () => {
@@ -103,7 +112,7 @@ const Analysis = () => {
       tempSetId.add(row.fields.questionnaireListId);
     });
     // console.log("bhag bhiya", tempSetAtt, tempSetId);
-    setAttendeeNameArr([...tempSetAtt]);
+    setAttendeeNameArr([...tempSetAtt].sort(handleStringSort));
     setInitatedQuestionnaireIdArr([...tempSetId]);
   };
 
@@ -157,7 +166,7 @@ const Analysis = () => {
     return -1;
   };
 
-  // console.log("in analytics global==", dateTimeArr);
+  // console.log("in analytics global==", selectedQuestionnaireArr);
   return (
     <>
       {!!questionnaireRootListError ||
@@ -398,7 +407,12 @@ const Analysis = () => {
                       !!selectedQuestionnaireArr.length &&
                       // selectedDateTime &&
                       selectedQuestionnaireArr
-                        // .sort((a, b) => a.questionnaireId - b.questionnaireId)
+                        .sort((a, b) =>
+                          handleStringSort(
+                            a.questionnaireName,
+                            b.questionnaireName
+                          )
+                        )
                         .map((obj) => {
                           // console.log("checking in parent", key+1)
                           return (

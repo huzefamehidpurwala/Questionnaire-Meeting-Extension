@@ -6,9 +6,11 @@ import { FrameContexts, app } from "@microsoft/teams-js";
 import { UserMeetingRole } from "@microsoft/live-share";
 import SmallPopUp from "./SmallPopUp";
 import MeetingStarted from "./sub/MeetingStarted";
-import CreateQuestionnaire from "./sub/CreateQuestionnaire";
+import DnDNewCreateQuestionnaire from "./sub/DnDNewCreateQuestionnaire";
 import AdminSidePanel from "./sub/AdminSidePanel";
 import { Navigate } from "react-router-dom";
+
+const currentTime = new Date();
 
 export default function Tab() {
   const {
@@ -126,79 +128,25 @@ export default function Tab() {
   /* const startTime = new Date (onlineMeeting.startDateTime as string) ;
   const mainContentElement = (startTime.getTime () < Date.now ()) */
 
-  let component = <></>;
-  const currentTime = new Date();
-  switch (/* "meetingStage" */ app.getFrameContext()) {
-    case FrameContexts.content:
-      component = persnolTab ? (
-        // <Questionnaire />
-        <CreateQuestionnaire persnolTab={persnolTab} />
-      ) : // <>
-      //   <Text size={700}>Persnol Tab Exp</Text>
-      //   <Analysis />
-      // </>
-      meetingEndDateTime && meetingStartDateTime ? (
-        currentTime > meetingEndDateTime ? (
-          <Navigate to="/analytics" />
-        ) : currentTime < meetingStartDateTime ? (
-          currentUserRole === UserMeetingRole.organizer ||
-          currentUserRole === UserMeetingRole.presenter ? (
-            <CreateQuestionnaire persnolTab={persnolTab} />
-          ) : (
-            <h1>You can not create Questionnaire</h1>
-          )
-        ) : meetingStartDateTime < currentTime < meetingEndDateTime ? (
-          currentUserRole === UserMeetingRole.organizer ||
-          currentUserRole === UserMeetingRole.presenter ? (
-            <CreateQuestionnaire />
-          ) : (
-            <MeetingStarted />
-          )
-        ) : null
-      ) : null;
-      break;
-
-    case FrameContexts.sidePanel:
-      component =
-        currentUserRole === UserMeetingRole.organizer ||
-        currentUserRole === UserMeetingRole.presenter ? (
-          <AdminSidePanel />
-        ) : (
-          <Text>You have to answer the questions when the timer starts</Text>
-        );
-      break;
-
-    case FrameContexts.meetingStage:
-      // component = <Questionnaire />;
-      component = (
-        <h1>
-          No Questionnaire was selected or an unauthorized person tried to
-          shared the application
-        </h1>
-      );
-      break;
-
-    default:
-      component = <h1>You are not in MS Teams Env</h1>;
-      break;
-  }
+  // let component = <></>;
 
   /* console.log(
     "<MeetingStarted />",
     meetingStartDateTime < currentTime < meetingEndDateTime
   );
-  console.log("<CreateQuestionnaire />", currentTime < meetingStartDateTime);
+  console.log("<DnDNewCreateQuestionnaire />", currentTime < meetingStartDateTime);
   console.log("<Analysis />", currentTime > meetingEndDateTime);
   console.log("<Persnol Tab Exp />", persnolTab); */
 
   return (
-    <div
+    <main
       className={mergeClasses(
         themeString === "default"
           ? "light"
           : themeString === "dark"
           ? "dark"
           : "contrast",
+        // "relative",
         "flex-container"
       )}
     >
@@ -211,7 +159,60 @@ export default function Tab() {
         modalType="alert"
       />
 
-      {currentUserRole && component}
-    </div>
+      {currentUserRole &&
+        (() => {
+          switch (app.getFrameContext()) {
+            case FrameContexts.content:
+              return persnolTab ? (
+                // <Questionnaire />
+                <DnDNewCreateQuestionnaire persnolTab={persnolTab} />
+              ) : // <>
+              //   <Text size={700}>Persnol Tab Exp</Text>
+              //   <Analysis />
+              // </>
+              meetingEndDateTime && meetingStartDateTime ? (
+                currentTime > meetingEndDateTime ? (
+                  <Navigate to="/analytics" />
+                ) : currentTime < meetingStartDateTime ? (
+                  currentUserRole === UserMeetingRole.organizer ||
+                  currentUserRole === UserMeetingRole.presenter ? (
+                    <DnDNewCreateQuestionnaire persnolTab={persnolTab} />
+                  ) : (
+                    <h1>You can not create Questionnaire</h1>
+                  )
+                ) : meetingStartDateTime < currentTime < meetingEndDateTime ? (
+                  currentUserRole === UserMeetingRole.organizer ||
+                  currentUserRole === UserMeetingRole.presenter ? (
+                    <DnDNewCreateQuestionnaire />
+                  ) : (
+                    <MeetingStarted />
+                  )
+                ) : null
+              ) : null;
+
+            case FrameContexts.sidePanel:
+              return currentUserRole === UserMeetingRole.organizer ||
+                currentUserRole === UserMeetingRole.presenter ? (
+                <AdminSidePanel />
+              ) : (
+                <Text>
+                  You have to answer the questions when the timer starts
+                </Text>
+              );
+
+            case FrameContexts.meetingStage:
+              // return <Questionnaire />;
+              return (
+                <h1>
+                  No Questionnaire was selected or an unauthorized person tried
+                  to shared the application
+                </h1>
+              );
+
+            default:
+              return <h1>You are not in MS Teams Env</h1>;
+          }
+        })()}
+    </main>
   );
 }

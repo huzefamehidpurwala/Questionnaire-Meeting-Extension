@@ -4,18 +4,27 @@ import {
   Button,
   Card,
   CardFooter,
+  DrawerBody,
+  DrawerHeader,
+  DrawerHeaderTitle,
   Field,
   Input,
+  OverlayDrawer,
   Radio,
   RadioGroup,
   Text,
   Textarea,
+  Toolbar,
+  ToolbarButton,
+  ToolbarGroup,
   Tooltip,
 } from "@fluentui/react-components";
 import {
   Add24Filled,
   Calendar20Filled,
   Delete24Regular,
+  Dismiss24Regular,
+  Drag24Regular,
 } from "@fluentui/react-icons";
 import { useContext, useState } from "react";
 import { TeamsFxContext } from "../Context";
@@ -33,7 +42,20 @@ const minValueOfId = 1000000001;
 const maxValueOfId = 9999999999;
 const numOfCards = 3;
 
-const CreateQuestionnaire = ({ persnolTab }) => {
+const changeInitialCss = (e) => {
+  e.target.style.opacity = "0.4";
+  // e.target.style.backgroundColor =
+  //   themeString === "default"
+  //     ? "#DEDEDE"
+  //     : "#3D3D3D";
+};
+
+const backToInitialCss = (e) => {
+  e.target.style.opacity = "1";
+  // e.target.style.backgroundColor = "inherit";
+};
+
+const DCreateQuestionnaire = ({ persnolTab }) => {
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
   // *functions
   const generateRandomIntegers = (lengthOfArr) => {
@@ -212,6 +234,33 @@ const CreateQuestionnaire = ({ persnolTab }) => {
     setPageLoading(false);
   };
 
+  const handleOnDragEnter = (e) => {
+    e.preventDefault();
+    const idOfQues = e.dataTransfer.getData("idOfQues");
+    console.log("handleOnDragEnter", idOfQues);
+    changeInitialCss(e);
+  };
+
+  const handleOnDragLeave = (e) => {
+    e.preventDefault();
+    const idOfQues = e.dataTransfer.getData("idOfQues");
+    console.log("handleOnDragLeave", idOfQues);
+    backToInitialCss(e);
+  };
+
+  const handleOnDragOver = (e) => {
+    e.preventDefault();
+    const idOfQues = e.dataTransfer.getData("idOfQues");
+    console.log("handleOnDragOver", idOfQues);
+  };
+
+  const handleOnDrop = (e) => {
+    e.preventDefault();
+    const idOfQues = e.dataTransfer.getData("idOfQues");
+    console.log("handleOnDrop", idOfQues);
+    backToInitialCss(e);
+  };
+
   // *states
   const [idArrOfQues, setIdArrOfQues] = useState(
     generateRandomIntegers(numOfCards)
@@ -223,6 +272,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
   const [questionnaireExists, setQuestionnaireExists] = useState(false);
   const [successCreate, setSuccessCreate] = useState(false);
   const [nameOfQuestionnaire, setNameOfQuestionnaire] = useState("");
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   // *create site in sharepoint
   // const setIsQuestionnaireSitePresent =
@@ -297,18 +347,47 @@ const CreateQuestionnaire = ({ persnolTab }) => {
         </span>
       </header>
 
+      <OverlayDrawer
+        modalType="non-modal"
+        open={openDrawer}
+        onOpenChange={(_, { open }) => setOpenDrawer(open)}
+      >
+        <DrawerHeader>
+          <Toolbar>
+            <ToolbarButton
+              appearance="subtle"
+              aria-label="Close"
+              icon={<Dismiss24Regular />}
+              onClick={() => setOpenDrawer(false)}
+            />
+          </Toolbar>
+          <DrawerHeaderTitle>Overlay Drawer</DrawerHeaderTitle>
+        </DrawerHeader>
+
+        <DrawerBody>
+          <p>Drawer content</p>
+        </DrawerBody>
+      </OverlayDrawer>
+
+      <Button
+        appearance="primary"
+        onClick={() => setOpenDrawer((t) => !t)}
+        className="fixed bottom-8 left-8 z-10"
+      >
+        Reorder Questions
+      </Button>
+
       {persnolTab && (
-        <div className="fixed bottom-8 left-8 z-10">
-          <Button
-            appearance="primary"
-            onClick={() =>
-              executeDeepLink("https://teams.microsoft.com/_#/scheduling-form/")
-            }
-            icon={<Calendar20Filled />}
-          >
-            Schedule Meeting
-          </Button>
-        </div>
+        <Button
+          className="fixed bottom-8 right-8 z-10"
+          appearance="primary"
+          onClick={() =>
+            executeDeepLink("https://teams.microsoft.com/_#/scheduling-form/")
+          }
+          icon={<Calendar20Filled />}
+        >
+          Schedule Meeting
+        </Button>
       )}
 
       {!!idArrOfQues && !!valueArrOfQues && (
@@ -329,8 +408,13 @@ const CreateQuestionnaire = ({ persnolTab }) => {
             <div className="question-card-flex">
               {idArrOfQues.map((idOfQues, indexOfMap) => (
                 <Card
+                  droppable="true"
+                  onDragEnter={handleOnDragEnter}
+                  onDragLeave={handleOnDragLeave}
+                  onDragOver={handleOnDragOver}
+                  onDrop={handleOnDrop}
                   key={idOfQues}
-                  className=""
+                  // className="relative"
                   id={`card-${idOfQues}`} /* style={{width: "35%"}} */
                 >
                   <Body1>
@@ -341,7 +425,8 @@ const CreateQuestionnaire = ({ persnolTab }) => {
                     >
                       <Textarea
                         required
-                        placeholder="Type here..."
+                        placeholder={idOfQues}
+                        // placeholder="Type here..."
                         value={getValFromValueArrOfQues(
                           idOfQues,
                           propsOfStateObj[1]
@@ -426,8 +511,28 @@ const CreateQuestionnaire = ({ persnolTab }) => {
                   </Body1>
 
                   <CardFooter>
-                    <div className="w-full grid">
-                      <div className="justify-self-end">
+                    <div className="w-full flex justify-between items-center">
+                      <div>
+                        <Tooltip
+                          withArrow
+                          content="Drag the Question!"
+                          positioning="below-start"
+                        >
+                          <Button
+                            // id={idOfQues}
+                            className="cursor-drag-btn"
+                            icon={<Drag24Regular />}
+                            appearance="transparent"
+                            draggable="true"
+                            onDragStart={(e) =>
+                              e.dataTransfer.setData("idOfQues", idOfQues)
+                            }
+                            // onClick={}
+                          />
+                          {/* <Drag24Regular /> */}
+                        </Tooltip>
+                      </div>
+                      <div>
                         <Tooltip
                           withArrow
                           content="Delete this Question?"
@@ -436,6 +541,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
                           <Button
                             id={idOfQues}
                             icon={<Delete24Regular id={idOfQues} />}
+                            // className="justify-self-end"
                             // appearance="transparent"
                             onClick={handleDeleteQuest}
                             // ?need to solve the error that null or undefined is not iterable
@@ -487,4 +593,4 @@ const CreateQuestionnaire = ({ persnolTab }) => {
   );
 };
 
-export default CreateQuestionnaire;
+export default DCreateQuestionnaire;

@@ -352,6 +352,14 @@ export const redirectUsingDeeplink = (pathName) => {
   executeDeepLink(webUrl);
 };
 
+export const handleStringSort = (a, b) => {
+  const x = a.toLowerCase();
+  const y = b.toLowerCase();
+  if (x < y) return -1;
+  if (x > y) return 1;
+  return 0;
+};
+
 // export const optionsColNames = ["field_1", "field_2", "field_3", "field_4"];
 
 // export const teamsPageTypes = ["content", "sidePanel", "meetingStage"];

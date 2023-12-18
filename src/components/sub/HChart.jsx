@@ -6,8 +6,8 @@ import { TeamsFxContext } from "../Context";
 import { useData } from "@microsoft/teamsfx-react";
 import { getListItems } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
-import NoBgLoading from "../../assets/noBgLoading.webp";
-// import WhiteBgLoading from "../../assets/loading.gif";
+// import NoBgLoading from "../../assets/noBgLoading.webp";
+import WhiteBgLoading from "../../assets/loading.gif";
 // import Loading from "../../assets/navy_for-light_bg.webp";
 import { Button, Image, Text } from "@fluentui/react-components";
 exporting(Highcharts);
@@ -202,11 +202,11 @@ const HChart = ({
           />
         </div>
         {loading && (
-          <div className="absolute top-28 right-56 w-28 h-28">
-            {/* <Spinner size="huge" /> */}
-            {/* <Image src={WhiteBgLoading} /> */}
-            <Image alt="Loading..." src={NoBgLoading} />
-          </div>
+          // <div className="absolute top-28 right-56 w-28 h-28">
+          //   {/* <Spinner size="huge" /> */}
+          //   <Image alt="Loading..." src={NoBgLoading} />
+          // </div>
+            <Image src={WhiteBgLoading} className="absolute"/>
         )}
       </div>
     </>

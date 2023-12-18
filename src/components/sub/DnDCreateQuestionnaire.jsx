@@ -16,6 +16,7 @@ import {
   Add24Filled,
   Calendar20Filled,
   Delete24Regular,
+  Drag24Regular,
 } from "@fluentui/react-icons";
 import { useContext, useState } from "react";
 import { TeamsFxContext } from "../Context";
@@ -27,13 +28,14 @@ import {
 } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
 import { executeDeepLink } from "@microsoft/teams-js";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 const numOfOptions = [1, 2, 3, 4];
 const minValueOfId = 1000000001;
 const maxValueOfId = 9999999999;
 const numOfCards = 3;
 
-const CreateQuestionnaire = ({ persnolTab }) => {
+const DnDCreateQuestionnaire = ({ persnolTab }) => {
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
   // *functions
   const generateRandomIntegers = (lengthOfArr) => {
@@ -212,6 +214,8 @@ const CreateQuestionnaire = ({ persnolTab }) => {
     setPageLoading(false);
   };
 
+  const onDragEnd = () => {};
+
   // *states
   const [idArrOfQues, setIdArrOfQues] = useState(
     generateRandomIntegers(numOfCards)
@@ -235,7 +239,7 @@ const CreateQuestionnaire = ({ persnolTab }) => {
   // console.log("global id1", valueArrOfQues);
   // console.log("global value", idArrOfQues);
   return (
-    <>
+    <DragDropContext onDragEnd={onDragEnd}>
       {/* loading */}
       <SmallPopUp
         className="loading"
@@ -326,154 +330,195 @@ const CreateQuestionnaire = ({ persnolTab }) => {
               </Field>
             </div>
 
-            <div className="question-card-flex">
-              {idArrOfQues.map((idOfQues, indexOfMap) => (
-                <Card
-                  key={idOfQues}
-                  className=""
-                  id={`card-${idOfQues}`} /* style={{width: "35%"}} */
+            <Droppable droppableId="question-card-flex">
+              {(provided) => (
+                <div
+                  className="question-card-flex"
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
                 >
-                  <Body1>
-                    <Field
-                      label={`Question ${indexOfMap + 1}:`}
-                      required
-                      size="medium"
+                  {idArrOfQues.map((idOfQues, indexOfMap) => (
+                    <Draggable
+                      key={idOfQues}
+                      draggableId={idOfQues.toString()}
+                      index={indexOfMap}
                     >
-                      <Textarea
-                        required
-                        placeholder="Type here..."
-                        value={getValFromValueArrOfQues(
-                          idOfQues,
-                          propsOfStateObj[1]
-                        )}
-                        onChange={(e) =>
-                          setValForValueArrOfQues(
-                            idOfQues,
-                            propsOfStateObj[1],
-                            e.target.value
-                          )
-                        }
-                      />
-                    </Field>
-
-                    <Body2>
-                      <RadioGroup
-                        required
-                        value={getValFromValueArrOfQues(
-                          idOfQues,
-                          propsOfStateObj[6]
-                        )}
-                        onChange={(e, data) =>
-                          setValForValueArrOfQues(
-                            idOfQues,
-                            propsOfStateObj[6]?.toString().replace(/\s/gm, ""),
-                            data.value
-                          )
-                        }
-                      >
-                        <div className="question-card-grid-container">
-                          {numOfOptions.map((elem, key) => (
-                            <div className="grid-item" key={key}>
-                              <div className="options-field">
-                                <Field
-                                  label={
-                                    <>
-                                      <Text>
-                                        {toTitleCase(propsOfStateObj[elem + 1])}
-                                        {": "}
-                                        <span className="text-red-600 text-sm">
-                                          *
-                                        </span>
-                                      </Text>
-                                      &nbsp;&nbsp;&nbsp;&nbsp;
-                                      <Radio
-                                        label={
-                                          <Text size={200}>Correct Ans!</Text>
-                                        }
-                                        value={propsOfStateObj[elem + 1]}
-                                      />
-                                    </>
-                                  }
-                                  // required
-                                  size="medium"
-                                  key={key}
-                                  className="options-field"
+                      {(provided) => (
+                        <Card
+                          className=""
+                          id={`card-${idOfQues}`} /* style={{width: "35%"}} */
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          ref={provided.innerRef}
+                        >
+                          <Body1>
+                            <Field
+                              label={`Question ${indexOfMap + 1}:`}
+                              required
+                              size="medium"
+                            >
+                              <Textarea
+                                required
+                                placeholder="Type here..."
+                                value={getValFromValueArrOfQues(
+                                  idOfQues,
+                                  propsOfStateObj[1]
+                                )}
+                                onChange={(e) =>
+                                  setValForValueArrOfQues(
+                                    idOfQues,
+                                    propsOfStateObj[1],
+                                    e.target.value
+                                  )
+                                }
+                              />
+                            </Field>
+                            <Body2>
+                              <RadioGroup
+                                required
+                                value={getValFromValueArrOfQues(
+                                  idOfQues,
+                                  propsOfStateObj[6]
+                                )}
+                                onChange={(e, data) =>
+                                  setValForValueArrOfQues(
+                                    idOfQues,
+                                    propsOfStateObj[6]
+                                      ?.toString()
+                                      .replace(/\s/gm, ""),
+                                    data.value
+                                  )
+                                }
+                              >
+                                <div className="question-card-grid-container">
+                                  {numOfOptions.map((elem, key) => (
+                                    <div className="grid-item" key={key}>
+                                      <div className="options-field">
+                                        <Field
+                                          label={
+                                            <>
+                                              <Text>
+                                                {toTitleCase(
+                                                  propsOfStateObj[elem + 1]
+                                                )}
+                                                {": "}
+                                                <span className="text-red-600 text-sm">
+                                                  *
+                                                </span>
+                                              </Text>
+                                              &nbsp;&nbsp;&nbsp;&nbsp;
+                                              <Radio
+                                                label={
+                                                  <Text size={200}>
+                                                    Correct Ans!
+                                                  </Text>
+                                                }
+                                                value={
+                                                  propsOfStateObj[elem + 1]
+                                                }
+                                              />
+                                            </>
+                                          }
+                                          // required
+                                          size="medium"
+                                          key={key}
+                                          className="options-field"
+                                        >
+                                          <Input
+                                            required
+                                            className="options-field"
+                                            type="text"
+                                            placeholder="Type here..."
+                                            value={getValFromValueArrOfQues(
+                                              idOfQues,
+                                              propsOfStateObj[elem + 1]
+                                            )}
+                                            onChange={(e) =>
+                                              setValForValueArrOfQues(
+                                                idOfQues,
+                                                propsOfStateObj[elem + 1],
+                                                e.target.value
+                                              )
+                                            }
+                                          />
+                                        </Field>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </RadioGroup>
+                            </Body2>
+                          </Body1>
+                          <CardFooter>
+                            <div className="w-full flex justify-between items-center">
+                              <div>
+                                <Tooltip
+                                  withArrow
+                                  content="Drag the Question!"
+                                  positioning="below-start"
                                 >
-                                  <Input
-                                    required
-                                    className="options-field"
-                                    type="text"
-                                    placeholder="Type here..."
-                                    value={getValFromValueArrOfQues(
-                                      idOfQues,
-                                      propsOfStateObj[elem + 1]
-                                    )}
-                                    onChange={(e) =>
-                                      setValForValueArrOfQues(
-                                        idOfQues,
-                                        propsOfStateObj[elem + 1],
-                                        e.target.value
+                                  <Button
+                                    // id={idOfQues}
+                                    className="cursor-drag-btn"
+                                    icon={<Drag24Regular />}
+                                    appearance="transparent"
+                                    // onClick={}
+                                  />
+                                  {/* <Drag24Regular /> */}
+                                </Tooltip>
+                              </div>
+                              <div>
+                                <Tooltip
+                                  withArrow
+                                  content="Delete this Question?"
+                                  positioning="below-end"
+                                >
+                                  <Button
+                                    id={idOfQues}
+                                    icon={<Delete24Regular id={idOfQues} />}
+                                    // className="justify-self-end"
+                                    // appearance="transparent"
+                                    onClick={handleDeleteQuest}
+                                    // ?need to solve the error that null or undefined is not iterable
+                                    disabled={
+                                      idArrOfQues.length === 1 &&
+                                      valueArrOfQues.length === 1 &&
+                                      !checkObjElemHasValue(
+                                        getValFromValueArrOfQues(idOfQues)
                                       )
                                     }
                                   />
-                                </Field>
+                                </Tooltip>
                               </div>
                             </div>
-                          ))}
-                        </div>
-                      </RadioGroup>
-                    </Body2>
-                  </Body1>
+                          </CardFooter>
+                        </Card>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
 
-                  <CardFooter>
-                    <div className="w-full grid">
-                      <div className="justify-self-end">
-                        <Tooltip
-                          withArrow
-                          content="Delete this Question?"
-                          positioning="below-end"
-                        >
-                          <Button
-                            id={idOfQues}
-                            icon={<Delete24Regular id={idOfQues} />}
-                            // appearance="transparent"
-                            onClick={handleDeleteQuest}
-                            // ?need to solve the error that null or undefined is not iterable
-                            disabled={
-                              idArrOfQues.length === 1 &&
-                              valueArrOfQues.length === 1 &&
-                              !checkObjElemHasValue(
-                                getValFromValueArrOfQues(idOfQues)
-                              )
-                            }
-                          />
-                        </Tooltip>
-                      </div>
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
-
-              {/* flex flex-col justify-center items-center gap-2 */}
-              <div className="text-center">
-                <Tooltip withArrow content="Add Question">
-                  {/* <div> */}
-                  <Button
-                    icon={<Add24Filled />}
-                    size="large"
-                    shape="circular"
-                    // className="min-w-full h-full"
-                    onClick={handleAddQuest}
-                    appearance="primary"
-                  />
-                  {/* </div> */}
-                </Tooltip>
-
-                {/* <div className="">
-                  <Text>Add Question</Text>
-                </div> */}
-              </div>
-            </div>
+                  {/* flex flex-col justify-center items-center gap-2 */}
+                  <div className="text-center">
+                    <Tooltip withArrow content="Add Question">
+                      {/* <div> */}
+                      <Button
+                        icon={<Add24Filled />}
+                        size="large"
+                        shape="circular"
+                        // className="min-w-full h-full"
+                        onClick={handleAddQuest}
+                        appearance="primary"
+                      />
+                      {/* </div> */}
+                    </Tooltip>
+                    {/* <div className="">
+                    <Text>Add Question</Text>
+                  </div> */}
+                  </div>
+                </div>
+              )}
+            </Droppable>
 
             <div className="questionnaire-submit-btn">
               <Button size="medium" appearance="primary" type="submit">
@@ -483,8 +528,8 @@ const CreateQuestionnaire = ({ persnolTab }) => {
           </div>
         </form>
       )}
-    </>
+    </DragDropContext>
   );
 };
 
-export default CreateQuestionnaire;
+export default DnDCreateQuestionnaire;

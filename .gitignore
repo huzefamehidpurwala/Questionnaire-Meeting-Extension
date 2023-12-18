@@ -19,3 +19,4 @@ appPackage/build
 
 # extras
 /.extras
+/certs

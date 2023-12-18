@@ -36,10 +36,17 @@
   ],
   "staticTabs": [
     {
-      "entityId": "index",
-      "name": "Questionnaire",
+      "entityId": "createQuestionnaire",
+      "name": "Create Questionnaire",
       "contentUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
-      "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
+      "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/createQuestionnaire",
+      "scopes": ["personal"]
+    },
+    {
+      "entityId": "listQuestionnaire",
+      "name": "List Questionnaire",
+      "contentUrl": "${{TAB_ENDPOINT}}/index.html#/listQuestionnaire",
+      "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/listQuestionnaire",
       "scopes": ["personal"]
     },
     {
@@ -74,7 +81,7 @@
   },
   "permissions": ["identity", "messageTeamMembers"],
   "validDomains": ["${{TAB_DOMAIN}}", "*.mehidpurwala.xyz"],
-	"isFullScreen": true,
+  "isFullScreen": true,
   "showLoadingIndicator": false,
   "webApplicationInfo": {
     "id": "${{AAD_APP_CLIENT_ID}}",
