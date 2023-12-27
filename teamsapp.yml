@@ -132,7 +132,12 @@ deploy:
     env:
       REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-      REACT_APP_FUNC_NAME: getUserProfile
+      REACT_APP_FUNC_NAME: getQuestions
+      REACT_APP_MEETING_INFO_FUNC_NAME: getMeetingInfo
+      REACT_APP_POST_ANSWERS_FUNC_NAME: postAnswers
+      REACT_APP_CREATE_QUESTIONNAIRE_FUNC_NAME: createQuestionnaire
+      REACT_APP_PATCH_QUESTIONNAIREROOTLIST_FUNC_NAME: patchQuestionnaireRootList
+      REACT_APP_QUESTIONNAIRE_ROOTLIST: 26ca1252-8fdf-467e-a1eb-172aaed95763
       REACT_APP_FUNC_ENDPOINT: ${{API_FUNCTION_ENDPOINT}}
   # Deploy bits to Azure Storage Static Website
   - uses: azureStorage/deploy

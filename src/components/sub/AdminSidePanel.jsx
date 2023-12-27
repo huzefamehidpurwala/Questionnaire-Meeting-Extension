@@ -72,7 +72,7 @@ const AdminSidePanel = () => {
 
     // createSearchParams()
 
-    patchQuestionnaireRootList(teamsUserCredential, quesRowId, exactDateTime);
+    // patchQuestionnaireRootList(teamsUserCredential, quesRowId, exactDateTime);
     meeting.shareAppContentToStage((err, res) => {},
     window.location.origin + `/index.html#/questionnaire?listId=${listId}`);
     // setPageLoading(false);
@@ -172,7 +172,7 @@ const AdminSidePanel = () => {
                       </div> */}
 
                       <div className="card-btn">
-                        {!field.isInitiated && btnClicked !== ind ? (
+                        {/* {!field.isInitiated && btnClicked !== ind ? (
                           <Button
                             appearance="primary"
                             icon={<Open16Regular />}
@@ -190,7 +190,20 @@ const AdminSidePanel = () => {
                           <Text className="ag-courses-item_date">
                             Initiated Once
                           </Text>
-                        )}
+                        )} */}
+                        <Button
+                          appearance="primary"
+                          icon={<Open16Regular />}
+                          onClick={(e) => {
+                            setDataToSessionAndAppShare(
+                              field.idOfLists,
+                              field.id
+                            );
+                            setBtnClicked(ind);
+                          }}
+                        >
+                          Share to Stage
+                        </Button>
                       </div>
                       {/* <div className="card-btn">
                         <Button

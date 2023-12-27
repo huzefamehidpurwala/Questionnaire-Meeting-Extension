@@ -5,7 +5,7 @@ import {
   teamsDarkTheme,
   teamsHighContrastTheme,
   Spinner,
-  tokens,
+  // tokens,
 } from "@fluentui/react-components";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useTeamsUserCredential } from "@microsoft/teamsfx-react";
@@ -30,6 +30,9 @@ export default function App() {
       initiateLoginEndpoint: config.initiateLoginEndpoint,
       clientId: config.clientId,
     });
+
+    // console.log("Huzefa === ", config)
+    // console.log("i am checking build2", )
 
   // *create site in sharepoint
   // const [isQuestionnaireSitePresent, setIsQuestionnaireSitePresent] =
@@ -87,32 +90,48 @@ export default function App() {
                 colorNeutralBackground3: "#eeeeee",
               }
         }
-        style={
-          !window.location.href?.includes("config")
-            ? {
-                background: tokens.colorNeutralBackground3,
-                minHeight: "100vh",
-              }
-            : {}
-        }
+        // style={
+        //   !window.location.href?.includes("config")
+        //     ? {
+        //         background: tokens.colorNeutralBackground3,
+        //         minHeight: "100vh",
+        //       }
+        //     : {}
+        // }
       >
-        <Router>
-          {loading ? (
-            <Spinner style={{ margin: 100 }} />
-          ) : (
-            <Routes>
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/termsofuse" element={<TermsOfUse />} />
-              <Route path="/tab" element={<Tab />} />
-              <Route path="/config" element={<TabConfig />} />
-              <Route path="/analytics" element={<Analysis />} />
-              <Route path="/listQuestionnaire" element={<ListQuestionnaire />} />
-              <Route path="/createQuestionnaire" element={<CreateQuestionnaire />} />
-              <Route path="/questionnaire" element={<Questionnaire />} />
-              {/* <Route path="*" element={<Navigate to={"/tab"} />}></Route> */}
-            </Routes>
-          )}
-        </Router>
+        <main
+          className={
+            !window.location.href?.includes("config")
+              ? "bg-teams-bg-3 h-screen" //  cursor-[url('assets/custom-cursor.png'),_auto_!important]
+              : ""
+          }
+        >
+          <Router>
+            {loading ? (
+              <Spinner style={{ margin: 100 }} />
+            ) : (
+              <Routes>
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/termsofuse" element={<TermsOfUse />} />
+                <Route path="/tab" element={<Tab />} />
+                <Route path="/config" element={<TabConfig />} />
+                <Route path="/analytics" element={<Analysis />} />
+                <Route
+                  path="/listQuestionnaire"
+                  element={<ListQuestionnaire />}
+                />
+                <Route
+                  path="/createQuestionnaire"
+                  element={<CreateQuestionnaire />}
+                />
+                <Route path="/questionnaire" element={<Questionnaire />} />
+                {/* <Route path="*" element={<Navigate to={"/tab"} />}></Route> */}
+              </Routes>
+            )}
+          </Router>
+
+          {/* <div className="fixed w-10 h-10 rounded-full border border-white z-50 bottom-0"></div> */}
+        </main>
       </FluentProvider>
     </TeamsFxContext.Provider>
   );

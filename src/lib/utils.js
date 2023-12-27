@@ -1,6 +1,7 @@
 import { BearerTokenAuthProvider, createApiClient } from "@microsoft/teamsfx";
 import config from "./config";
 import { executeDeepLink } from "@microsoft/teams-js";
+import axios from "axios";
 
 const getQuestionsFunc = config.apiName || "getQuestions";
 const getMeetingInfoFunc = config.meetingInfoApiName || "getMeetingInfo";
@@ -220,6 +221,29 @@ export async function createQuestionnaire(
     }
     throw new Error(funcErrorMsg);
   }
+}
+
+export async function customPostAnswers(ansArr, accessToken) {
+  for (const ansObj of ansArr) {
+    await axios
+      .post(
+        "https://graph.microsoft.com/v1.0/sites/29151005-7f34-4489-a82f-ff4a19cb537a/lists/d26a4a06-27e1-47cf-9782-155f265f5984/items",
+        { fields: ansObj },
+        { headers: { Authorization: `Bearer ${accessToken}` } }
+      )
+      .then((response) => {
+        console.log("in utils customPostAnswers", response);
+        // if (response.status === 201) {
+        //   // setShowEdit(!showEdit);
+        //   // BtnClick();
+        //   alert("successful create");
+        // } else {
+        //   alert("create failed");
+        // }
+      });
+  }
+
+  // window.location.reload();
 }
 
 export const colNames = [

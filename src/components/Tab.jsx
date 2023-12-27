@@ -15,6 +15,7 @@ const currentTime = new Date();
 export default function Tab() {
   const {
     themeString,
+    teamsUserCredential,
     // teamsPageType: { current: teamsPageType },
   } = useContext(TeamsFxContext);
   // console.log("keseho", teamsPageType);
@@ -27,7 +28,7 @@ export default function Tab() {
   const [meetingEndDateTime, setMeetingEndDateTime] = useState("");
   const [persnolTab, setPersnolTab] = useState(false);
 
-  const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
+  // const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
 
   const setCurrentUserRoleFunc = (currentUserId, participantsObj) => {
     if (participantsObj) {

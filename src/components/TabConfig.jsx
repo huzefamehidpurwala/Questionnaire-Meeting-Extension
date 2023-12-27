@@ -26,7 +26,7 @@ const TabConfig = () => {
             entityId: "test",
             contentUrl: baseUrl + "/index.html#/tab",
             websiteUrl: baseUrl + "/index.html#/tab",
-            suggestedDisplayName: "Meeting Extensions",
+            suggestedDisplayName: "Questionnaire",
           })
           .then(() => {
             saveEvent.notifySuccess();
