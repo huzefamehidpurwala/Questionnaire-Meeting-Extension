@@ -242,8 +242,6 @@ export async function customPostAnswers(ansArr, accessToken) {
         // }
       });
   }
-
-  // window.location.reload();
 }
 
 export const colNames = [

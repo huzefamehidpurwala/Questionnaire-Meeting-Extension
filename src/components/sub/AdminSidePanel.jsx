@@ -52,7 +52,7 @@ const AdminSidePanel = () => {
 
   const { loading, data: dataFromRootList, error, reload } = useData(fetchData);
 
-  const setDataToSessionAndAppShare = (listId, quesRowId) => {
+  const setDataToSessionAndAppShare = async (listId, quesRowId) => {
     // let modifiedData = [];
     // data.forEach((ques) => {
     //   // console.log(ques);
@@ -72,9 +72,16 @@ const AdminSidePanel = () => {
 
     // createSearchParams()
 
-    // patchQuestionnaireRootList(teamsUserCredential, quesRowId, exactDateTime);
     meeting.shareAppContentToStage((err, res) => {},
     window.location.origin + `/index.html#/questionnaire?listId=${listId}`);
+
+    await patchQuestionnaireRootList(
+      teamsUserCredential,
+      quesRowId,
+      exactDateTime
+    );
+    window.location.reload();
+
     // setPageLoading(false);
   };
 
@@ -172,7 +179,7 @@ const AdminSidePanel = () => {
                       </div> */}
 
                       <div className="card-btn">
-                        {/* {!field.isInitiated && btnClicked !== ind ? (
+                        {!field.isInitiated && btnClicked !== ind ? (
                           <Button
                             appearance="primary"
                             icon={<Open16Regular />}
@@ -190,20 +197,7 @@ const AdminSidePanel = () => {
                           <Text className="ag-courses-item_date">
                             Initiated Once
                           </Text>
-                        )} */}
-                        <Button
-                          appearance="primary"
-                          icon={<Open16Regular />}
-                          onClick={(e) => {
-                            setDataToSessionAndAppShare(
-                              field.idOfLists,
-                              field.id
-                            );
-                            setBtnClicked(ind);
-                          }}
-                        >
-                          Share to Stage
-                        </Button>
+                        )}
                       </div>
                       {/* <div className="card-btn">
                         <Button
