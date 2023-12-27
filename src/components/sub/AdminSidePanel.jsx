@@ -80,7 +80,7 @@ const AdminSidePanel = () => {
       quesRowId,
       exactDateTime
     );
-    window.location.reload();
+    // window.location.reload();
 
     // setPageLoading(false);
   };
