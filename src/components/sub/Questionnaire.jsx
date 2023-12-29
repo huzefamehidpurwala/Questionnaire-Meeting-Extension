@@ -24,10 +24,12 @@ import { TeamsUserCredential } from "@microsoft/teamsfx";
 const containerSchema = {
   initialObjects: {
     indOfQues: LiveState, // SharedMap / LiveState
-    // timer: LiveTimer,
+    // toggleLiveState: LiveState,
   },
 };
 const exactDateTime = new Date();
+const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+const counterInitialValue = 10;
 
 const Questionnaire = () => {
   window.onbeforeunload = function () {
@@ -44,12 +46,15 @@ const Questionnaire = () => {
   const [startQuiz, setStartQuiz] = useState(false);
   const [ansArr, setAnsArr] = useState([]);
   const [noListIdFound, setNoListIdFound] = useState(false);
-  // const [toggleState, setToggleState] = useState(false);
+  const [counter, setCounter] = useState(counterInitialValue);
+  const [counterInterValue, setCounterInterValue] = useState(undefined);
+  const [quesInterValue, setQuesInterValue] = useState(undefined);
   const [userRole, setUserRole] = useState(
     sessionStorage.getItem("userMeetingRole")
   );
 
   const indOfQues = useRef(undefined);
+  // const toggleLiveState = useRef(undefined);
 
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
   const { loading, data, error, reload } = useData(async () => {
@@ -77,18 +82,36 @@ const Questionnaire = () => {
     }
   });
 
-  const handleQuesNav = (method) => {
-    if (method === "add") {
-      indOfQues.current.set({ ...data?.value[indexOfQuestion + 1] });
-      setIndexOfQuestion((t) => ++t);
-    } else if (method === "sub") {
-      indOfQues.current.set({ ...data?.value[indexOfQuestion - 1] });
-      setIndexOfQuestion((t) => --t);
+  const handleStartRestart = async (method) => {
+    if (method !== "start" && method !== "restart") return;
+
+    const quesVal =
+      method === "start" ? data.value[0] : method === "restart" && null;
+
+    method === "restart" && clearIntervals();
+
+    try {
+      setIndexOfQuestion(0);
+      await indOfQues.current.set(quesVal);
+    } catch (error) {
+      console.error("error occurred in setting the fluid container \n", error);
     }
+  };
+
+  const handleQuesNav = async (method) => {
+    if (method !== "add" && method !== "sub") return;
+
+    setIndexOfQuestion((prev) => {
+      method === "add" ? ++prev : method === "sub" && --prev;
+      indOfQues.current.set(data?.value[prev]);
+      // await indOfQues.current.set(data?.value[prev]);
+      return prev;
+    });
   };
 
   const handleExit = async () => {
     setStartQuiz(false);
+    setIndexOfQuestion(0);
 
     const authConfig = {
       initiateLoginEndpoint: config.initiateLoginEndpoint,
@@ -99,7 +122,7 @@ const Questionnaire = () => {
 
     const token = (await credential.getToken(["User.Read"])).token;
 
-    indOfQues.current.set({ accessToken: token });
+    await indOfQues.current.set({ accessToken: token });
   };
 
   const updateArrOfAnsGiven = async (selectedOption) => {
@@ -110,8 +133,8 @@ const Questionnaire = () => {
 
     // console.log("checking in func", selectedOption);
 
-    setAnsArr((t) => [
-      ...t,
+    setAnsArr((prev) => [
+      ...prev,
       {
         Title: currentAttendeeMailId,
         attendeeName,
@@ -125,19 +148,49 @@ const Questionnaire = () => {
     ]);
   };
 
+  const intervals = () => {
+    const counterInterValueInd = setInterval(() => {
+      setCounter((prev) => --prev);
+    }, 1000);
+    setCounterInterValue(counterInterValueInd);
+
+    const quesInterValueInd = setInterval(() => {
+      setCounter(counterInitialValue);
+      userRole === UserMeetingRole.organizer &&
+        setIndexOfQuestion((prev) => {
+          indOfQues.current.set(data?.value[++prev]);
+          // await indOfQues.current.set(data?.value[++prev]);
+          return prev;
+        });
+    }, (counterInitialValue + 1) * 1000);
+    setQuesInterValue(quesInterValueInd);
+  };
+
+  const clearIntervals = () => {
+    // console.log("i m in clearing func", counterInterValue, quesInterValue);
+    clearInterval(counterInterValue);
+    clearInterval(quesInterValue);
+    setCounter(counterInitialValue);
+    setCounterInterValue(undefined);
+    setQuesInterValue(undefined);
+  };
+
   useEffect(() => {
-    if (questionObj && ansArr.length && "accessToken" in questionObj) {
-      (async () => {
-        try {
-          await customPostAnswers(ansArr, questionObj.accessToken);
-        } catch (error) {
-          console.error("error in customPostAnswer", error);
-        }
-      })();
+    clearIntervals();
+
+    if (questionObj) {
+      if (ansArr.length && "accessToken" in questionObj) {
+        (async () => {
+          try {
+            await customPostAnswers(ansArr, questionObj.accessToken);
+            setAnsArr([]);
+          } catch (error) {
+            console.error("error in customPostAnswer", error);
+          }
+        })();
+      }
+      !("accessToken" in questionObj) && intervals();
     }
-    /* else if (ansArr.length && "restart" in questionObj) {
-      setAnsArr([]);
-    } */
     // eslint-disable-next-line
   }, [questionObj]);
 
@@ -145,61 +198,63 @@ const Questionnaire = () => {
     setPageLoading(true);
 
     sessionStorage.removeItem("answers");
-    setUserRole(sessionStorage.getItem("userMeetingRole"));
+    const user = sessionStorage.getItem("userMeetingRole");
+    setUserRole(user);
 
-    app.initialize().then(async () => {
-      try {
-        const host = LiveShareHost.create();
-        const client = new LiveShareClient(host);
+    (data || user !== UserMeetingRole.organizer) &&
+      app.initialize().then(async () => {
+        try {
+          const host = LiveShareHost.create();
+          const client = new LiveShareClient(host);
 
-        const { container } = await client.joinContainer(containerSchema);
+          const { container } = await client.joinContainer(containerSchema);
 
-        indOfQues.current = container.initialObjects.indOfQues;
+          // ({ indOfQues: indOfQues.current, toggleLiveState: toggleLiveState.current } = container.initialObjects);
+          indOfQues.current = container.initialObjects.indOfQues;
+          // console.log("checking this current", container.initialObjects);
 
-        // You can optionally declare what roles you want to be able to change state
-        const allowedRoles = [
-          UserMeetingRole.organizer,
-          UserMeetingRole.presenter,
-        ];
-        await indOfQues.current.initialize(questionObj, allowedRoles);
+          /* toggleLiveState.current.on("stateChanged", (val) => {
+            console.log("timre changed!!", val);
+            if (val) {
+              intervals();
+            } else {
+              clearIntervals();
+            }
+          }); */
 
-        indOfQues.current.on("stateChanged", () =>
-          setQuestionObj(indOfQues.current.state)
-        );
+          indOfQues.current.on("stateChanged", (quest) => {
+            setQuestionObj(quest); // indOfQues.current.state
+          });
 
-        setPageLoading(false);
-      } catch (error) {
-        console.error("eror occured", error);
-      }
+          // You can optionally declare what roles you want to be able to change state
+          // await toggleLiveState.current.initialize(true, allowedRoles);
+          await indOfQues.current.initialize(questionObj, allowedRoles);
 
-      app.notifySuccess();
-    });
-    setPageLoading(false);
+          // console.log("checking initializing ==", indOfQues.current.initializeState);
+          // toggleLiveState.current.isInitialized &&
+          indOfQues.current.isInitialized && setPageLoading(false);
+        } catch (error) {
+          console.error("eror occured", error);
+          setPageLoading(false);
+        }
+
+        app.notifySuccess();
+      });
     // eslint-disable-next-line
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     if (data) {
-      if (startQuiz) {
-        try {
-          setQuestionObj({ ...data.value[0] });
-          // setIndexOfQuestion(indOfQues.current.state);
-          indOfQues.current.set({ ...data.value[0] });
-        } catch (error) {
-          console.error(
-            "error occurred in setting the fluid container \n",
-            error
-          );
-        }
-      } else {
-        setQuestionObj(null);
-        setIndexOfQuestion(0);
-        // setAnsArr([]); // !not possible as this will only effect for organiser
-        indOfQues.current?.set(null);
-      }
+      startQuiz ? handleStartRestart("start") : handleStartRestart("restart");
     }
     // eslint-disable-next-line
-  }, [data, startQuiz]);
+  }, [startQuiz]);
+
+  userRole === UserMeetingRole.organizer &&
+    data?.value.length - 1 < indexOfQuestion &&
+    handleExit();
+
+  // console.log("global console in questionnaire ==", counterInterValue, quesInterValue);
 
   return (
     <>
@@ -251,35 +306,34 @@ const Questionnaire = () => {
             </div>
           </SmallPopUp>
 
-          <>
-            {/* {userRole !== UserMeetingRole.organizer && (
-              <div className="fixed top-4 right-4">
-                <Tooltip content="Refresh" positioning="below-end" withArrow>
-                  <Button
-                    appearance="subtle"
-                    size="large"
-                    shape="circular"
-                    icon={<ArrowClockwise48Filled />}
-                    onClick={(e) => window.location.reload()}
-                  />
-                </Tooltip>
-              </div>
-            )} */}
-          </>
+          <div className="grid-center-box gap-4 relative min-h-screen min-w-full w-auto app-bg-dark-color">
+            <>
+              {/* {userRole === UserMeetingRole.organizer && (
+                <div className="fixed top-4 right-4">
+                  <Button onClick={(e) => clearIntervals()}>Stop Timer</Button>
+                </div>
+              )} */}
+            </>
 
-          <div className="grid-center-box gap-4 min-h-screen app-bg-dark-color">
+            <Text block font="numeric" size={800}>
+              {(counter / 100).toFixed(2)}
+            </Text>
+
             {userRole === UserMeetingRole.organizer && (
               <div className="flex gap-4">
-                <Button
-                  shape="circular"
-                  appearance="subtle"
-                  size="large"
-                  icon={<ArrowLeft48Filled />}
-                  disabled={!questionObj || indexOfQuestion < 1}
-                  // onClick={(e) => setIndexOfQuestion((t) => --t % 10)}
-                  onClick={(e) => handleQuesNav("sub")}
-                />
+                {/* // * backWard btn */}
+                <>
+                  {/* <Button
+                    shape="circular"
+                    appearance="subtle"
+                    size="large"
+                    icon={<ArrowLeft48Filled />}
+                    disabled={!questionObj || indexOfQuestion < 1}
+                    onClick={(e) => handleQuesNav("sub")}
+                  /> */}
+                </>
 
+                {/* //! need to find solution if questionnaire has only 1 question. */}
                 {data?.value.length - 1 < indexOfQuestion + 1 ? (
                   <Button size="large" onClick={handleExit}>
                     Exit
@@ -290,17 +344,20 @@ const Questionnaire = () => {
                   </Button>
                 )}
 
-                <Button
-                  shape="circular"
-                  appearance="subtle"
-                  size="large"
-                  icon={<ArrowRight48Filled />}
-                  disabled={
-                    !questionObj || data?.value.length - 1 < indexOfQuestion + 1
-                  }
-                  // onClick={(e) => setIndexOfQuestion((t) => ++t % 10)}
-                  onClick={(e) => handleQuesNav("add")}
-                />
+                {/* // * forward btn */}
+                <>
+                  {/* <Button
+                    shape="circular"
+                    appearance="subtle"
+                    size="large"
+                    icon={<ArrowRight48Filled />}
+                    disabled={
+                      !questionObj ||
+                      data?.value.length - 1 < indexOfQuestion + 1
+                    }
+                    onClick={(e) => handleQuesNav("add")}
+                  /> */}
+                </>
               </div>
             )}
 
