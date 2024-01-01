@@ -52,7 +52,7 @@ const AdminSidePanel = () => {
 
   const { loading, data: dataFromRootList, error, reload } = useData(fetchData);
 
-  const setDataToSessionAndAppShare = async (listId, quesRowId) => {
+  const setDataToSessionAndAppShare = async (listId, quesRowId, force) => {
     // let modifiedData = [];
     // data.forEach((ques) => {
     //   // console.log(ques);
@@ -75,11 +75,17 @@ const AdminSidePanel = () => {
     meeting.shareAppContentToStage((err, res) => {},
     window.location.origin + `/index.html#/questionnaire?listId=${listId}`);
 
-    await patchQuestionnaireRootList(
-      teamsUserCredential,
-      quesRowId,
-      exactDateTime
-    );
+    if (!force) {
+      await patchQuestionnaireRootList(
+        teamsUserCredential,
+        quesRowId,
+        exactDateTime
+      );
+
+      reload();
+
+      setBtnClicked("");
+    }
     // window.location.reload();
 
     // setPageLoading(false);
@@ -186,7 +192,8 @@ const AdminSidePanel = () => {
                             onClick={(e) => {
                               setDataToSessionAndAppShare(
                                 field.idOfLists,
-                                field.id
+                                field.id,
+                                false
                               );
                               setBtnClicked(ind);
                             }}
@@ -194,9 +201,24 @@ const AdminSidePanel = () => {
                             Share to Stage
                           </Button>
                         ) : (
-                          <Text className="ag-courses-item_date">
-                            Initiated Once
-                          </Text>
+                          <>
+                            <Text className="ag-courses-item_date">
+                              Initiated Once
+                            </Text>
+
+                            <Button
+                              appearance="subtle"
+                              onClick={(e) => {
+                                setDataToSessionAndAppShare(
+                                  field.idOfLists,
+                                  field.id,
+                                  true
+                                );
+                              }}
+                            >
+                              Forcefully Share
+                            </Button>
+                          </>
                         )}
                       </div>
                       {/* <div className="card-btn">

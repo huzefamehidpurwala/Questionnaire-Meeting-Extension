@@ -1,12 +1,7 @@
 import {
-  Body1,
-  Body2,
   Button,
-  Card,
-  CardFooter,
   DrawerBody,
   DrawerHeader,
-  DrawerHeaderTitle,
   Field,
   Input,
   InlineDrawer,
@@ -14,25 +9,16 @@ import {
   RadioGroup,
   Text,
   Textarea,
-  Toolbar,
-  ToolbarButton,
-  ToolbarGroup,
   Tooltip,
   useToastController,
   Toast,
   ToastTitle,
-  ToastBody,
-  ToastFooter,
   Toaster,
 } from "@fluentui/react-components";
 import {
   Add24Filled,
-  ArrowMaximizeVertical20Regular,
   Calendar20Filled,
   Delete20Regular,
-  Dismiss24Regular,
-  Drag24Regular,
-  Edit20Regular,
 } from "@fluentui/react-icons";
 import React, { useContext, useEffect, useState } from "react";
 import { TeamsFxContext } from "../Context";
@@ -52,20 +38,11 @@ const minValueOfId = 1000000001;
 const maxValueOfId = 9999999999;
 const numOfCards = 1;
 
-/* const changeInitialCss = (e) => {
-  e.target.style.opacity = "0.4";
-  // e.target.style.backgroundColor =
-  //   themeString === "default"
-  //     ? "#DEDEDE"
-  //     : "#3D3D3D";
-};
-
-const backToInitialCss = (e) => {
-  e.target.style.opacity = "1";
-  // e.target.style.backgroundColor = "inherit";
-}; */
-
 const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
+  window.onbeforeunload = function () {
+    return "Your saved questions will be lost!";
+  };
+
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
 
   const generateRandomIntegers = (lengthOfArr) => {
@@ -89,11 +66,7 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
 
   // *states
   // const [idArrOfQues, setIdArrOfQues] = useState(generateRandomIntegers(numOfCards));
-  const [valueArrOfQues, setValueArrOfQues] = useState(
-    generateRandomIntegers(numOfCards).map((idOfQues) =>
-      createNewElemInValueArrOfQues(idOfQues)
-    )
-  );
+  const [valueArrOfQues, setValueArrOfQues] = useState([]); // generateRandomIntegers(numOfCards).map((idOfQues) => createNewElemInValueArrOfQues(idOfQues))
   const [selectedQuesForEdit, setSelectedQuesForEdit] = useState("");
   const [pageLoading, setPageLoading] = useState(false);
   const [questionnaireExists, setQuestionnaireExists] = useState(false);
@@ -101,13 +74,13 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
   const [nameOfQuestionnaire, setNameOfQuestionnaire] = useState("");
   // const [toggle, setToggle] = useState(true);
 
-  /* useEffect(() => {
+  useEffect(() => {
     setValueArrOfQues(
       generateRandomIntegers(numOfCards).map((idOfQues) =>
         createNewElemInValueArrOfQues(idOfQues)
       )
     );
-  }, []); */
+  }, []);
 
   // *toast
   const { dispatchToast } = useToastController("toasterId");
@@ -197,26 +170,10 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
   };
 
   const handleDeleteQuest = (valObj) => {
-    // !e.target.id && console.error("you clicked this element without id", e.target);
-
-    // const currentElem = parseInt(id);
-    // const idIndexOfCurrentElem = idArrOfQues.indexOf(currentElem);
     const valueIndexOfCurrentElem = valueArrOfQues.indexOf(valObj);
-    // const valueIndexOfCurrentElem = valueArrOfQues.indexOf(
-    //   getValFromValueArrOfQues(currentElem)
-    // );
-    // console.log("delete", currentElem, valueIndexOfCurrentElem);
-
-    // selectedQuesForEdit &&
-    //   valObj[propsOfStateObj[0]] === selectedQuesForEdit[propsOfStateObj[0]] &&
-      setSelectedQuesForEdit("");
 
     if (valueIndexOfCurrentElem !== -1 && valueArrOfQues.length > 1) {
-      // setIdArrOfQues((t) => {
-      //   t.splice(idIndexOfCurrentElem, 1);
-      //   return [...t];
-      // });
-
+      setSelectedQuesForEdit("");
       setValueArrOfQues((t) => {
         t.splice(valueIndexOfCurrentElem, 1);
         return [...t];
@@ -230,12 +187,9 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
       ]);
     }
 
-    // console.log("checking skes ", selectedQuesForEdit)
-    // console.log("checking skes ", valObj[propsOfStateObj[0]] === selectedQuesForEdit[propsOfStateObj[0]])
-
-    // selectedQuesForEdit &&
-    //   compareObjects(valObj, selectedQuesForEdit) &&
-    //   setSelectedQuesForEdit("");
+    selectedQuesForEdit &&
+      compareObjects(valObj, selectedQuesForEdit) &&
+      setSelectedQuesForEdit("");
   };
 
   const resetStates = () => {
@@ -283,6 +237,10 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
             newList,
             updateListFields(valueArrOfQues)
           );
+          console.log(
+            "this will be posted to list",
+            updateListFields(valueArrOfQues)
+          );
           setSuccessCreate(true);
           // resetStates();
           // console.log("Hello World", response);
@@ -297,33 +255,6 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
     // console.log("global value", valueArrOfQues);
     setPageLoading(false);
   };
-
-  /* const handleOnDragEnter = (e) => {
-    e.preventDefault();
-    const idOfQues = e.dataTransfer.getData("idOfQues");
-    console.log("handleOnDragEnter", idOfQues);
-    changeInitialCss(e);
-  };
-
-  const handleOnDragLeave = (e) => {
-    e.preventDefault();
-    const idOfQues = e.dataTransfer.getData("idOfQues");
-    console.log("handleOnDragLeave", idOfQues);
-    backToInitialCss(e);
-  };
-
-  const handleOnDragOver = (e) => {
-    e.preventDefault();
-    const idOfQues = e.dataTransfer.getData("idOfQues");
-    console.log("handleOnDragOver", idOfQues);
-  };
-
-  const handleOnDrop = (e) => {
-    e.preventDefault();
-    const idOfQues = e.dataTransfer.getData("idOfQues");
-    console.log("handleOnDrop", idOfQues);
-    backToInitialCss(e);
-  }; */
 
   const onDragEnd = ({ destination, source }) => {
     // console.log("dragend", {destination, source});
@@ -340,9 +271,9 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
   const handleChangeSelectedQuesForEdit = (e, data) => {
     // const currentTarget = data || e.target;
     // console.log("first handling", data);
-    setSelectedQuesForEdit((t) => ({
-      ...t,
-      [e.target.name]: data.value.trimStart(),
+    setSelectedQuesForEdit(({ valObj, index }) => ({
+      valObj: { ...valObj, [e.target.name]: data.value.trimStart() },
+      index,
     }));
   };
 
@@ -352,15 +283,17 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
         return i;
       }
     }
+    return -1;
   };
 
   const handleSaveFormSubmit = (e) => {
     e.preventDefault();
 
-    const ind = getInd(selectedQuesForEdit[propsOfStateObj[0]]);
+    const ind = getInd(selectedQuesForEdit.valObj[propsOfStateObj[0]]);
+    // const finalInd = ind !== -1 ? ind : valueArrOfQues.length - 1;
     ind !== -1 &&
       setValueArrOfQues((t) => {
-        t[ind] = selectedQuesForEdit;
+        t[ind] = selectedQuesForEdit.valObj;
         return t;
       });
 
@@ -370,15 +303,16 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
   };
 
   // *create site in sharepoint
-  // const setIsQuestionnaireSitePresent =
-  //   useContext(TeamsFxContext).setIsQuestionnaireSitePresent;
-  // useEffect(() => {
-  //   setIsQuestionnaireSitePresent(false);
-  //   // eslint-disable-next-line
-  // }, []);
+  /* const setIsQuestionnaireSitePresent =
+    useContext(TeamsFxContext).setIsQuestionnaireSitePresent;
+  useEffect(() => {
+    setIsQuestionnaireSitePresent(false);
+    // eslint-disable-next-line
+  }, []); */
 
-  console.log("checking skes ", selectedQuesForEdit);
-  console.log("global again valueArrOfQues ===", valueArrOfQues);
+  // console.log("checking skes ", selectedQuesForEdit);
+  // console.log("global again valueArrOfQues ===", valueArrOfQues);
+
   return (
     <>
       <DragDropContext onDragEnd={onDragEnd}>
@@ -546,9 +480,6 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                                         {...provided.draggableProps}
                                         {...provided.dragHandleProps}
                                         ref={provided.innerRef}
-                                        onClick={(e) =>
-                                          setSelectedQuesForEdit(valObj)
-                                        }
                                       >
                                         <Tooltip
                                           content="Drag to re-arrange"
@@ -559,15 +490,24 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                                           >
                                             {/* <li className="px-2"> */}
                                             <Text
+                                              block={true}
+                                              role="button"
+                                              onClick={(e) =>
+                                                setSelectedQuesForEdit({
+                                                  valObj,
+                                                  index,
+                                                })
+                                              }
                                               wrap={false}
                                               truncate
                                               className={
                                                 valObj[propsOfStateObj[1]]
-                                                  ? ""
-                                                  : "opacity-60"
+                                                  ? "grow"
+                                                  : "grow opacity-60"
                                               }
                                             >
-                                              {/* {++index}{". "} */}
+                                              {index + 1}
+                                              {". "}
                                               {valObj[propsOfStateObj[1]] ||
                                                 "Please complete the question..."}
                                               {/* Lorem ipsum dolor sit amet
@@ -591,9 +531,7 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                                                   onClick={(e) =>
                                                     handleDeleteQuest(valObj)
                                                   }
-                                                  // ?need to solve the error that null or undefined is not iterable
                                                   disabled={
-                                                    // idArrOfQues.length === 1 &&
                                                     valueArrOfQues.length ===
                                                       1 &&
                                                     !checkObjElemHasValue(
@@ -602,24 +540,6 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                                                   }
                                                 />
                                               </Tooltip>
-                                              <>
-                                                {/* <Tooltip
-                                                  withArrow
-                                                  content="Edit this Question"
-                                                  positioning="after"
-                                                >
-                                                  <Button
-                                                    // className="cursor-drag-btn"
-                                                    appearance="transparent"
-                                                    icon={<Edit20Regular />}
-                                                    onClick={(e) =>
-                                                      setSelectedQuesForEdit(
-                                                        valObj
-                                                      )
-                                                    }
-                                                  />
-                                                </Tooltip> */}
-                                              </>
                                             </div>
                                           </div>
                                         </Tooltip>
@@ -660,13 +580,19 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                       onSubmit={handleSaveFormSubmit}
                     >
                       <div className="flex flex-col justify-between h-full">
-                        <Field label={"Question:"} required size="medium">
+                        <Field
+                          label={`Question ${selectedQuesForEdit.index + 1}:`}
+                          required
+                          size="medium"
+                        >
                           <Textarea
                             required
                             placeholder="Type here..."
                             // resize="vertical"
                             name={propsOfStateObj[1]}
-                            value={selectedQuesForEdit[propsOfStateObj[1]]}
+                            value={
+                              selectedQuesForEdit.valObj[propsOfStateObj[1]]
+                            }
                             onChange={handleChangeSelectedQuesForEdit}
                           />
                         </Field>
@@ -674,7 +600,7 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                         <RadioGroup
                           required
                           name={propsOfStateObj[6]}
-                          value={selectedQuesForEdit[propsOfStateObj[6]]}
+                          value={selectedQuesForEdit.valObj[propsOfStateObj[6]]}
                           onChange={handleChangeSelectedQuesForEdit}
                         >
                           {numOfOptions.map((elem, key) => (
@@ -707,7 +633,9 @@ const DnDNewCreateQuestionnaire = ({ persnolTab }) => {
                                 placeholder="Type here..."
                                 name={propsOfStateObj[elem + 1]}
                                 value={
-                                  selectedQuesForEdit[propsOfStateObj[elem + 1]]
+                                  selectedQuesForEdit.valObj[
+                                    propsOfStateObj[elem + 1]
+                                  ]
                                 }
                                 onChange={handleChangeSelectedQuesForEdit}
                               />

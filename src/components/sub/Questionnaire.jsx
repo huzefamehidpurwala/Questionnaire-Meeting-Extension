@@ -1,10 +1,5 @@
-import { Button, Text, Tooltip } from "@fluentui/react-components";
+import { Button, Text } from "@fluentui/react-components";
 import React, { useState, useEffect, useRef, useContext } from "react";
-import {
-  ArrowRight48Filled,
-  ArrowLeft48Filled,
-  ArrowClockwise48Filled,
-} from "@fluentui/react-icons";
 import {
   LiveShareClient,
   LiveState,
@@ -49,6 +44,7 @@ const Questionnaire = () => {
   const [counter, setCounter] = useState(counterInitialValue);
   const [counterInterValue, setCounterInterValue] = useState(undefined);
   const [quesInterValue, setQuesInterValue] = useState(undefined);
+  const [showQuitPopUp, setShowQuitPopUp] = useState("");
   const [userRole, setUserRole] = useState(
     sessionStorage.getItem("userMeetingRole")
   );
@@ -98,7 +94,7 @@ const Questionnaire = () => {
     }
   };
 
-  const handleQuesNav = async (method) => {
+  /* const handleQuesNav = async (method) => {
     if (method !== "add" && method !== "sub") return;
 
     setIndexOfQuestion((prev) => {
@@ -107,7 +103,7 @@ const Questionnaire = () => {
       // await indOfQues.current.set(data?.value[prev]);
       return prev;
     });
-  };
+  }; */
 
   const handleExit = async () => {
     setStartQuiz(false);
@@ -179,15 +175,42 @@ const Questionnaire = () => {
     clearIntervals();
 
     if (questionObj) {
-      if (ansArr.length && "accessToken" in questionObj) {
-        (async () => {
+      if ("accessToken" in questionObj) {
+        const postAns = async () => {
           try {
+            if (ansArr.length > data?.value?.length)
+              // eslint-disable-next-line
+              throw { name: "customMsg", msg: "you answered a question twice" };
+
+            if (!ansArr.length)
+              // eslint-disable-next-line
+              throw {
+                name: "customMsg",
+                msg: "you didn't answer any question",
+              };
+
             await customPostAnswers(ansArr, questionObj.accessToken);
             setAnsArr([]);
+            setShowQuitPopUp(
+              `Quiz Completed${
+                userRole !== UserMeetingRole.organizer
+                  ? " and answers submitted"
+                  : ""
+              }!`
+            );
           } catch (error) {
             console.error("error in customPostAnswer", error);
+            error.name === "customMsg"
+              ? setShowQuitPopUp(`Quiz Completed but ${error.msg}!`)
+              : setShowQuitPopUp(
+                  "Quiz Completed but answers were not posted. Some error occured!"
+                );
           }
-        })();
+        };
+
+        userRole !== UserMeetingRole.organizer
+          ? postAns()
+          : setShowQuitPopUp("Quiz Completed!");
       }
       !("accessToken" in questionObj) && intervals();
     }
@@ -254,7 +277,7 @@ const Questionnaire = () => {
     data?.value.length - 1 < indexOfQuestion &&
     handleExit();
 
-  // console.log("global console in questionnaire ==", counterInterValue, quesInterValue);
+  // console.log("global console in questionnaire ==", ansArr);
 
   return (
     <>
@@ -286,9 +309,9 @@ const Questionnaire = () => {
           />
 
           <SmallPopUp
-            title={"Quiz Completed!"}
-            // open={showQuitPopUp}
-            // onOpenChange={(e, data) => setShowQuitPopUp(data.open)}
+            title={showQuitPopUp}
+            open={showQuitPopUp}
+            onOpenChange={(e, data) => setShowQuitPopUp(data.open)}
             spinner={false}
             activeActions={true}
             modalType="alert"
@@ -307,17 +330,12 @@ const Questionnaire = () => {
           </SmallPopUp>
 
           <div className="grid-center-box gap-4 relative min-h-screen min-w-full w-auto app-bg-dark-color">
-            <>
-              {/* {userRole === UserMeetingRole.organizer && (
-                <div className="fixed top-4 right-4">
-                  <Button onClick={(e) => clearIntervals()}>Stop Timer</Button>
-                </div>
-              )} */}
-            </>
-
-            <Text block font="numeric" size={800}>
-              {(counter / 100).toFixed(2)}
-            </Text>
+            {questionObj && !("accessToken" in questionObj) && (
+              <Text block font="numeric" size={800}>
+                {counter} sec left
+                {/* {(counter / 100).toFixed(2)} */}
+              </Text>
+            )}
 
             {userRole === UserMeetingRole.organizer && (
               <div className="flex gap-4">
