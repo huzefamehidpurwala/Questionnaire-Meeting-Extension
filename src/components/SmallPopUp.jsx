@@ -13,14 +13,14 @@ import React from "react";
 
 const SmallPopUp = (props) => {
   return (
-    <Dialog {...props}>  {/* open={props.open} */}
+    <Dialog {...props}>
       <DialogSurface>
         <DialogBody>
           {props.title && <DialogTitle>{props.title}</DialogTitle>}
           {(props.msg || props.children) && (
             <DialogContent>
               {props.spinner && (
-                <div /* className={props.className} */>
+                <div>
                   <Spinner
                     size="huge"
                     labelPosition="below"
@@ -31,25 +31,15 @@ const SmallPopUp = (props) => {
               {props.children}
             </DialogContent>
           )}
-          {
-            /* props.open &&  */ !props.spinner && props.activeActions && (
-              <DialogActions>
-                <DialogTrigger disableButtonEnhancement>
-                  <Button appearance="secondary">
-                    {props.deleteTaskId ? "Cancel" : "Close"}
-                  </Button>
-                </DialogTrigger>
-                {/* {props.deleteTaskId && (
-                  <Button
-                    appearance="primary"
-                    // onClick={(e) => props.taskDelete(props.deleteTaskId)}
-                  >
-                    Delete
-                  </Button>
-                )} */}
-              </DialogActions>
-            )
-          }
+          {!props.spinner && props.activeActions && (
+            <DialogActions>
+              <DialogTrigger disableButtonEnhancement>
+                <Button appearance="secondary">
+                  {props.deleteTaskId ? "Cancel" : "Close"}
+                </Button>
+              </DialogTrigger>
+            </DialogActions>
+          )}
         </DialogBody>
       </DialogSurface>
     </Dialog>

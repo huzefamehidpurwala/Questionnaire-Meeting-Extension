@@ -17,13 +17,9 @@ const Analysis = () => {
 
   const [needConsent, setNeedConsent] = useState(false);
   const [attendeeNameArr, setAttendeeNameArr] = useState([]);
-  // const [dateTimeArr, setDateTimeArr] = useState([]);
-  // const [selectedDateTime, setSelectedDateTime] = useState("");
   const [selectedAttendeeNameArr, setSelectedAttendeeNameArr] = useState([]);
   const [questionnaireObjArr, setQuestionnaireObjArr] = useState([]);
   const [selectedQuestionnaireArr, setSelectedQuestionnaireArr] = useState([]);
-  // const [selectedQuestionnaireIdArr, setSelectedQuestionnaireIdArr] = useState([]);
-  // const [selectedQuestionnaireNameArr, setSelectedQuestionnaireNameArr] = useState([]);
   const [initatedquestionnaireIdArr, setInitatedQuestionnaireIdArr] = useState(
     []
   );
@@ -93,10 +89,9 @@ const Analysis = () => {
         ? tempSet.add({
             questionnaireName: row.fields.Title,
             questionnaireId: row.fields.idOfLists,
-          }) // tempSet.add(row.fields.Title)
+          })
         : ""
     );
-    // console.log("tempSet", tempSet);
     setQuestionnaireObjArr(
       [...tempSet].sort((a, b) =>
         handleStringSort(a.questionnaireName, b.questionnaireName)
@@ -111,28 +106,10 @@ const Analysis = () => {
       tempSetAtt.add(row.fields.attendeeName);
       tempSetId.add(row.fields.questionnaireListId);
     });
-    // console.log("bhag bhiya", tempSetAtt, tempSetId);
+
     setAttendeeNameArr([...tempSetAtt].sort(handleStringSort));
     setInitatedQuestionnaireIdArr([...tempSetId]);
   };
-
-  // const updateDateTimeArr = () => {
-  //   let tempSetDate = new Set();
-  //   analyticsOfQuestionnaireData.graphClientMessage.value.forEach((row) => {
-  //     const id = row.fields.questionnaireListId;
-  //     const date = row.fields.dateTheAttendeeGaveAns;
-  //     JSON.stringify(selectedQuestionnaireArr).includes(id) &&
-  //       tempSetDate.add(date);
-  //   });
-  //   // console.log("bhag bhiya", tempSetDate, tempSetId);
-  //   setDateTimeArr([...tempSetDate]);
-  // };
-
-  // useEffect(() => {
-  //   !!selectedQuestionnaireArr.length && updateDateTimeArr();
-  //   return;
-  //   // eslint-disable-next-line
-  // }, [selectedQuestionnaireArr]);
 
   useEffect(() => {
     analyticsOfQuestionnaireData && updateAttendeeNameArr();
@@ -166,7 +143,6 @@ const Analysis = () => {
     return -1;
   };
 
-  // console.log("in analytics global==", selectedQuestionnaireArr);
   return (
     <>
       {!!questionnaireRootListError ||
@@ -212,7 +188,6 @@ const Analysis = () => {
               ) &&
               !analyticsOfQuestionnaireData?.graphClientMessage.value.length
             }
-            // onOpenChange={(e, data) => setSuccessCreate(data.open)}
             activeActions={false}
             spinner={false}
             modalType="alert"
@@ -241,7 +216,6 @@ const Analysis = () => {
                   <div className="sub-container1">
                     <div>
                       <Button
-                        // appearance="transparent"
                         onClick={(e) => {
                           setSelectedAttendeeNameArr([]);
                           setSelectedQuestionnaireArr([]);
@@ -258,7 +232,6 @@ const Analysis = () => {
                       {attendeeNameArr.length > 1 && (
                         <Checkbox
                           label={<Text size={200}>Select All Attedees</Text>}
-                          // size="large"
                           checked={
                             !!selectedAttendeeNameArr.length
                               ? attendeeNameArr.length >
@@ -268,7 +241,6 @@ const Analysis = () => {
                               : false
                           }
                           onChange={(e, data) => {
-                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedAttendeeNameArr([...attendeeNameArr])
                               : setSelectedAttendeeNameArr([]);
@@ -277,14 +249,12 @@ const Analysis = () => {
                       )}
                       {attendeeNameArr.map((attendeeName, key) => (
                         <Checkbox
-                          label={attendeeName} // <Text size={400}>{attendeeName}</Text>
-                          // value={attendeeName}
+                          label={attendeeName}
                           key={key}
                           checked={selectedAttendeeNameArr.includes(
                             attendeeName
                           )}
                           onChange={(e, data) => {
-                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedAttendeeNameArr((t) => [
                                   ...t,
@@ -292,7 +262,6 @@ const Analysis = () => {
                                 ])
                               : setSelectedAttendeeNameArr((t) => {
                                   t.splice(t.indexOf(attendeeName), 1);
-                                  // console.log("in state", t);
                                   return [...t];
                                 });
                           }}
@@ -309,7 +278,6 @@ const Analysis = () => {
                           label={
                             <Text size={200}>Select All Questionnaires</Text>
                           }
-                          // size="large"
                           checked={
                             !!selectedQuestionnaireArr.length
                               ? questionnaireObjArr.length >
@@ -319,7 +287,6 @@ const Analysis = () => {
                               : false
                           }
                           onChange={(e, data) => {
-                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedQuestionnaireArr([
                                   ...questionnaireObjArr,
@@ -330,16 +297,13 @@ const Analysis = () => {
                       )}
                       {questionnaireObjArr.map((obj, key) => (
                         <Checkbox
-                          label={toTitleCase(obj.questionnaireName)} // <Text size={400}>{toTitleCase(obj.questionnaireName)}</Text>
-                          // value={obj.questionnaireName}
-                          // id={obj.questionnaireId}
+                          label={toTitleCase(obj.questionnaireName)}
                           key={key}
                           checked={checkPresenceOfObj(
                             selectedQuestionnaireArr,
                             obj
                           )}
                           onChange={(e, data) => {
-                            // console.log("onChange == ", data.checked/* , "---", e */);
                             const newObj = {
                               questionnaireName: obj.questionnaireName, // e.target.value
                               questionnaireId: obj.questionnaireId, // e.target.id
@@ -351,7 +315,6 @@ const Analysis = () => {
                                 ])
                               : setSelectedQuestionnaireArr((t) => {
                                   t.splice(getIndex(t, newObj), 1);
-                                  // console.log("in state", t);
                                   return [...t];
                                 });
                           }}
@@ -359,53 +322,11 @@ const Analysis = () => {
                       ))}
                     </div>
 
-                    {/* // *date */}
-                    <>
-                      {/* {!!selectedQuestionnaireArr.length && (
-                      <div className="checkbox-container">
-                        <Text size={400} weight="bold">
-                          Select Date:
-                        </Text>
-                        {dateTimeArr.length > 1 && (
-                          <Checkbox
-                            label={<Text size={200}>Select All Dates</Text>}
-                            // size="large"
-                            // checked={
-                            //   !!selectedAttendeeNameArr.length
-                            //     ? attendeeNameArr.length >
-                            //       selectedAttendeeNameArr.length
-                            //       ? "mixed"
-                            //       : true
-                            //     : false
-                            // }
-                            // onChange={(e, data) => {
-                            //   // console.log("onChange == ", data.checked);
-                            //   data.checked
-                            //     ? setSelectedAttendeeNameArr([...attendeeNameArr])
-                            //     : setSelectedAttendeeNameArr([]);
-                            // }}
-                          />
-                        )}
-                        {dateTimeArr.map((date, key) => (
-                          <Checkbox
-                            label={convertDateTime(date)} // <Text size={400}>{toTitleCase(obj.questionnaireName)}</Text>
-                            key={key}
-                            checked={selectedDateTime.includes(date)}
-                            onChange={(e, data) => {
-                              data.checked
-                                ? setSelectedDateTime(date)
-                                : setSelectedDateTime("");
-                            }}
-                          />
-                        ))}
-                      </div>
-                    )} */}
-                    </>
+                    {/* // *date below */}
                   </div>
                   <div className="sub-container2">
                     {!!selectedAttendeeNameArr.length &&
                       !!selectedQuestionnaireArr.length &&
-                      // selectedDateTime &&
                       selectedQuestionnaireArr
                         .sort((a, b) =>
                           handleStringSort(
@@ -414,7 +335,6 @@ const Analysis = () => {
                           )
                         )
                         .map((obj) => {
-                          // console.log("checking in parent", key+1)
                           return (
                             <HChart
                               key={obj.questionnaireId}
@@ -424,8 +344,6 @@ const Analysis = () => {
                               )}
                               selectedAttendeeNameArr={selectedAttendeeNameArr}
                               chartType={"column"}
-                              // selectedDateTime={selectedDateTime}
-                              // questionnaireRootListData={questionnaireRootListData}
                               analyticsOfQuestionnaireData={
                                 analyticsOfQuestionnaireData
                               }

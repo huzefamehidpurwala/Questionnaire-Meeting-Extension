@@ -6,9 +6,7 @@ import { TeamsFxContext } from "../Context";
 import { useData } from "@microsoft/teamsfx-react";
 import { getListItems } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
-// import NoBgLoading from "../../assets/noBgLoading.webp";
 import WhiteBgLoading from "../../assets/loading.gif";
-// import Loading from "../../assets/navy_for-light_bg.webp";
 import { Button, Image, Text } from "@fluentui/react-components";
 exporting(Highcharts);
 
@@ -17,8 +15,6 @@ const HChart = ({
   questionnaireId,
   selectedAttendeeNameArr,
   chartType,
-  // selectedDateTime,
-  // questionnaireRootListData,
   analyticsOfQuestionnaireData,
 }) => {
   const [needConsent, setNeedConsent] = useState(false);
@@ -32,7 +28,6 @@ const HChart = ({
       setNeedConsent(false);
     }
     try {
-      // console.log("check list id url query", searchParams.get("listId"));
       const functionRes = await getListItems(
         teamsUserCredential,
         questionnaireId
@@ -71,42 +66,22 @@ const HChart = ({
       });
 
       selectedAttendeeNameArr.forEach((name, index) => {
-        // console.log("checking inde", name, index);
         series[0].data[index] =
           data.graphClientMessage.value.length -
           (series[1].data[index] + series[2].data[index]);
       });
-      // console.log("checking series", series);
-
-      // series = ["Not Answered", "Incorrect Answer", "Correct Answer"].map(
-      //   (name) => ({
-      //     name,
-      //     data: Array(selectedAttendeeNameArr.length).fill(10),
-      //   })
-      // );
     }
 
     return series;
   };
-  // console.log("hcharts", data?.graphClientMessage.value.length);
 
   const options = {
     chart: {
       type: chartType,
     },
     title: {
-      text: questionnaireName, // `${selectedAttendeeNameArr} - ${selectedQuestionnaireNameArr}`,
-      // align: "left",
+      text: questionnaireName,
     },
-    // subtitle: {
-    //   text: '<div style="color: red">Huzefa</div>',
-    //   align: "left",
-    // },
-    // navigation: {
-    //   buttonOptions: {
-    //     enabled: true,
-    //   },
-    // },
     exporting: {
       enabled: true,
     },
@@ -131,10 +106,6 @@ const HChart = ({
       gridLineWidth: 0,
       lineWidth: 0.3, // width of the line that is known as axis
     },
-    // the popup shown on mouse-hover
-    // tooltip: {
-    //   valueSuffix: " tasks",
-    // },
     accessibility: {
       enabled: false, // to supress the console warning
     },
@@ -146,33 +117,11 @@ const HChart = ({
         },
         groupPadding: 0.1, // this defines the thickness of bar
       },
-      // this is to stack up the series
-      // series: {
-      //   stacking: "normal",
-      //   dataLabels: {
-      //     enabled: true,
-      //   },
-      // },
     },
-    // this is the card shown that helps to understand which color represents the respective data
-    // legend: {
-    //   layout: "vertical",
-    //   align: "right",
-    //   verticalAlign: "top",
-    //   // x: -40,
-    //   // y: 80,
-    //   floating: true,
-    //   borderWidth: 1,
-    //   backgroundColor:
-    //     Highcharts.defaultOptions.legend.backgroundColor || "#FFFFFF",
-    //   shadow: true,
-    //   // reversed: true,
-    // },
-    // this is the domain name shown below the chart when enabled
     credits: {
       enabled: false,
     },
-    series: getValForSeries(), // || [{name: "Year 1990",data: [631, 727, 3202, 721],},{name: "Year 2000",data: [814, 841, 3714, 726],},{name: "Year 2018",data: [1276, 1007, 4561, 746],},],
+    series: getValForSeries(),
   };
 
   return !!error || needConsent ? (
@@ -195,19 +144,9 @@ const HChart = ({
     <>
       <div className="relative flex flex-col justify-center items-center">
         <div className={loading ? "opacity-70" : ""}>
-          <HighchartsReact
-            // containerProps={{ style: { outerWidth: "100%" } }}
-            highcharts={Highcharts}
-            options={options}
-          />
+          <HighchartsReact highcharts={Highcharts} options={options} />
         </div>
-        {loading && (
-          // <div className="absolute top-28 right-56 w-28 h-28">
-          //   {/* <Spinner size="huge" /> */}
-          //   <Image alt="Loading..." src={NoBgLoading} />
-          // </div>
-            <Image src={WhiteBgLoading} className="absolute"/>
-        )}
+        {loading && <Image src={WhiteBgLoading} className="absolute" />}
       </div>
     </>
   );

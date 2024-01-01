@@ -32,7 +32,6 @@ const config = require("../config");
  */
 module.exports = async function (context, req, teamsfxContext) {
   context.log("HTTP trigger function processed a request.");
-  // console.log("i am in utils.js", teamsfxContext);
 
   // Initialize response.
   const res = {
@@ -76,25 +75,6 @@ module.exports = async function (context, req, teamsfxContext) {
     };
   }
 
-  // Query user's information from the access token.
-  /* try {
-    const currentUser = await credential.getUserInfo();
-    if (currentUser && currentUser.displayName) {
-      res.body.userInfoMessage = `User display name is ${currentUser.displayName}.`;
-    } else {
-      res.body.userInfoMessage =
-        "No user information was found in access token.";
-    }
-  } catch (e) {
-    context.log.error(e);
-    return {
-      status: 400,
-      body: {
-        error: "Access token is invalid.",
-      },
-    };
-  } */
-
   // Create a graph client to access user's Microsoft 365 data after user has consented.
   // let meetingWebUrl = "";
   try {
@@ -108,17 +88,12 @@ module.exports = async function (context, req, teamsfxContext) {
       authProvider: authProvider,
     });
 
-    // console.log("i ma in chat", graphClient);
-    // console.log(context.req.body)
     const profile = await graphClient
       .api(
         `/sites/29151005-7f34-4489-a82f-ff4a19cb537a/lists/26ca1252-8fdf-467e-a1eb-172aaed95763/items/${req.body.quesRowId}/fields`
       )
       .patch({ isInitiated: true, initiationDateTime: req.body.exactDateTime });
     res.body.graphClientMessage = profile;
-
-    // console.error("huzefakasjf;", meetingWebUrl);
-    // res.body.meetingWebUrl = meetingWebUrl;
   } catch (e) {
     context.log.error(e);
     return {

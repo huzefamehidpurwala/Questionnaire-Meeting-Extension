@@ -5,7 +5,6 @@ import {
   teamsDarkTheme,
   teamsHighContrastTheme,
   Spinner,
-  // tokens,
 } from "@fluentui/react-components";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useTeamsUserCredential } from "@microsoft/teamsfx-react";
@@ -31,53 +30,9 @@ export default function App() {
       clientId: config.clientId,
     });
 
-    // console.log("Huzefa === ", config)
-    // console.log("i am checking build2", )
-
-  // *create site in sharepoint
-  // const [isQuestionnaireSitePresent, setIsQuestionnaireSitePresent] =
-  //   useState(true);
-  // console.log("hello app.jsx", isQuestionnaireSitePresent);
-  // const teamsPageType = useRef("");
-  // useEffect(() => {
-  //   // Initialize teams app
-  //   app.initialize().then(async () => {
-  //     const authConfig = {
-  //       initiateLoginEndpoint: config.initiateLoginEndpoint,
-  //       clientId: config.clientId,
-  //     };
-  //     const credential = new TeamsUserCredential(authConfig);
-  //     const token = await credential.getToken([
-  //       "https://ygr11.sharepoint.com/Sites.ReadWrite.All",
-  //     ]);
-  //     // console.log("TOKEN------------->", token.token);
-
-  //     *api to create site in sharepoint
-  //     const res = axios.post(
-  //       "https://ygr11.sharepoint.com/_api/SPSiteManager/create", // * /create /delete  https://learn.microsoft.com/en-us/sharepoint/dev/apis/site-creation-rest
-  //       {
-  //         request: {
-  //           Title: "New Hidden Teams Site by API", // *name of the site
-  //           Description: "Site created b API", // *Desc of the site
-  //           WebTemplate: "STS#3", // *teams site -> "WebTemplate":"STS#3" (or) communication site -> "WebTemplate":"SITEPAGEPUBLISHING#0"
-  //           Url: "https://ygr11.sharepoint.com/sites/hteams1", // *url for that site
-  //         },
-  //       },
-  //       { headers: { Authorization: `Bearer ${token.token}` } }
-  //     );
-
-  //     app.notifySuccess();
-  //   });
-  // }, []);
-
   return (
     <TeamsFxContext.Provider
-      value={{
-        theme,
-        themeString,
-        teamsUserCredential,
-        // setIsQuestionnaireSitePresent,
-      }}
+      value={{ theme, themeString, teamsUserCredential }}
     >
       <FluentProvider
         theme={
@@ -85,24 +40,13 @@ export default function App() {
             ? teamsDarkTheme
             : themeString === "contrast"
             ? teamsHighContrastTheme
-            : {
-                ...teamsLightTheme,
-                colorNeutralBackground3: "#eeeeee",
-              }
+            : { ...teamsLightTheme, colorNeutralBackground3: "#eeeeee" }
         }
-        // style={
-        //   !window.location.href?.includes("config")
-        //     ? {
-        //         background: tokens.colorNeutralBackground3,
-        //         minHeight: "100vh",
-        //       }
-        //     : {}
-        // }
       >
         <main
           className={
             !window.location.href?.includes("config")
-              ? "bg-teams-bg-3 h-screen" //  cursor-[url('assets/custom-cursor.png'),_auto_!important]
+              ? "bg-teams-bg-3 h-screen"
               : ""
           }
         >
@@ -125,12 +69,9 @@ export default function App() {
                   element={<CreateQuestionnaire />}
                 />
                 <Route path="/questionnaire" element={<Questionnaire />} />
-                {/* <Route path="*" element={<Navigate to={"/tab"} />}></Route> */}
               </Routes>
             )}
           </Router>
-
-          {/* <div className="fixed w-10 h-10 rounded-full border border-white z-50 bottom-0"></div> */}
         </main>
       </FluentProvider>
     </TeamsFxContext.Provider>

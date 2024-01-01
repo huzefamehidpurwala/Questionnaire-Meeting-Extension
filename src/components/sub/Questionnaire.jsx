@@ -15,13 +15,7 @@ import QuestionnaireStage from "./QuestionnaireStage";
 import config from "../../lib/config";
 import { TeamsUserCredential } from "@microsoft/teamsfx";
 
-// const counterKey = "indexOfQuestion";
-const containerSchema = {
-  initialObjects: {
-    indOfQues: LiveState, // SharedMap / LiveState
-    // toggleLiveState: LiveState,
-  },
-};
+const containerSchema = { initialObjects: { indOfQues: LiveState } };
 const exactDateTime = new Date();
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 const counterInitialValue = 10;
@@ -50,11 +44,9 @@ const Questionnaire = () => {
   );
 
   const indOfQues = useRef(undefined);
-  // const toggleLiveState = useRef(undefined);
 
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
   const { loading, data, error, reload } = useData(async () => {
-    // error, reload
     if (!teamsUserCredential) {
       throw new Error("TeamsFx SDK is not initialized.");
     }
@@ -94,17 +86,6 @@ const Questionnaire = () => {
     }
   };
 
-  /* const handleQuesNav = async (method) => {
-    if (method !== "add" && method !== "sub") return;
-
-    setIndexOfQuestion((prev) => {
-      method === "add" ? ++prev : method === "sub" && --prev;
-      indOfQues.current.set(data?.value[prev]);
-      // await indOfQues.current.set(data?.value[prev]);
-      return prev;
-    });
-  }; */
-
   const handleExit = async () => {
     setStartQuiz(false);
     setIndexOfQuestion(0);
@@ -126,8 +107,6 @@ const Questionnaire = () => {
     const userInfo = await teamsUserCredential.getUserInfo();
     const currentAttendeeMailId = userInfo.preferredUserName;
     const attendeeName = userInfo.displayName;
-
-    // console.log("checking in func", selectedOption);
 
     setAnsArr((prev) => [
       ...prev,
@@ -163,7 +142,6 @@ const Questionnaire = () => {
   };
 
   const clearIntervals = () => {
-    // console.log("i m in clearing func", counterInterValue, quesInterValue);
     clearInterval(counterInterValue);
     clearInterval(quesInterValue);
     setCounter(counterInitialValue);
@@ -232,29 +210,15 @@ const Questionnaire = () => {
 
           const { container } = await client.joinContainer(containerSchema);
 
-          // ({ indOfQues: indOfQues.current, toggleLiveState: toggleLiveState.current } = container.initialObjects);
           indOfQues.current = container.initialObjects.indOfQues;
-          // console.log("checking this current", container.initialObjects);
-
-          /* toggleLiveState.current.on("stateChanged", (val) => {
-            console.log("timre changed!!", val);
-            if (val) {
-              intervals();
-            } else {
-              clearIntervals();
-            }
-          }); */
 
           indOfQues.current.on("stateChanged", (quest) => {
             setQuestionObj(quest); // indOfQues.current.state
           });
 
           // You can optionally declare what roles you want to be able to change state
-          // await toggleLiveState.current.initialize(true, allowedRoles);
           await indOfQues.current.initialize(questionObj, allowedRoles);
 
-          // console.log("checking initializing ==", indOfQues.current.initializeState);
-          // toggleLiveState.current.isInitialized &&
           indOfQues.current.isInitialized && setPageLoading(false);
         } catch (error) {
           console.error("eror occured", error);
@@ -276,8 +240,6 @@ const Questionnaire = () => {
   userRole === UserMeetingRole.organizer &&
     data?.value.length - 1 < indexOfQuestion &&
     handleExit();
-
-  // console.log("global console in questionnaire ==", ansArr);
 
   return (
     <>

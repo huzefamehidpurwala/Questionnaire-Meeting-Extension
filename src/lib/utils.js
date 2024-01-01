@@ -3,19 +3,11 @@ import config from "./config";
 import { executeDeepLink } from "@microsoft/teams-js";
 import axios from "axios";
 
-const getQuestionsFunc = config.apiName || "getQuestions";
-const getMeetingInfoFunc = config.meetingInfoApiName || "getMeetingInfo";
-const postAnswersFunc = config.postAnswersApiName || "postAnswers";
-const patchQuestionnaireRootListFunc =
-  config.patchQuestionnaireRootListApiName || "patchQuestionnaireRootList";
-const createQuestionnaireFunc =
-  config.createQuestionnaireApiName || "createQuestionnaire";
-
-// *custom hook
-/* export const useGetTeamsUserCredential = () => {
-  const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
-  return teamsUserCredential;
-}; */
+const getQuestionsFunc = "getQuestions";
+const getMeetingInfoFunc = "getMeetingInfo";
+const postAnswersFunc = "postAnswers";
+const patchQuestionnaireRootListFunc = "patchQuestionnaireRootList";
+const createQuestionnaireFunc = "createQuestionnaire";
 
 export async function patchQuestionnaireRootList(
   teamsUserCredential,
@@ -38,7 +30,6 @@ export async function patchQuestionnaireRootList(
       quesRowId,
       exactDateTime,
     });
-    // config.questions = response.graphClientMessage;
     return response.data;
   } catch (err) {
     let funcErrorMsg = "";
@@ -76,7 +67,6 @@ export async function postAnswers(teamsUserCredential, answersArr) {
       )
     );
     const response = await apiClient.post(postAnswersFunc, { answersArr });
-    // config.questions = response.graphClientMessage;
     return response.data;
   } catch (err) {
     let funcErrorMsg = "";
@@ -114,7 +104,6 @@ export async function getMeetingInfo(teamsUserCredential, chatId) {
       )
     );
     const response = await apiClient.post(getMeetingInfoFunc, { chatId });
-    // config.questions = response.graphClientMessage;
     return response.data;
   } catch (err) {
     let funcErrorMsg = "";
@@ -154,7 +143,6 @@ export async function getListItems(teamsUserCredential, listId, sort = "") {
     const response = listId
       ? await apiClient.post(getQuestionsFunc, { listId, sort })
       : await apiClient.get(getQuestionsFunc);
-    // config.questions = response.graphClientMessage;
     return response.data;
   } catch (err) {
     let funcErrorMsg = "";
@@ -199,7 +187,6 @@ export async function createQuestionnaire(
       newList,
       listFields,
     });
-    // config.questions = response.graphClientMessage;
     return response.data;
   } catch (err) {
     let funcErrorMsg = "";
@@ -232,14 +219,7 @@ export async function customPostAnswers(ansArr, accessToken) {
         { headers: { Authorization: `Bearer ${accessToken}` } }
       )
       .then((response) => {
-        console.log("in utils customPostAnswers", response);
-        // if (response.status === 201) {
-        //   // setShowEdit(!showEdit);
-        //   // BtnClick();
-        //   alert("successful create");
-        // } else {
-        //   alert("create failed");
-        // }
+        console.log("in utils customPostAnswers", response); // success when response.status === 201
       });
   }
 }
@@ -273,13 +253,6 @@ export const encryptObj = (objToEncrypt) => {
   }
 
   return JSON.stringify(encryptedString);
-  /* try {
-    sessionStorage.setItem(sessionKey, JSON.stringify(encryptedString));
-    return true;
-  } catch (error) {
-    console.error("falied to save in session Storage", error);
-    return false;
-  } */
 };
 
 export const decryptStr = (strToDecode) => {
@@ -368,8 +341,6 @@ export function convertDateTime(inputDateString) {
 }
 
 export const redirectUsingDeeplink = (pathName) => {
-  // var encodedContext = `{"subEntityId":  ${data}}`;
-
   const webUrl = `https://teams.microsoft.com/l/entity/${config.teamsAppId}${pathName}`;
   executeDeepLink(webUrl);
 };

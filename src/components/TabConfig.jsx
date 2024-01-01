@@ -10,6 +10,7 @@ import { Checkbox, Link } from "@fluentui/react-components";
  */
 const TabConfig = () => {
   const [checked, setChecked] = useState(false);
+
   useEffect(() => {
     // Initialize the Microsoft Teams SDK
     app.initialize().then(() => {
@@ -20,7 +21,6 @@ const TabConfig = () => {
        */
       pages.config.registerOnSaveHandler((saveEvent) => {
         const baseUrl = `https://${window.location.hostname}:${window.location.port}`;
-        // console.log("in TabConfig", baseUrl);
         pages.config
           .setConfig({
             entityId: "test",

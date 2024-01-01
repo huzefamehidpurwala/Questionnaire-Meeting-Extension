@@ -7,9 +7,7 @@ const config = {
   postAnswersApiName: process.env.REACT_APP_POST_ANSWERS_FUNC_NAME,
   createQuestionnaireApiName: process.env.REACT_APP_CREATE_QUESTIONNAIRE_FUNC_NAME,
   patchQuestionnaireRootListApiName: process.env.REACT_APP_PATCH_QUESTIONNAIREROOTLIST_FUNC_NAME,
-  questionnaireRootListId: process.env.REACT_APP_QUESTIONNAIRE_ROOTLIST,
-  // questions: null,
-  // userMeetingRole: ""
+  questionnaireRootListId: process.env.REACT_APP_QUESTIONNAIRE_ROOTLIST
 };
 
 export default config;

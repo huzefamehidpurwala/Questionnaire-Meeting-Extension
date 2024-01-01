@@ -45,7 +45,6 @@ const ListQuestionnaire = () => {
     data.graphClientMessage.value.forEach((row) => {
       tempSet.add(row.createdBy.user.displayName);
     });
-    // console.log("bhag bhiya", tempSet, tempSetId);
     setCreatorNameArr([...tempSet]);
   };
 
@@ -58,7 +57,6 @@ const ListQuestionnaire = () => {
           questionnaireId: row.fields.idOfLists,
         });
     });
-    // console.log("bhag bhiya", tempSet, tempSetId);
     setQuestionnaireObjArr([...tempSet]);
   };
 
@@ -112,7 +110,6 @@ const ListQuestionnaire = () => {
                 <div className="flex-grow">
                   <div>
                     <Button
-                      // appearance="transparent"
                       onClick={(e) => {
                         setSelectedCreatorName("");
                         setSelectedQuestionnaireObj("");

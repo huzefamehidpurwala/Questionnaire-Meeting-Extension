@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { TeamsFxContext } from "../Context";
 import { getListItems } from "../../lib/utils";
-import NoBgLoading from "../../assets/noBgLoading.webp";
-import { Image, Spinner } from "@fluentui/react-components";
 import SmallPopUp from "../SmallPopUp";
 
 const ListOfQuestions = ({ selectedQuestionnaireId }) => {
@@ -30,8 +28,6 @@ const ListOfQuestions = ({ selectedQuestionnaireId }) => {
     // eslint-disable-next-line
   }, [selectedQuestionnaireId]);
 
-  // console.log("selectedQuestionnaireId == ", NoBgLoading);
-
   return (
     <>
       {/* loading popup */}
@@ -45,12 +41,6 @@ const ListOfQuestions = ({ selectedQuestionnaireId }) => {
       />
 
       <div className="relative min-w-max min-h-max">
-        {/* loading && (
-          <div className="absolute">
-            {/* <Image alt="Loading..." className="w-28 h-28" src={NoBgLoading} /> */}
-        {/* <Spinner size="large" />
-          </div>
-        )} */}
         <ul>
           {!!data.length &&
             data.map((row) => <li key={row.id}>{row.fields.Title}</li>)}

@@ -4,9 +4,6 @@
 
 * {
   box-sizing: border-box;
-  /* -webkit-user-select: none; */ /* Safari */
-  /* -ms-user-select: none; */ /* IE 10 and IE 11 */
-  /* user-select: none; */ /* Standard syntax */
 }
 
 /* width of scrollbar */
@@ -56,7 +53,6 @@ body {
 .error {
   width: 100%;
   padding: 20px;
-  /* font-size: 150%; */
   background-color: #eb5353;
   text-align: center;
   color: white;
@@ -70,23 +66,6 @@ body {
 
 .header-bg {
   background: rgb(68, 71, 145);
-  /* background: hsla(237, 86%, 73%, 1);
-  background: radial-gradient(
-    circle,
-    hsla(237, 86%, 73%, 1) 0%,
-    hsla(238, 39%, 50%, 1) 89%
-  );
-  background: -moz-radial-gradient(
-    circle,
-    hsla(237, 86%, 73%, 1) 0%,
-    hsla(238, 39%, 50%, 1) 89%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(237, 86%, 73%, 1) 0%,
-    hsla(238, 39%, 50%, 1) 89%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7F85F5", endColorstr="#4F52B2", GradientType=1 ); */
 }
 
 .light .header-bg {
@@ -99,26 +78,8 @@ body {
   user-select: none; /* Standard syntax */
   min-height: 100vh;
   width: 100%;
-  /* display: flex; */
   flex-direction: row;
   justify-content: space-between;
-  /* background: hsla(240, 27%, 37%, 1);
-  background: radial-gradient(
-    circle,
-    hsla(240, 27%, 37%, 1) 0%,
-    hsla(240, 20%, 21%, 1) 100%
-  );
-  background: -moz-radial-gradient(
-    circle,
-    hsla(240, 27%, 37%, 1) 0%,
-    hsla(240, 20%, 21%, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    hsla(240, 27%, 37%, 1) 0%,
-    hsla(240, 20%, 21%, 1) 100%
-  );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#444477", endColorstr="#2B2B40", GradientType=1 ); */
 }
 
 .question-area {
@@ -155,28 +116,16 @@ body {
 
 .grid-container {
   display: grid;
-  /* grid-template-columns: auto auto; */
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  /* background-color: #164863; */
-  /* padding: 10px; */
-  /* width: fit-content; */
   width: 100%;
   grid-auto-rows: 1fr;
 }
 
 .grid-container > .grid-item {
-  /* background-color: #427d9d; */
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 10px 18px 18px 18px;
   font-size: 30px;
   align-items: flex-start !important;
-  /* text-align: center; */
 }
-
-/* .grid-container > .grid-item:hover {
-  cursor: pointer;
-  background-color: rgb(50, 118, 155);
-} */
 
 .disable-option {
   opacity: 0.6;
@@ -199,7 +148,6 @@ body {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .ag-format-container {
   width: 1142px;
-  /* margin: 0 auto; */
   line-height: 1.25;
 }
 
@@ -227,7 +175,6 @@ body {
   display: block;
   padding: 30px 20px;
   background-color: #121212;
-  /* border: 1px solid grey; */
   overflow: hidden;
   position: relative;
 }
@@ -345,7 +292,6 @@ body {
 .success-questionnaire {
   width: 100%;
   padding: 20px;
-  /* font-size: 150%; */
   background-color: #36ae7c;
   text-align: center;
   color: white;
@@ -356,8 +302,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 90vw; */
-  /* padding: 0 4rem; */
   gap: 2rem;
 }
 
@@ -374,14 +318,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
-  /* margin: 0 0 1rem 0; */
   grid-auto-rows: 1fr;
   justify-items: start;
 }
 
 .question-card-grid-container > .grid-item {
   padding: 1rem 2rem 0 0;
-  /* width: 100%; */
 }
 
 .question-card-grid-container > .grid-item > .options-field {
@@ -392,10 +334,6 @@ body {
   cursor: row-resize !important;
 }
 
-/* .questionnaire-submit-btn {
-  align-self: center;
-} */
-
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .analytics-flex-container {
@@ -403,7 +341,6 @@ body {
   flex-direction: row;
   padding: 2rem;
   gap: 3rem;
-  /* border: 1px dotted red; */
   min-height: 100vh;
   width: 100%;
 }
@@ -413,7 +350,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   min-width: fit-content;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -425,12 +361,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* justify-content: center; */
   align-items: center;
   gap: 3rem;
   overflow: auto;
-  /* max-width: min-content; */
-  /* max-height: 100%; */
 }
 
 .checkbox-container {
@@ -439,17 +372,6 @@ body {
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-/* .questionnaire-chart {
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-}
-
-.chart-loading {
-  position: absolute;
-  z-index: 2;
-} */
 
 .in-draggable-wrapper:hover .question-action-btn {
   display: flex !important;

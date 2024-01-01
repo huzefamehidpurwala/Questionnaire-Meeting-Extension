@@ -32,7 +32,6 @@ const config = require("../config");
  */
 module.exports = async function (context, req, teamsfxContext) {
   context.log("HTTP trigger function processed a request.");
-  // console.log("i am in utils.js", teamsfxContext);
 
   // Initialize response.
   const res = {
@@ -76,27 +75,7 @@ module.exports = async function (context, req, teamsfxContext) {
     };
   }
 
-  // Query user's information from the access token.
-  /* try {
-    const currentUser = await credential.getUserInfo();
-    if (currentUser && currentUser.displayName) {
-      res.body.userInfoMessage = `User display name is ${currentUser.displayName}.`;
-    } else {
-      res.body.userInfoMessage =
-        "No user information was found in access token.";
-    }
-  } catch (e) {
-    context.log.error(e);
-    return {
-      status: 400,
-      body: {
-        error: "Access token is invalid.",
-      },
-    };
-  } */
-
   // Create a graph client to access user's Microsoft 365 data after user has consented.
-  // let meetingWebUrl = "";
   try {
     // Create an instance of the TokenCredentialAuthenticationProvider by passing the tokenCredential instance and options to the constructor
     const authProvider = new TokenCredentialAuthenticationProvider(credential, {
@@ -108,8 +87,6 @@ module.exports = async function (context, req, teamsfxContext) {
       authProvider: authProvider,
     });
 
-    // console.log("i ma in chat", graphClient);
-    // console.log(context.req.body)
     const profileForChatId = await graphClient
       .api(`/chats/${context.req.body?.chatId}`)
       .get();
@@ -118,13 +95,9 @@ module.exports = async function (context, req, teamsfxContext) {
 
     const profile = await graphClient
       .api("/me/onlineMeetings")
-      // .select(["participants+"])
       .filter(`JoinWebUrl eq '${meetingWebUrl}'`)
       .get();
     res.body.graphClientMessage = profile;
-
-    // console.error("huzefakasjf;", meetingWebUrl);
-    // res.body.meetingWebUrl = meetingWebUrl;
   } catch (e) {
     context.log.error(e);
     return {
