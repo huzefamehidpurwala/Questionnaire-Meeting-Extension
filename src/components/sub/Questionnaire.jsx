@@ -293,7 +293,7 @@ const Questionnaire = () => {
 
           <div className="grid-center-box gap-4 relative min-h-screen min-w-full w-auto app-bg-dark-color">
             {questionObj && !("accessToken" in questionObj) && (
-              <Text block font="numeric" size={800}>
+              <Text block font="numeric" size={800} className="pt-4">
                 {counter} sec left
                 {/* {(counter / 100).toFixed(2)} */}
               </Text>
@@ -341,8 +341,8 @@ const Questionnaire = () => {
               </div>
             )}
 
-            <div className="relative min-w-[90vw] min-h-[80vh] rounded-3xl overflow-auto border-4 border-slate-600">
-              <div className="absolute bg-teams-bg-1 w-full h-full opacity-50"></div>
+            <div className="relative min-w-[90vw] min-h-[80vh] m-6 rounded-3xl overflow-auto border-4 border-slate-600">
+              <div className="absolute bg-teams-bg-1 min-w-full min-h-full opacity-50"></div>
               {questionObj && !("accessToken" in questionObj) && (
                 <QuestionnaireStage
                   fields={questionObj?.fields}

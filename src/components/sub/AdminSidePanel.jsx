@@ -55,11 +55,11 @@ const AdminSidePanel = () => {
     window.location.origin + `/index.html#/questionnaire?listId=${listId}`);
 
     if (!force) {
-      await patchQuestionnaireRootList(
-        teamsUserCredential,
-        quesRowId,
-        exactDateTime
-      );
+      // await patchQuestionnaireRootList(
+      //   teamsUserCredential,
+      //   quesRowId,
+      //   exactDateTime
+      // );
 
       reload();
 
@@ -104,14 +104,16 @@ const AdminSidePanel = () => {
         </div>
       </SmallPopUp>
 
-      <SmallPopUp
-        className="loading"
-        msg={"Fetching List of Questionnaires..."}
-        open={loading}
-        spinner={true}
-        activeActions={false}
-        modalType="alert"
-      />
+      {!dataFromRootList && (
+        <SmallPopUp
+          className="loading"
+          msg={"Fetching List of Questionnaires..."}
+          open={loading}
+          spinner={true}
+          activeActions={false}
+          modalType="alert"
+        />
+      )}
 
       {dataFromRootList &&
         (userMeetingRole === UserMeetingRole.organizer ||

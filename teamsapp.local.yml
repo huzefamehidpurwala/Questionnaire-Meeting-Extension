@@ -43,26 +43,26 @@ provision:
   # Set required variables for local launch
   - uses: script
     with:
-      run:
-        echo "::set-teamsfx-env TAB_DOMAIN=teamstoolkit.mehidpurwala.xyz";
-        echo "::set-teamsfx-env TAB_ENDPOINT=https://teamstoolkit.mehidpurwala.xyz";
-        echo "::set-teamsfx-env FUNC_NAME=getQuestions";
-        echo "::set-teamsfx-env MEETING_INFO_FUNC_NAME=getMeetingInfo";
-        echo "::set-teamsfx-env POST_ANSWERS_FUNC_NAME=postAnswers";
-        echo "::set-teamsfx-env CREATE_QUESTIONNAIRE_FUNC_NAME=createQuestionnaire";
-        echo "::set-teamsfx-env PATCH_QUESTIONNAIREROOTLIST_FUNC_NAME=patchQuestionnaireRootList";
-        echo "::set-teamsfx-env FUNC_ENDPOINT=https://graphapi.mehidpurwala.xyz";
-        echo "::set-teamsfx-env QUESTIONNAIRE_ROOTLIST=26ca1252-8fdf-467e-a1eb-172aaed95763";
       # run:
-        # echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000";
-        # echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
+        # echo "::set-teamsfx-env TAB_DOMAIN=teamstoolkit.mehidpurwala.xyz";
+        # echo "::set-teamsfx-env TAB_ENDPOINT=https://teamstoolkit.mehidpurwala.xyz";
         # echo "::set-teamsfx-env FUNC_NAME=getQuestions";
         # echo "::set-teamsfx-env MEETING_INFO_FUNC_NAME=getMeetingInfo";
         # echo "::set-teamsfx-env POST_ANSWERS_FUNC_NAME=postAnswers";
         # echo "::set-teamsfx-env CREATE_QUESTIONNAIRE_FUNC_NAME=createQuestionnaire";
         # echo "::set-teamsfx-env PATCH_QUESTIONNAIREROOTLIST_FUNC_NAME=patchQuestionnaireRootList";
-        # echo "::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071";
+        # echo "::set-teamsfx-env FUNC_ENDPOINT=https://graphapi.mehidpurwala.xyz";
         # echo "::set-teamsfx-env QUESTIONNAIRE_ROOTLIST=26ca1252-8fdf-467e-a1eb-172aaed95763";
+      run:
+        echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000";
+        echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
+        echo "::set-teamsfx-env FUNC_NAME=getQuestions";
+        echo "::set-teamsfx-env MEETING_INFO_FUNC_NAME=getMeetingInfo";
+        echo "::set-teamsfx-env POST_ANSWERS_FUNC_NAME=postAnswers";
+        echo "::set-teamsfx-env CREATE_QUESTIONNAIRE_FUNC_NAME=createQuestionnaire";
+        echo "::set-teamsfx-env PATCH_QUESTIONNAIREROOTLIST_FUNC_NAME=patchQuestionnaireRootList";
+        echo "::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071";
+        echo "::set-teamsfx-env QUESTIONNAIRE_ROOTLIST=26ca1252-8fdf-467e-a1eb-172aaed95763";
 
 
   # Apply the AAD manifest to an existing AAD app. Will use the object id in

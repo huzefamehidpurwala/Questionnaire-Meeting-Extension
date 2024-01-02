@@ -6,7 +6,7 @@ import { FrameContexts, app } from "@microsoft/teams-js";
 import { UserMeetingRole } from "@microsoft/live-share";
 import SmallPopUp from "./SmallPopUp";
 import MeetingStarted from "./sub/MeetingStarted";
-import DnDNewCreateQuestionnaire from "./sub/DnDNewCreateQuestionnaire";
+import CreateQuestionnaire from "./sub/CreateQuestionnaire";
 import AdminSidePanel from "./sub/AdminSidePanel";
 import { Navigate } from "react-router-dom";
 
@@ -103,21 +103,21 @@ export default function Tab() {
           switch (app.getFrameContext()) {
             case FrameContexts.content:
               return persnolTab ? (
-                <DnDNewCreateQuestionnaire persnolTab={persnolTab} />
+                <CreateQuestionnaire persnolTab={persnolTab} />
               ) : meetingEndDateTime && meetingStartDateTime ? (
                 currentTime > meetingEndDateTime ? (
                   <Navigate to="/analytics" />
                 ) : currentTime < meetingStartDateTime ? (
                   currentUserRole === UserMeetingRole.organizer ||
                   currentUserRole === UserMeetingRole.presenter ? (
-                    <DnDNewCreateQuestionnaire persnolTab={persnolTab} />
+                    <CreateQuestionnaire persnolTab={persnolTab} />
                   ) : (
                     <h1>You can not create Questionnaire</h1>
                   )
                 ) : meetingStartDateTime < currentTime < meetingEndDateTime ? (
                   currentUserRole === UserMeetingRole.organizer ||
                   currentUserRole === UserMeetingRole.presenter ? (
-                    <DnDNewCreateQuestionnaire />
+                    <CreateQuestionnaire />
                   ) : (
                     <MeetingStarted />
                   )

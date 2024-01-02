@@ -28,7 +28,7 @@ const QuestionnaireStage = ({
   }, [fields]);
 
   return (
-    <div className="absolute bg-inherit p-4 w-full h-full flex flex-col justify-evenly items-center select-none">
+    <div className="relative bg-inherit p-4 min-w-[90vw] min-h-[80vh] flex flex-col justify-evenly items-center select-none">
       <div className="text-center p-5 min-w-fit">
         <Text size={600} weight="bold">
           <strong>{`Q.${fields.id})`}</strong> {fields[colNames[0]]}
