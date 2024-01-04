@@ -30,6 +30,8 @@ export default function App() {
       clientId: config.clientId,
     });
 
+    console.log("this is to check")
+
   return (
     <TeamsFxContext.Provider
       value={{ theme, themeString, teamsUserCredential }}
