@@ -14,6 +14,7 @@ import { useSearchParams } from "react-router-dom";
 import QuestionnaireStage from "./QuestionnaireStage";
 import config from "../../lib/config";
 import { TeamsUserCredential } from "@microsoft/teamsfx";
+import { ArrowLeft48Filled, ArrowRight48Filled } from "@fluentui/react-icons";
 
 const containerSchema = { initialObjects: { indOfQues: LiveState } };
 const exactDateTime = new Date();
@@ -86,6 +87,17 @@ const Questionnaire = () => {
     }
   };
 
+  const handleQuesNav = (method) => {
+    if (method !== "add" && method !== "sub") return;
+
+    setIndexOfQuestion((prev) => {
+      method === "add" ? ++prev : method === "sub" && --prev;
+      indOfQues.current.set(data?.value[prev]);
+      // await indOfQues.current.set(data?.value[prev]);
+      return prev;
+    });
+  };
+
   const handleExit = async () => {
     setStartQuiz(false);
     setIndexOfQuestion(0);
@@ -104,9 +116,18 @@ const Questionnaire = () => {
 
   const updateArrOfAnsGiven = async (selectedOption) => {
     const fields = questionObj.fields;
-    const userInfo = await teamsUserCredential.getUserInfo();
-    const currentAttendeeMailId = userInfo.preferredUserName;
-    const attendeeName = userInfo.displayName;
+
+    let userInfo = undefined;
+    try {
+      userInfo = await teamsUserCredential.getUserInfo();
+    } catch (error) {
+      console.error("error in teamsUserCredential", error);
+    }
+
+    const currentAttendeeMailId =
+      userInfo?.preferredUserName || "error in teamsUserCredential";
+    const attendeeName =
+      userInfo?.displayName || "error in teamsUserCredential";
 
     setAnsArr((prev) => [
       ...prev,
@@ -154,6 +175,7 @@ const Questionnaire = () => {
 
     if (questionObj) {
       if ("accessToken" in questionObj) {
+        setAnsArr([]);
         const postAns = async () => {
           try {
             if (ansArr.length > data?.value?.length)
@@ -167,8 +189,10 @@ const Questionnaire = () => {
                 msg: "you didn't answer any question",
               };
 
+            await indOfQues.current.set(null);
+            // console.log("console in useEffect ==", userRole,ansArr, questionObj);
             await customPostAnswers(ansArr, questionObj.accessToken);
-            setAnsArr([]);
+            // setAnsArr([]); // ! if this is enabled and above setAnsArr is commented then this api is run twice
             setShowQuitPopUp(
               `Quiz Completed${
                 userRole !== UserMeetingRole.organizer
@@ -272,7 +296,7 @@ const Questionnaire = () => {
 
           <SmallPopUp
             title={showQuitPopUp}
-            open={showQuitPopUp}
+            open={!!showQuitPopUp}
             onOpenChange={(e, data) => setShowQuitPopUp(data.open)}
             spinner={false}
             activeActions={true}

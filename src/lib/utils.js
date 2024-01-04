@@ -219,7 +219,7 @@ export async function customPostAnswers(ansArr, accessToken) {
         { headers: { Authorization: `Bearer ${accessToken}` } }
       )
       .then((response) => {
-        console.log("in utils customPostAnswers", response); // success when response.status === 201
+        console.log("after graphApi initiated -", response); // success when response.status === 201
       });
   }
 }

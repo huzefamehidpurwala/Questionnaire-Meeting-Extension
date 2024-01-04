@@ -55,15 +55,15 @@ const AdminSidePanel = () => {
     window.location.origin + `/index.html#/questionnaire?listId=${listId}`);
 
     if (!force) {
-      // await patchQuestionnaireRootList(
-      //   teamsUserCredential,
-      //   quesRowId,
-      //   exactDateTime
-      // );
+      await patchQuestionnaireRootList(
+        teamsUserCredential,
+        quesRowId,
+        exactDateTime
+      );
 
       reload();
 
-      setBtnClicked("");
+      // setBtnClicked("");
     }
   };
 
@@ -104,16 +104,14 @@ const AdminSidePanel = () => {
         </div>
       </SmallPopUp>
 
-      {!dataFromRootList && (
-        <SmallPopUp
-          className="loading"
-          msg={"Fetching List of Questionnaires..."}
-          open={loading}
-          spinner={true}
-          activeActions={false}
-          modalType="alert"
-        />
-      )}
+      <SmallPopUp
+        className="loading"
+        msg={"Fetching List of Questionnaires..."}
+        open={loading && !dataFromRootList}
+        spinner={true}
+        activeActions={false}
+        modalType="alert"
+      />
 
       {dataFromRootList &&
         (userMeetingRole === UserMeetingRole.organizer ||
@@ -131,7 +129,7 @@ const AdminSidePanel = () => {
                       <div className="ag-courses-item_title">{field.Title}</div>
 
                       <div className="card-btn">
-                        {!field.isInitiated && btnClicked !== ind ? (
+                        {!field.isInitiated && btnClicked !== field.id ? (
                           <Button
                             appearance="primary"
                             icon={<Open16Regular />}
@@ -141,30 +139,15 @@ const AdminSidePanel = () => {
                                 field.id,
                                 false
                               );
-                              setBtnClicked(ind);
+                              setBtnClicked(field.id);
                             }}
                           >
                             Share to Stage
                           </Button>
                         ) : (
-                          <>
-                            <Text className="ag-courses-item_date">
-                              Initiated Once
-                            </Text>
-
-                            <Button
-                              appearance="subtle"
-                              onClick={(e) => {
-                                setDataToSessionAndAppShare(
-                                  field.idOfLists,
-                                  field.id,
-                                  true
-                                );
-                              }}
-                            >
-                              Forcefully Share
-                            </Button>
-                          </>
+                          <Text className="ag-courses-item_date">
+                            Initiated Once
+                          </Text>
                         )}
                       </div>
                     </div>

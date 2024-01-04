@@ -49,12 +49,8 @@ const QuestionnaireStage = ({
               className={`grid-item hover:bg-teams-bg-1 border border-slate-600 hover:border-blue-700 ${
                 selectedOption
                   ? currOptionIsCorrectAns
-                    ? isCurrOptClicked
-                      ? "bg-green-900"
-                      : "bg-green-700"
-                    : isCurrOptClicked
-                    ? "bg-red-900"
-                    : "bg-red-700"
+                    ? "bg-green-700" // isCurrOptClicked ? "bg-green-900" : "bg-green-700"
+                    : isCurrOptClicked && "bg-red-700" // : "bg-red-700"
                   : ""
               }`}
               key={ind}
