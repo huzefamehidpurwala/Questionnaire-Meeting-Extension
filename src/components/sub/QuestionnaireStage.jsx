@@ -50,7 +50,9 @@ const QuestionnaireStage = ({
                 selectedOption
                   ? currOptionIsCorrectAns
                     ? "bg-green-700" // isCurrOptClicked ? "bg-green-900" : "bg-green-700"
-                    : isCurrOptClicked && "bg-red-700" // : "bg-red-700"
+                    : isCurrOptClicked
+                    ? "bg-red-700"
+                    : "" // : "bg-red-700"
                   : ""
               }`}
               key={ind}
