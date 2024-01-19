@@ -1,7 +1,8 @@
 import { BearerTokenAuthProvider, createApiClient } from "@microsoft/teamsfx";
 import config from "./config";
-import { executeDeepLink } from "@microsoft/teams-js";
+import { app, executeDeepLink } from "@microsoft/teams-js";
 import axios from "axios";
+import { UserMeetingRole } from "@microsoft/live-share";
 
 const getQuestionsFunc = "getQuestions";
 const getMeetingInfoFunc = "getMeetingInfo";
@@ -289,6 +290,8 @@ export function toTitleCase(str) {
   // Add a space before a capital letter if it's preceded by a lowercase letter
   str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
 
+  str = str.replace(/([a-zA-Z])([0-9])/g, '$1 $2').replace(/([0-9])([a-zA-Z])/g, '$1 $2');
+
   return str.replace(
     /\w\S*/g,
     (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
@@ -342,7 +345,8 @@ export function convertDateTime(inputDateString) {
 
 export const redirectUsingDeeplink = (pathName) => {
   const webUrl = `https://teams.microsoft.com/l/entity/${config.teamsAppId}${pathName}`;
-  executeDeepLink(webUrl);
+  // executeDeepLink(webUrl);
+  app.openLink(webUrl);
 };
 
 export const handleStringSort = (a, b, desc = false) => {
@@ -352,3 +356,7 @@ export const handleStringSort = (a, b, desc = false) => {
   if (x > y) return desc ? -1 : 1;
   return 0;
 };
+
+export const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
+
+export const isAdmin = (role) => allowedRoles.includes(role); // role === UserMeetingRole.organizer;
