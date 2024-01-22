@@ -1,0 +1,4022 @@
+https://teams.microsoft.com/l/app/2de93d5c-4ed0-4478-a78a-d2991546440a?installAppPackage=true&webjoin=true&appTenantId=47165d17-0fdb-4f2a-a567-116783fae3a5&login_hint=Huzefa.M@ygr11.onmicrosoft.com
+
+to run api - azure functions
+npm install -g azure-functions-core-tools
+
+
+sharepoint site name = Questionnaire-Site
+site-id = 29151005-7f34-4489-a82f-ff4a19cb537a
+
+const liveState = container.initialObjects.currentLiveQues;
+        await liveState.initialize(0);
+        console.log("first console in ques", liveState.state);
+        liveState.set(1);
+        liveState.on("some", ()=>{});
+        console.log("second console in ques", liveState.state);
+
+        "meetingChatTab",
+    "@fluidframework/test-client-utils": "^1.3.7",
+
+npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps
+
+[
+    {
+        "@odata.etag": "\"b957acac-66fb-4802-b825-e863f1cbfb3d,1\"",
+        "createdDateTime": "2023-11-20T13:14:14Z",
+        "eTag": "\"b957acac-66fb-4802-b825-e863f1cbfb3d,1\"",
+        "id": "399",
+        "lastModifiedDateTime": "2023-11-20T13:14:14Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/399_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('399')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"b957acac-66fb-4802-b825-e863f1cbfb3d,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "How to remove borders applied in Cells?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:41Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "399",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:14Z",
+            "Created": "2023-11-20T13:14:14Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"0a4a1a5d-7427-429b-85a6-69fa04f47d7b,1\"",
+        "createdDateTime": "2023-11-20T13:14:14Z",
+        "eTag": "\"0a4a1a5d-7427-429b-85a6-69fa04f47d7b,1\"",
+        "id": "400",
+        "lastModifiedDateTime": "2023-11-20T13:14:14Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/400_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('400')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"0a4a1a5d-7427-429b-85a6-69fa04f47d7b,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The Greater Than sign (>) exemplifies a/an _____ operator.\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:43Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "400",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:14Z",
+            "Created": "2023-11-20T13:14:14Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"7f982a75-bf6a-4ee2-bfea-e74c00fe258b,1\"",
+        "createdDateTime": "2023-11-20T13:14:15Z",
+        "eTag": "\"7f982a75-bf6a-4ee2-bfea-e74c00fe258b,1\"",
+        "id": "401",
+        "lastModifiedDateTime": "2023-11-20T13:14:15Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/401_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('401')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"7f982a75-bf6a-4ee2-bfea-e74c00fe258b,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ is not a valid data type in MS Excel.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:46Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "401",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:15Z",
+            "Created": "2023-11-20T13:14:15Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"97711d00-a92e-456b-9862-a02c8c65ff96,1\"",
+        "createdDateTime": "2023-11-20T13:14:15Z",
+        "eTag": "\"97711d00-a92e-456b-9862-a02c8c65ff96,1\"",
+        "id": "402",
+        "lastModifiedDateTime": "2023-11-20T13:14:15Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/402_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('402')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"97711d00-a92e-456b-9862-a02c8c65ff96,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ is the correct syntax of IF() Function.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:49Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "402",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:15Z",
+            "Created": "2023-11-20T13:14:15Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"bd26b3d4-124d-44d3-9c33-6d02edf7dfa8,1\"",
+        "createdDateTime": "2023-11-20T13:14:15Z",
+        "eTag": "\"bd26b3d4-124d-44d3-9c33-6d02edf7dfa8,1\"",
+        "id": "403",
+        "lastModifiedDateTime": "2023-11-20T13:14:15Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/403_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('403')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"bd26b3d4-124d-44d3-9c33-6d02edf7dfa8,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "___is the function used to match multiple values and returns the first match in Windows/ MAC(if you have Office 2019, or if you have a Microsoft 365 subscription) \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:52Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "403",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:15Z",
+            "Created": "2023-11-20T13:14:15Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"960f77ac-8523-474b-acff-38aec9cf7a0d,1\"",
+        "createdDateTime": "2023-11-20T13:14:16Z",
+        "eTag": "\"960f77ac-8523-474b-acff-38aec9cf7a0d,1\"",
+        "id": "404",
+        "lastModifiedDateTime": "2023-11-20T13:14:16Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/404_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('404')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"960f77ac-8523-474b-acff-38aec9cf7a0d,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ type of chart is good for a single series of data. \n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:55Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "404",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:16Z",
+            "Created": "2023-11-20T13:14:16Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"494a5150-dd31-4fc1-80fa-5a089065470c,1\"",
+        "createdDateTime": "2023-11-20T13:14:17Z",
+        "eTag": "\"494a5150-dd31-4fc1-80fa-5a089065470c,1\"",
+        "id": "405",
+        "lastModifiedDateTime": "2023-11-20T13:14:17Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/405_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('405')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"494a5150-dd31-4fc1-80fa-5a089065470c,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is MS Excel?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:13:59Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "405",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:17Z",
+            "Created": "2023-11-20T13:14:17Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"82dc1967-8ab1-4da4-b7a8-cc21463e1746,1\"",
+        "createdDateTime": "2023-11-20T13:14:17Z",
+        "eTag": "\"82dc1967-8ab1-4da4-b7a8-cc21463e1746,1\"",
+        "id": "406",
+        "lastModifiedDateTime": "2023-11-20T13:14:17Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/406_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('406')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"82dc1967-8ab1-4da4-b7a8-cc21463e1746,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is the row limit of MS Excel 2019?\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:14:01Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "406",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:17Z",
+            "Created": "2023-11-20T13:14:17Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"44d88d8c-efed-4080-94bc-37149a7192ec,1\"",
+        "createdDateTime": "2023-11-20T13:14:17Z",
+        "eTag": "\"44d88d8c-efed-4080-94bc-37149a7192ec,1\"",
+        "id": "407",
+        "lastModifiedDateTime": "2023-11-20T13:14:17Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/407_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('407')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"44d88d8c-efed-4080-94bc-37149a7192ec,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "In Microsoft Excel spreadsheets, rows are designated as _______.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:14:04Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "407",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:17Z",
+            "Created": "2023-11-20T13:14:17Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"482cf631-6541-404c-98bb-3c80253d973a,1\"",
+        "createdDateTime": "2023-11-20T13:14:18Z",
+        "eTag": "\"482cf631-6541-404c-98bb-3c80253d973a,1\"",
+        "id": "408",
+        "lastModifiedDateTime": "2023-11-20T13:14:18Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/408_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('408')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"482cf631-6541-404c-98bb-3c80253d973a,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ logical function indicates TRUE only if all arguments are assessed as TRUE, and FALSE otherwise.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:14:07Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "408",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:18Z",
+            "Created": "2023-11-20T13:14:18Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"caacb384-4d0b-4c40-bebc-5c28c011d8d1,1\"",
+        "createdDateTime": "2023-11-20T13:14:18Z",
+        "eTag": "\"caacb384-4d0b-4c40-bebc-5c28c011d8d1,1\"",
+        "id": "409",
+        "lastModifiedDateTime": "2023-11-20T13:14:18Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/409_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('409')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"caacb384-4d0b-4c40-bebc-5c28c011d8d1,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The intersection of a column and a row in a worksheet is called____ \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:14:10Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "409",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:14:18Z",
+            "Created": "2023-11-20T13:14:18Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"e9a86703-4981-4b4e-8aa7-864a16123566,1\"",
+        "createdDateTime": "2023-11-20T13:15:54Z",
+        "eTag": "\"e9a86703-4981-4b4e-8aa7-864a16123566,1\"",
+        "id": "410",
+        "lastModifiedDateTime": "2023-11-20T13:15:54Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/410_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('410')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"e9a86703-4981-4b4e-8aa7-864a16123566,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "How to remove borders applied in Cells?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:21Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "410",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:54Z",
+            "Created": "2023-11-20T13:15:54Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"2eaa0ec7-57e6-46ad-a6fe-f69d23269bce,1\"",
+        "createdDateTime": "2023-11-20T13:15:54Z",
+        "eTag": "\"2eaa0ec7-57e6-46ad-a6fe-f69d23269bce,1\"",
+        "id": "411",
+        "lastModifiedDateTime": "2023-11-20T13:15:54Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/411_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('411')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"2eaa0ec7-57e6-46ad-a6fe-f69d23269bce,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The Greater Than sign (>) exemplifies a/an _____ operator.\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:24Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "411",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:54Z",
+            "Created": "2023-11-20T13:15:54Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"01214c68-0c89-4f63-a406-fc477348db06,1\"",
+        "createdDateTime": "2023-11-20T13:15:55Z",
+        "eTag": "\"01214c68-0c89-4f63-a406-fc477348db06,1\"",
+        "id": "412",
+        "lastModifiedDateTime": "2023-11-20T13:15:55Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/412_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('412')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"01214c68-0c89-4f63-a406-fc477348db06,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ is not a valid data type in MS Excel.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:26Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "412",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:55Z",
+            "Created": "2023-11-20T13:15:55Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"b2e3a3bf-c213-4ef7-af25-af19ccca5994,1\"",
+        "createdDateTime": "2023-11-20T13:15:55Z",
+        "eTag": "\"b2e3a3bf-c213-4ef7-af25-af19ccca5994,1\"",
+        "id": "413",
+        "lastModifiedDateTime": "2023-11-20T13:15:55Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/413_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('413')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"b2e3a3bf-c213-4ef7-af25-af19ccca5994,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "How to remove borders applied in Cells?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:21Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "413",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:55Z",
+            "Created": "2023-11-20T13:15:55Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"864b9f09-3fa0-4d2c-9228-71058a92b41f,1\"",
+        "createdDateTime": "2023-11-20T13:15:55Z",
+        "eTag": "\"864b9f09-3fa0-4d2c-9228-71058a92b41f,1\"",
+        "id": "414",
+        "lastModifiedDateTime": "2023-11-20T13:15:55Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/414_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('414')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"864b9f09-3fa0-4d2c-9228-71058a92b41f,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The Greater Than sign (>) exemplifies a/an _____ operator.\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:24Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "414",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:55Z",
+            "Created": "2023-11-20T13:15:55Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"a29713ac-340b-4031-826e-ff343bb155f0,1\"",
+        "createdDateTime": "2023-11-20T13:15:55Z",
+        "eTag": "\"a29713ac-340b-4031-826e-ff343bb155f0,1\"",
+        "id": "415",
+        "lastModifiedDateTime": "2023-11-20T13:15:55Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/415_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('415')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"a29713ac-340b-4031-826e-ff343bb155f0,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ is not a valid data type in MS Excel.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:26Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "415",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:55Z",
+            "Created": "2023-11-20T13:15:55Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"83b21822-0aac-4435-a0ec-223b1ca58714,1\"",
+        "createdDateTime": "2023-11-20T13:15:56Z",
+        "eTag": "\"83b21822-0aac-4435-a0ec-223b1ca58714,1\"",
+        "id": "416",
+        "lastModifiedDateTime": "2023-11-20T13:15:56Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/416_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('416')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"83b21822-0aac-4435-a0ec-223b1ca58714,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ is the correct syntax of IF() Function.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:30Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "416",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:56Z",
+            "Created": "2023-11-20T13:15:56Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"22ec5050-206c-418b-8dea-9a88ea1fac34,1\"",
+        "createdDateTime": "2023-11-20T13:15:56Z",
+        "eTag": "\"22ec5050-206c-418b-8dea-9a88ea1fac34,1\"",
+        "id": "417",
+        "lastModifiedDateTime": "2023-11-20T13:15:56Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/417_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('417')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"22ec5050-206c-418b-8dea-9a88ea1fac34,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ is the correct syntax of IF() Function.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:30Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "417",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:56Z",
+            "Created": "2023-11-20T13:15:56Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"51639491-d6f9-4f58-9797-5971e320c8c4,1\"",
+        "createdDateTime": "2023-11-20T13:15:56Z",
+        "eTag": "\"51639491-d6f9-4f58-9797-5971e320c8c4,1\"",
+        "id": "418",
+        "lastModifiedDateTime": "2023-11-20T13:15:56Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/418_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('418')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"51639491-d6f9-4f58-9797-5971e320c8c4,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is MS Excel?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:38Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "418",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:56Z",
+            "Created": "2023-11-20T13:15:56Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"756335a6-4f39-444b-9b6b-4990403da3fb,1\"",
+        "createdDateTime": "2023-11-20T13:15:57Z",
+        "eTag": "\"756335a6-4f39-444b-9b6b-4990403da3fb,1\"",
+        "id": "419",
+        "lastModifiedDateTime": "2023-11-20T13:15:57Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/419_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('419')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"756335a6-4f39-444b-9b6b-4990403da3fb,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is the row limit of MS Excel 2019?\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:41Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "419",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:57Z",
+            "Created": "2023-11-20T13:15:57Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"9d7ac99b-0469-44eb-a05e-02475483e9bf,1\"",
+        "createdDateTime": "2023-11-20T13:15:57Z",
+        "eTag": "\"9d7ac99b-0469-44eb-a05e-02475483e9bf,1\"",
+        "id": "420",
+        "lastModifiedDateTime": "2023-11-20T13:15:57Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/420_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('420')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"9d7ac99b-0469-44eb-a05e-02475483e9bf,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is MS Excel?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:38Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "420",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:57Z",
+            "Created": "2023-11-20T13:15:57Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"7cd88dbd-8ef9-4690-95b4-e7b3035ae2b2,1\"",
+        "createdDateTime": "2023-11-20T13:15:57Z",
+        "eTag": "\"7cd88dbd-8ef9-4690-95b4-e7b3035ae2b2,1\"",
+        "id": "421",
+        "lastModifiedDateTime": "2023-11-20T13:15:57Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/421_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('421')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"7cd88dbd-8ef9-4690-95b4-e7b3035ae2b2,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "In Microsoft Excel spreadsheets, rows are designated as _______.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:44Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "421",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:57Z",
+            "Created": "2023-11-20T13:15:57Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"8a449b57-f948-4850-bfcd-155eef6806c9,1\"",
+        "createdDateTime": "2023-11-20T13:15:58Z",
+        "eTag": "\"8a449b57-f948-4850-bfcd-155eef6806c9,1\"",
+        "id": "422",
+        "lastModifiedDateTime": "2023-11-20T13:15:58Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/422_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('422')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"8a449b57-f948-4850-bfcd-155eef6806c9,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "What is the row limit of MS Excel 2019?\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:41Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "422",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:58Z",
+            "Created": "2023-11-20T13:15:58Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"f52ace20-f42b-4f0b-9595-fd3c6aad6595,1\"",
+        "createdDateTime": "2023-11-20T13:15:58Z",
+        "eTag": "\"f52ace20-f42b-4f0b-9595-fd3c6aad6595,1\"",
+        "id": "423",
+        "lastModifiedDateTime": "2023-11-20T13:15:58Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/423_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('423')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"f52ace20-f42b-4f0b-9595-fd3c6aad6595,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ logical function indicates TRUE only if all arguments are assessed as TRUE, and FALSE otherwise.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:47Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "423",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:58Z",
+            "Created": "2023-11-20T13:15:58Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"48630621-8f77-433f-9eae-170acc3506a0,1\"",
+        "createdDateTime": "2023-11-20T13:15:58Z",
+        "eTag": "\"48630621-8f77-433f-9eae-170acc3506a0,1\"",
+        "id": "424",
+        "lastModifiedDateTime": "2023-11-20T13:15:58Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/424_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('424')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"48630621-8f77-433f-9eae-170acc3506a0,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "In Microsoft Excel spreadsheets, rows are designated as _______.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:44Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "424",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:58Z",
+            "Created": "2023-11-20T13:15:58Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"42b77db6-5ea8-4e93-8cc5-91bfcf5a624e,1\"",
+        "createdDateTime": "2023-11-20T13:15:58Z",
+        "eTag": "\"42b77db6-5ea8-4e93-8cc5-91bfcf5a624e,1\"",
+        "id": "425",
+        "lastModifiedDateTime": "2023-11-20T13:15:58Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/425_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('425')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"42b77db6-5ea8-4e93-8cc5-91bfcf5a624e,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The intersection of a column and a row in a worksheet is called____ \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:50Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "425",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:58Z",
+            "Created": "2023-11-20T13:15:58Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"a0782d2b-b08d-4893-9876-41374f66a810,1\"",
+        "createdDateTime": "2023-11-20T13:15:59Z",
+        "eTag": "\"a0782d2b-b08d-4893-9876-41374f66a810,1\"",
+        "id": "426",
+        "lastModifiedDateTime": "2023-11-20T13:15:59Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/426_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('426')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"a0782d2b-b08d-4893-9876-41374f66a810,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ logical function indicates TRUE only if all arguments are assessed as TRUE, and FALSE otherwise.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:47Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "426",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:59Z",
+            "Created": "2023-11-20T13:15:59Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"e910e274-e511-4b7d-9326-08d61c4a1ecc,1\"",
+        "createdDateTime": "2023-11-20T13:15:59Z",
+        "eTag": "\"e910e274-e511-4b7d-9326-08d61c4a1ecc,1\"",
+        "id": "427",
+        "lastModifiedDateTime": "2023-11-20T13:15:59Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/427_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('427')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"e910e274-e511-4b7d-9326-08d61c4a1ecc,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The intersection of a column and a row in a worksheet is called____ \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:15:50Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Sigar Dave",
+            "id": "427",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:15:59Z",
+            "Created": "2023-11-20T13:15:59Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"b8762bf6-d942-4a8d-8fd0-ef3a0ab123db,1\"",
+        "createdDateTime": "2023-11-20T13:16:45Z",
+        "eTag": "\"b8762bf6-d942-4a8d-8fd0-ef3a0ab123db,1\"",
+        "id": "428",
+        "lastModifiedDateTime": "2023-11-20T13:16:45Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/428_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('428')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"b8762bf6-d942-4a8d-8fd0-ef3a0ab123db,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "How to remove borders applied in Cells?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:13Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "428",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:45Z",
+            "Created": "2023-11-20T13:16:45Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"96f308dd-3973-4be2-8958-ac0af541802b,1\"",
+        "createdDateTime": "2023-11-20T13:16:45Z",
+        "eTag": "\"96f308dd-3973-4be2-8958-ac0af541802b,1\"",
+        "id": "429",
+        "lastModifiedDateTime": "2023-11-20T13:16:45Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/429_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('429')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"96f308dd-3973-4be2-8958-ac0af541802b,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The Greater Than sign (>) exemplifies a/an _____ operator.\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:14Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "429",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:45Z",
+            "Created": "2023-11-20T13:16:45Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"c419d074-0e9d-4382-bedf-fca961d338c2,1\"",
+        "createdDateTime": "2023-11-20T13:16:45Z",
+        "eTag": "\"c419d074-0e9d-4382-bedf-fca961d338c2,1\"",
+        "id": "430",
+        "lastModifiedDateTime": "2023-11-20T13:16:45Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/430_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('430')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"c419d074-0e9d-4382-bedf-fca961d338c2,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ is not a valid data type in MS Excel.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:18Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "430",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:45Z",
+            "Created": "2023-11-20T13:16:45Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"074e037a-eb85-4e47-a443-c9b85b92a5f3,1\"",
+        "createdDateTime": "2023-11-20T13:16:46Z",
+        "eTag": "\"074e037a-eb85-4e47-a443-c9b85b92a5f3,1\"",
+        "id": "431",
+        "lastModifiedDateTime": "2023-11-20T13:16:46Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/431_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('431')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"074e037a-eb85-4e47-a443-c9b85b92a5f3,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ is the correct syntax of IF() Function.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:21Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "431",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:46Z",
+            "Created": "2023-11-20T13:16:46Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"c568a4da-dbca-45b7-88f3-c41827865a6e,1\"",
+        "createdDateTime": "2023-11-20T13:16:46Z",
+        "eTag": "\"c568a4da-dbca-45b7-88f3-c41827865a6e,1\"",
+        "id": "432",
+        "lastModifiedDateTime": "2023-11-20T13:16:46Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/432_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('432')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"c568a4da-dbca-45b7-88f3-c41827865a6e,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "How to remove borders applied in Cells?\n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:13Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "432",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:46Z",
+            "Created": "2023-11-20T13:16:46Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"7404d96d-680f-496b-a471-6395b39db41f,1\"",
+        "createdDateTime": "2023-11-20T13:16:46Z",
+        "eTag": "\"7404d96d-680f-496b-a471-6395b39db41f,1\"",
+        "id": "433",
+        "lastModifiedDateTime": "2023-11-20T13:16:46Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/433_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('433')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"7404d96d-680f-496b-a471-6395b39db41f,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The Greater Than sign (>) exemplifies a/an _____ operator.\n",
+            "questionCorrectAns": "Option2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:14Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "433",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:46Z",
+            "Created": "2023-11-20T13:16:46Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"2693f657-cdb3-4422-94b1-307a57f69e02,1\"",
+        "createdDateTime": "2023-11-20T13:16:47Z",
+        "eTag": "\"2693f657-cdb3-4422-94b1-307a57f69e02,1\"",
+        "id": "434",
+        "lastModifiedDateTime": "2023-11-20T13:16:47Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/434_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('434')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"2693f657-cdb3-4422-94b1-307a57f69e02,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "___is the function used to match multiple values and returns the first match in Windows/ MAC(if you have Office 2019, or if you have a Microsoft 365 subscription) \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:24Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "434",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:47Z",
+            "Created": "2023-11-20T13:16:47Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"bfd55880-f91a-4d31-955a-921824964af9,1\"",
+        "createdDateTime": "2023-11-20T13:16:47Z",
+        "eTag": "\"bfd55880-f91a-4d31-955a-921824964af9,1\"",
+        "id": "435",
+        "lastModifiedDateTime": "2023-11-20T13:16:47Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/435_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('435')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"bfd55880-f91a-4d31-955a-921824964af9,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ is not a valid data type in MS Excel.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:18Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "435",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:47Z",
+            "Created": "2023-11-20T13:16:47Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"d7062552-b76d-4060-b6e6-3822a6ff7511,1\"",
+        "createdDateTime": "2023-11-20T13:16:47Z",
+        "eTag": "\"d7062552-b76d-4060-b6e6-3822a6ff7511,1\"",
+        "id": "436",
+        "lastModifiedDateTime": "2023-11-20T13:16:47Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/436_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('436')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"d7062552-b76d-4060-b6e6-3822a6ff7511,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "In Microsoft Excel spreadsheets, rows are designated as _______.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:36Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "436",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:47Z",
+            "Created": "2023-11-20T13:16:47Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"5e1a54b6-ac40-4aa3-a3c7-1e41153033a9,1\"",
+        "createdDateTime": "2023-11-20T13:16:47Z",
+        "eTag": "\"5e1a54b6-ac40-4aa3-a3c7-1e41153033a9,1\"",
+        "id": "437",
+        "lastModifiedDateTime": "2023-11-20T13:16:47Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/437_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('437')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"5e1a54b6-ac40-4aa3-a3c7-1e41153033a9,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "____ is the correct syntax of IF() Function.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:21Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "437",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:47Z",
+            "Created": "2023-11-20T13:16:47Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"5d4dac94-e414-406b-88f5-b10b57ff43cb,1\"",
+        "createdDateTime": "2023-11-20T13:16:47Z",
+        "eTag": "\"5d4dac94-e414-406b-88f5-b10b57ff43cb,1\"",
+        "id": "438",
+        "lastModifiedDateTime": "2023-11-20T13:16:47Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/438_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('438')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"5d4dac94-e414-406b-88f5-b10b57ff43cb,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ logical function indicates TRUE only if all arguments are assessed as TRUE, and FALSE otherwise.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:39Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "438",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:47Z",
+            "Created": "2023-11-20T13:16:47Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"c7d6db24-2351-4a76-bab8-8d32ab25e603,1\"",
+        "createdDateTime": "2023-11-20T13:16:48Z",
+        "eTag": "\"c7d6db24-2351-4a76-bab8-8d32ab25e603,1\"",
+        "id": "439",
+        "lastModifiedDateTime": "2023-11-20T13:16:48Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/439_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('439')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"c7d6db24-2351-4a76-bab8-8d32ab25e603,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The intersection of a column and a row in a worksheet is called____ \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:41Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "439",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:48Z",
+            "Created": "2023-11-20T13:16:48Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"40a01d84-e690-469f-a8b7-8a33083b0388,1\"",
+        "createdDateTime": "2023-11-20T13:16:49Z",
+        "eTag": "\"40a01d84-e690-469f-a8b7-8a33083b0388,1\"",
+        "id": "440",
+        "lastModifiedDateTime": "2023-11-20T13:16:49Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/440_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('440')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"40a01d84-e690-469f-a8b7-8a33083b0388,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "___is the function used to match multiple values and returns the first match in Windows/ MAC(if you have Office 2019, or if you have a Microsoft 365 subscription) \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:24Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "440",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:49Z",
+            "Created": "2023-11-20T13:16:49Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"285da92c-e61f-4a37-8052-9b1df62b3149,1\"",
+        "createdDateTime": "2023-11-20T13:16:49Z",
+        "eTag": "\"285da92c-e61f-4a37-8052-9b1df62b3149,1\"",
+        "id": "441",
+        "lastModifiedDateTime": "2023-11-20T13:16:49Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/441_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('441')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"285da92c-e61f-4a37-8052-9b1df62b3149,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "In Microsoft Excel spreadsheets, rows are designated as _______.\n",
+            "questionCorrectAns": "Option3",
+            "ansGivenByAttendee": "Option3",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:36Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "441",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:49Z",
+            "Created": "2023-11-20T13:16:49Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"e95523df-78c7-4468-ab8e-a721a8b906b3,1\"",
+        "createdDateTime": "2023-11-20T13:16:49Z",
+        "eTag": "\"e95523df-78c7-4468-ab8e-a721a8b906b3,1\"",
+        "id": "442",
+        "lastModifiedDateTime": "2023-11-20T13:16:49Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/442_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('442')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"e95523df-78c7-4468-ab8e-a721a8b906b3,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "_____ logical function indicates TRUE only if all arguments are assessed as TRUE, and FALSE otherwise.\n",
+            "questionCorrectAns": "Option4",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:39Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "442",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:49Z",
+            "Created": "2023-11-20T13:16:49Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"9f6153cf-e7c4-471e-a8f4-8771553eef6a,1\"",
+        "createdDateTime": "2023-11-20T13:16:50Z",
+        "eTag": "\"9f6153cf-e7c4-471e-a8f4-8771553eef6a,1\"",
+        "id": "443",
+        "lastModifiedDateTime": "2023-11-20T13:16:50Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/443_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('443')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"9f6153cf-e7c4-471e-a8f4-8771553eef6a,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "The intersection of a column and a row in a worksheet is called____ \n",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:16:41Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c0e002f6-c4fc-496e-a6cc-550f0d216452",
+            "attendeeName": "Nitish Kumar",
+            "id": "443",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:16:50Z",
+            "Created": "2023-11-20T13:16:50Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"aeea4d68-e29b-491e-ac41-c801df5c5c98,1\"",
+        "createdDateTime": "2023-11-20T13:29:21Z",
+        "eTag": "\"aeea4d68-e29b-491e-ac41-c801df5c5c98,1\"",
+        "id": "447",
+        "lastModifiedDateTime": "2023-11-20T13:29:21Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/447_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('447')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"aeea4d68-e29b-491e-ac41-c801df5c5c98,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:29:19Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "447",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:29:21Z",
+            "Created": "2023-11-20T13:29:21Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"e60b4eb0-0884-42bd-8ed4-86654409b8d4,1\"",
+        "createdDateTime": "2023-11-20T13:29:49Z",
+        "eTag": "\"e60b4eb0-0884-42bd-8ed4-86654409b8d4,1\"",
+        "id": "448",
+        "lastModifiedDateTime": "2023-11-20T13:29:49Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/448_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('448')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"e60b4eb0-0884-42bd-8ed4-86654409b8d4,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-20T13:29:46Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "448",
+            "ContentType": "Item",
+            "Modified": "2023-11-20T13:29:49Z",
+            "Created": "2023-11-20T13:29:49Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"c78c2f01-84b9-4889-8af1-0e48ae13be68,1\"",
+        "createdDateTime": "2023-11-21T05:29:00Z",
+        "eTag": "\"c78c2f01-84b9-4889-8af1-0e48ae13be68,1\"",
+        "id": "450",
+        "lastModifiedDateTime": "2023-11-21T05:29:00Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/450_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('450')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"c78c2f01-84b9-4889-8af1-0e48ae13be68,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:29:00Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "450",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:29:00Z",
+            "Created": "2023-11-21T05:29:00Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"38139dda-387a-444f-817e-073b605af851,1\"",
+        "createdDateTime": "2023-11-21T05:29:27Z",
+        "eTag": "\"38139dda-387a-444f-817e-073b605af851,1\"",
+        "id": "451",
+        "lastModifiedDateTime": "2023-11-21T05:29:27Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/451_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('451')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"38139dda-387a-444f-817e-073b605af851,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:29:26Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "451",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:29:27Z",
+            "Created": "2023-11-21T05:29:27Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"80a7a7cc-798b-48cf-953c-3eca5eedf79a,1\"",
+        "createdDateTime": "2023-11-21T05:32:43Z",
+        "eTag": "\"80a7a7cc-798b-48cf-953c-3eca5eedf79a,1\"",
+        "id": "457",
+        "lastModifiedDateTime": "2023-11-21T05:32:43Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/457_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('457')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"80a7a7cc-798b-48cf-953c-3eca5eedf79a,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:32:42Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "457",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:32:43Z",
+            "Created": "2023-11-21T05:32:43Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"2481dd53-dc11-4776-a58b-9005b7b884d6,1\"",
+        "createdDateTime": "2023-11-21T05:32:57Z",
+        "eTag": "\"2481dd53-dc11-4776-a58b-9005b7b884d6,1\"",
+        "id": "458",
+        "lastModifiedDateTime": "2023-11-21T05:32:57Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/458_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('458')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"2481dd53-dc11-4776-a58b-9005b7b884d6,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:32:57Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "458",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:32:57Z",
+            "Created": "2023-11-21T05:32:57Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"88c481eb-b3d3-4768-ba5b-00e7c7b8416f,1\"",
+        "createdDateTime": "2023-11-21T05:33:21Z",
+        "eTag": "\"88c481eb-b3d3-4768-ba5b-00e7c7b8416f,1\"",
+        "id": "459",
+        "lastModifiedDateTime": "2023-11-21T05:33:21Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/459_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('459')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"88c481eb-b3d3-4768-ba5b-00e7c7b8416f,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:33:20Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "459",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:33:21Z",
+            "Created": "2023-11-21T05:33:21Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"736f5e02-bfce-4960-94f6-1a7b36bc75c1,1\"",
+        "createdDateTime": "2023-11-21T05:35:14Z",
+        "eTag": "\"736f5e02-bfce-4960-94f6-1a7b36bc75c1,1\"",
+        "id": "461",
+        "lastModifiedDateTime": "2023-11-21T05:35:14Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/461_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('461')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"736f5e02-bfce-4960-94f6-1a7b36bc75c1,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:35:13Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "461",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:35:14Z",
+            "Created": "2023-11-21T05:35:14Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"e42adb41-1b36-415f-9d6f-efa4f112e9aa,1\"",
+        "createdDateTime": "2023-11-21T05:38:35Z",
+        "eTag": "\"e42adb41-1b36-415f-9d6f-efa4f112e9aa,1\"",
+        "id": "466",
+        "lastModifiedDateTime": "2023-11-21T05:38:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/466_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('466')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"e42adb41-1b36-415f-9d6f-efa4f112e9aa,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option1",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:38:35Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "466",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:38:35Z",
+            "Created": "2023-11-21T05:38:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"80086b03-c1b8-454b-b541-9daaa38e92d6,1\"",
+        "createdDateTime": "2023-11-21T05:38:42Z",
+        "eTag": "\"80086b03-c1b8-454b-b541-9daaa38e92d6,1\"",
+        "id": "467",
+        "lastModifiedDateTime": "2023-11-21T05:38:42Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/467_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('467')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"80086b03-c1b8-454b-b541-9daaa38e92d6,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "keakjas",
+            "questionCorrectAns": "Option1",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:38:41Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "bd632ea9-b772-4e02-9604-382972f1aaaf",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "467",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:38:42Z",
+            "Created": "2023-11-21T05:38:42Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"ed42e13f-7963-4a36-a7f8-ff693759e872,1\"",
+        "createdDateTime": "2023-11-21T05:59:53Z",
+        "eTag": "\"ed42e13f-7963-4a36-a7f8-ff693759e872,1\"",
+        "id": "468",
+        "lastModifiedDateTime": "2023-11-21T05:59:53Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/468_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('468')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"ed42e13f-7963-4a36-a7f8-ff693759e872,1\"",
+            "Title": "Huzefa.M@ygr11.onmicrosoft.com",
+            "LinkTitle": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "Q1? sgs",
+            "questionCorrectAns": "Option 2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T05:59:53Z",
+            "LinkTitleNoMenu": "Huzefa.M@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c2d02730-8587-4640-8b8f-99fb40662ef3",
+            "attendeeName": "Huzefa Mehidpurwala",
+            "id": "468",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T05:59:53Z",
+            "Created": "2023-11-21T05:59:53Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"ae400a77-5758-473e-985f-73559b04fc06,1\"",
+        "createdDateTime": "2023-11-21T06:00:54Z",
+        "eTag": "\"ae400a77-5758-473e-985f-73559b04fc06,1\"",
+        "id": "469",
+        "lastModifiedDateTime": "2023-11-21T06:00:54Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/469_.000",
+        "createdBy": {
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Nitish.K@ygr11.onmicrosoft.com",
+                "id": "72c429ec-d781-4208-8889-4ef77489c45c",
+                "displayName": "Nitish Kumar"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('469')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"ae400a77-5758-473e-985f-73559b04fc06,1\"",
+            "Title": "Nitish.K@ygr11.onmicrosoft.com",
+            "LinkTitle": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "Q1? sgs",
+            "questionCorrectAns": "Option 2",
+            "ansGivenByAttendee": "Option4",
+            "ansIsCorrect": false,
+            "dateTheAttendeeGaveAns": "2023-11-21T06:00:53Z",
+            "LinkTitleNoMenu": "Nitish.K@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c2d02730-8587-4640-8b8f-99fb40662ef3",
+            "attendeeName": "Nitish Kumar",
+            "id": "469",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T06:00:54Z",
+            "Created": "2023-11-21T06:00:54Z",
+            "AuthorLookupId": "13",
+            "EditorLookupId": "13",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"108f56f1-155f-4ba8-aa39-9c788d855f50,1\"",
+        "createdDateTime": "2023-11-21T06:01:14Z",
+        "eTag": "\"108f56f1-155f-4ba8-aa39-9c788d855f50,1\"",
+        "id": "470",
+        "lastModifiedDateTime": "2023-11-21T06:01:14Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/Analytics%20Of%20Questionnaire/470_.000",
+        "createdBy": {
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "sigar@ygr11.onmicrosoft.com",
+                "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                "displayName": "Sigar Dave"
+            }
+        },
+        "parentReference": {
+            "id": "bdb2f636-f36a-4af9-8e2e-2f9e3c054ff4",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x01003C8D37C2C92AA7499C46EC0959F06EBD000EAF144F916D6C4ABDD98AC57DDC4DF4",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('d26a4a06-27e1-47cf-9782-155f265f5984')/items('470')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"108f56f1-155f-4ba8-aa39-9c788d855f50,1\"",
+            "Title": "sigar@ygr11.onmicrosoft.com",
+            "LinkTitle": "sigar@ygr11.onmicrosoft.com",
+            "questionOfQuestionnaire": "Q1? sgs",
+            "questionCorrectAns": "Option 2",
+            "ansGivenByAttendee": "Option2",
+            "ansIsCorrect": true,
+            "dateTheAttendeeGaveAns": "2023-11-21T06:01:13Z",
+            "LinkTitleNoMenu": "sigar@ygr11.onmicrosoft.com",
+            "questionnaireListId": "c2d02730-8587-4640-8b8f-99fb40662ef3",
+            "attendeeName": "Sigar Dave",
+            "id": "470",
+            "ContentType": "Item",
+            "Modified": "2023-11-21T06:01:14Z",
+            "Created": "2023-11-21T06:01:14Z",
+            "AuthorLookupId": "12",
+            "EditorLookupId": "12",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    }
+]
+
+{
+    "organizer": {
+        "upn": "Huzefa.M@ygr11.onmicrosoft.com",
+        "role": "presenter",
+        "identity": {
+            "application": null,
+            "device": null,
+            "user": {
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": null,
+                "tenantId": "47165d17-0fdb-4f2a-a567-116783fae3a5",
+                "identityProvider": "AAD"
+            }
+        }
+    },
+    "attendees": [
+        {
+            "upn": "sigar@ygr11.onmicrosoft.com",
+            "role": "attendee",
+            "identity": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "id": "e0166dcd-77ba-4b7c-b540-df2076c9fe69",
+                    "displayName": null,
+                    "tenantId": "47165d17-0fdb-4f2a-a567-116783fae3a5",
+                    "identityProvider": "AAD"
+                }
+            }
+        }
+    ]
+}
+
+https://teams.microsoft.com/_#/scheduling-form/?startTime=Mon%20Nov%2027%202023%2015:00:00%20GMT%2B0530%20(India%20Standard%20Time)&endTime=Mon%20Nov%2027%202023%2015:30:00%20GMT%2B0530%20(India%20Standard%20Time)&opener=1&navCtx=navigateHybridContentRoute
+Mon Nov%2027%202023%2015:00:00%20GMT%2B0530 (India Standard Time)&endTime=Mon Nov 27 2023 15:30:00 GMT+0530 (India Standard Time)
+
+if (!showQuitContent) {
+    return (
+      <>
+        {!!error || needConsent ? (
+          <SmallPopUp
+            open={!!error || needConsent}
+            activeActions={false}
+            spinner={false}
+            modalType="alert"
+          >
+            <div className="error">
+              <Text size={800}>Fetching Data Failed</Text>
+              <br />
+              <br />
+              <Button appearance="primary" disabled={loading} onClick={reload}>
+                Authorize and call Azure Function
+              </Button>
+            </div>
+          </SmallPopUp>
+        ) : (
+          <>
+            <SmallPopUp
+              className="loading"
+              msg={"Fetching Questions..."}
+              open={loading}
+              spinner={true}
+              activeActions={false}
+              modalType="alert"
+            />
+
+            <SmallPopUp
+              title={"Quiz Completed!"}
+              open={showQuitPopUp}
+              onOpenChange={(e, data) => setShowQuitPopUp(data.open)}
+              spinner={false}
+              activeActions={true}
+              modalType="alert"
+            />
+
+            {/* popup on ListId not found */}
+            <SmallPopUp
+              open={noListIdFound}
+              activeActions={false}
+              spinner={false}
+              modalType="alert"
+            >
+              <div className="error">
+                <Text size={800}>No List ID Found</Text>
+              </div>
+            </SmallPopUp>
+
+            {/* popup on ans given */}
+            <>
+              {/* <SmallPopUp
+              open={isAnsGiven}
+              // onOpenChange={(e, data) => setIsAnsGiven(data.open)}
+              activeActions={false}
+              spinner={false}
+              modalType="alert"
+            >
+              <div className={`error ${isAnsCorrect}`}>
+                <Text size={800}>{toTitleCase(isAnsCorrect)}</Text>
+              </div>
+            </SmallPopUp> */}
+            </>
+
+            {question && (
+              <div className="container question-container">
+                {currentQues > 0 &&
+                (userMeetingRole === UserMeetingRole.organizer ||
+                  userMeetingRole === UserMeetingRole.presenter) ? (
+                  <div
+                    className="container question-navigation-btn"
+                    id="left"
+                    onClick={(e) => handleNav(e.target.id)}
+                  >
+                    <ArrowLeft48Filled id="left" />
+                  </div>
+                ) : (
+                  <div
+                    style={{
+                      minWidth: "6rem",
+                      minHeight: "6rem",
+                      margin: "1rem",
+                    }}
+                  ></div>
+                )}
+                <div className="container question-area">
+                  {isAnsGiven && (
+                    <div
+                      className={
+                        selectedOptionColValue === question?.fields[colNames[5]]
+                          ? "correct-ans"
+                          : "incorrect-ans"
+                      }
+                    >
+                      <Text size={800}>
+                        {selectedOptionColValue ===
+                        question?.fields[colNames[5]]
+                          ? "Correct Answer!"
+                          : "Wrong Answer!"}
+                      </Text>
+                    </div>
+                  )}
+
+                  <div className="container timer-box">
+                    <Text size={900} weight="semibold">
+                      {(counter / 100).toFixed(2)}
+                    </Text>
+                  </div>
+
+                  <div className="question">
+                    <Text size={800} weight="bold">
+                      <strong>{`Q.${question?.fields.id})`}</strong>{" "}
+                      {question?.fields[colNames[0]]}
+                    </Text>
+                  </div>
+
+                  <div className="grid-container">
+                    {optionChars.map((char, index) => {
+                      const currOptionIsCorrectAns = question?.fields[
+                        colNames[5]
+                      ].includes(index + 1);
+                      const currOptionIsSelected =
+                        selectedOptionColValue.includes(index + 1);
+                      return (
+                        <div
+                          className={
+                            !isAnsGiven
+                              ? "container grid-item"
+                              : `container grid-item disable-option ${
+                                  currOptionIsCorrectAns
+                                    ? "correct-ans"
+                                    : "incorrect-ans"
+                                } ${currOptionIsSelected && "selected-option"}`
+                          }
+                          key={index}
+                          onClick={(e) => {
+                            // userMeetingRole !== UserMeetingRole.organizer && userMeetingRole !== UserMeetingRole.presenter &&
+                            if (!isAnsGiven) {
+                              setIsAnsGiven(true);
+                              setSelectedOptionColValue(colNames[index + 1]);
+                              updateArrOfAnsGiven(colNames[index + 1]); // /* question?.fields.id, */ colNames[index + 1]
+                            }
+                          }}
+                        >
+                          <Text size={700}>
+                            <strong>{char}</strong>{" "}
+                            {
+                              question?.fields[
+                                colNames[index + 1].toLowerCase()
+                              ]
+                            }
+                          </Text>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {userMeetingRole === UserMeetingRole.organizer ||
+                userMeetingRole === UserMeetingRole.presenter ? (
+                  <div
+                    className="container question-navigation-btn"
+                    id="right"
+                    onClick={(e) => handleNav(e.target.id)}
+                  >
+                    {currentQues < lengthOfData - 1 ? (
+                      <ArrowRight48Filled id="right" />
+                    ) : (
+                      <Text size={600}>Exit</Text>
+                    )}
+                  </div>
+                ) : (
+                  <div
+                    style={{
+                      minWidth: "6rem",
+                      minHeight: "6rem",
+                      margin: "1rem",
+                    }}
+                  ></div>
+                )}
+              </div>
+            )}
+          </>
+        )}
+      </>
+    );
+  } else if (!showQuitPopUp) {
+    return <Analysis />;
+  }
+

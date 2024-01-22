@@ -1,0 +1,123 @@
+.wrapper {
+  background-color: #33334f;
+  padding: 40px;
+  min-height: 100vh;
+
+  /* *changes here */
+  /* display: grid; */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+@media (max-width: 576.98px) {
+  .wrapper {
+    padding: 10px;
+  }
+}
+
+.wrapper .time-laps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+  margin-bottom: 20px;
+}
+
+.wrapper .time-laps .label {
+  color: #fff;
+  font-size: 20px;
+}
+
+.wrapper .time-laps .count {
+  background-color: #555675;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wrapper .card {
+  background-color: #fff;
+  border-radius: 36px;
+  padding: 40px;
+  display: flex;
+  column-gap: 24px;
+  align-items: flex-start;
+  min-height: 400px;
+}
+
+@media (max-width: 576.98px) {
+  .wrapper .card {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.wrapper .card .number {
+  background-color: #33334f;
+  border-radius: 12px;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  /* *changes here */
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .card .multi-choice-question {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.wrapper .card .multi-choice-question .question {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.wrapper .card .multi-choice-question .options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 600px;
+}
+
+@media (max-width: 767.98px) {
+  .wrapper .card .multi-choice-question .options {
+    max-width: 100%;
+  }
+}
+
+.wrapper .card .multi-choice-question .options div {
+  border: 1px solid #d6d6d6;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* *changes here */
+/* .wrapper .card .multi-choice-question .options div:hover {
+  cursor: pointer;
+} */
+
+.wrapper .card .multi-choice-question .options div.right-option {
+  background-color: #43be6e;
+  color: #fff;
+}
+
+.wrapper .card .multi-choice-question .options div.wrong-option {
+  background-color: #ee605d;
+  color: #fff;
+}

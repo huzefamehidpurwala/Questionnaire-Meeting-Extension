@@ -1,0 +1,365 @@
+[
+    {
+        "@odata.etag": "\"f3e3145b-3750-4206-832a-c5c2e33985a3,2\"",
+        "createdDateTime": "2023-11-25T06:37:52Z",
+        "eTag": "\"f3e3145b-3750-4206-832a-c5c2e33985a3,2\"",
+        "id": "17",
+        "lastModifiedDateTime": "2023-12-01T10:15:51Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/17_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('17')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"f3e3145b-3750-4206-832a-c5c2e33985a3,2\"",
+            "Title": "Excel Questionnaire",
+            "idOfLists": "5f51a1f7-13fa-4dfe-a2f4-bc335aea32d3",
+            "isInitiated": true,
+            "initiationDateTime": "2023-12-01T10:15:29Z",
+            "id": "17",
+            "ContentType": "Item",
+            "Modified": "2023-12-01T10:15:51Z",
+            "Created": "2023-11-25T06:37:52Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "2.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "Excel Questionnaire",
+            "LinkTitle": "Excel Questionnaire",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"2363f239-73e7-4f16-9f84-7df807969e4e,2\"",
+        "createdDateTime": "2023-11-25T06:43:16Z",
+        "eTag": "\"2363f239-73e7-4f16-9f84-7df807969e4e,2\"",
+        "id": "18",
+        "lastModifiedDateTime": "2023-11-25T06:50:25Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/18_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('18')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"2363f239-73e7-4f16-9f84-7df807969e4e,2\"",
+            "Title": "Latest Excel Questionnaire",
+            "idOfLists": "56510ea1-2256-4363-826f-0af83c800ade",
+            "isInitiated": true,
+            "initiationDateTime": "2023-11-25T06:50:06Z",
+            "id": "18",
+            "ContentType": "Item",
+            "Modified": "2023-11-25T06:50:25Z",
+            "Created": "2023-11-25T06:43:16Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "2.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "Latest Excel Questionnaire",
+            "LinkTitle": "Latest Excel Questionnaire",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"001d744f-83d8-4e24-ac88-35f99bd781ce,1\"",
+        "createdDateTime": "2023-11-25T09:09:32Z",
+        "eTag": "\"001d744f-83d8-4e24-ac88-35f99bd781ce,1\"",
+        "id": "19",
+        "lastModifiedDateTime": "2023-11-25T09:09:32Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/19_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('19')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"001d744f-83d8-4e24-ac88-35f99bd781ce,1\"",
+            "Title": "Capitals",
+            "idOfLists": "264c4b9b-6072-4d73-9b6e-be54d87b2706",
+            "isInitiated": false,
+            "id": "19",
+            "ContentType": "Item",
+            "Modified": "2023-11-25T09:09:32Z",
+            "Created": "2023-11-25T09:09:32Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "Capitals",
+            "LinkTitle": "Capitals",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"0ddaa35a-02eb-4e0c-aa3d-0f6f8d477b88,2\"",
+        "createdDateTime": "2023-11-25T09:38:47Z",
+        "eTag": "\"0ddaa35a-02eb-4e0c-aa3d-0f6f8d477b88,2\"",
+        "id": "20",
+        "lastModifiedDateTime": "2023-11-25T09:39:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/20_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('20')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"0ddaa35a-02eb-4e0c-aa3d-0f6f8d477b88,2\"",
+            "Title": "Capitals Of India",
+            "idOfLists": "5091d008-704a-46d3-88ee-bbd388a60659",
+            "isInitiated": true,
+            "initiationDateTime": "2023-11-25T09:39:13Z",
+            "id": "20",
+            "ContentType": "Item",
+            "Modified": "2023-11-25T09:39:35Z",
+            "Created": "2023-11-25T09:38:47Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "2.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "Capitals Of India",
+            "LinkTitle": "Capitals Of India",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"9605fb0b-3591-4eb6-8a31-3eb0787c0d71,1\"",
+        "createdDateTime": "2023-11-27T05:28:34Z",
+        "eTag": "\"9605fb0b-3591-4eb6-8a31-3eb0787c0d71,1\"",
+        "id": "21",
+        "lastModifiedDateTime": "2023-11-27T05:28:34Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/21_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('21')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"9605fb0b-3591-4eb6-8a31-3eb0787c0d71,1\"",
+            "Title": "Latest Questionnaire",
+            "idOfLists": "b5c30eae-6ef4-40ec-991d-699bd6b4822f",
+            "isInitiated": false,
+            "id": "21",
+            "ContentType": "Item",
+            "Modified": "2023-11-27T05:28:34Z",
+            "Created": "2023-11-27T05:28:34Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "Latest Questionnaire",
+            "LinkTitle": "Latest Questionnaire",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"10c17e6c-f79f-4674-bae1-36ca1319adf2,1\"",
+        "createdDateTime": "2023-11-27T10:08:04Z",
+        "eTag": "\"10c17e6c-f79f-4674-bae1-36ca1319adf2,1\"",
+        "id": "22",
+        "lastModifiedDateTime": "2023-11-27T10:08:04Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/QuestionnaireRootList/22_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "22ff8f8f-af68-4020-a8ee-a6af055a71f3",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100EED6E43C3AE51C4CBEE52343694E5C6900144A0D1B892A3544A704FF5EA41770C9",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('26ca1252-8fdf-467e-a1eb-172aaed95763')/items('22')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"10c17e6c-f79f-4674-bae1-36ca1319adf2,1\"",
+            "Title": "New Capitals",
+            "idOfLists": "98128f15-d582-49b4-ac3f-5a203b3f3d5d",
+            "isInitiated": false,
+            "id": "22",
+            "ContentType": "Item",
+            "Modified": "2023-11-27T10:08:04Z",
+            "Created": "2023-11-27T10:08:04Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "New Capitals",
+            "LinkTitle": "New Capitals",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    }
+]

@@ -14,7 +14,7 @@ import Tab from "./components/Tab";
 import { TeamsFxContext } from "./components/Context";
 import config from "./lib/config";
 import TabConfig from "./components/TabConfig";
-import Questionnaire from "./components/sub/Questionnaire";
+import NewQuestionnaire from "./components/sub/NewQuestionnaire";
 import Analysis from "./components/sub/Analysis";
 import ListQuestionnaire from "./components/sub/ListQuestionnaire";
 import CreateQuestionnaire from "./components/sub/CreateQuestionnaire";
@@ -46,7 +46,7 @@ export default function App() {
         <main
           className={
             !window.location.href?.includes("config")
-              ? "bg-teams-bg-3 h-screen"
+              ? "bg-teams-bg-3 min-h-screen"
               : ""
           }
         >
@@ -68,7 +68,7 @@ export default function App() {
                   path="/createQuestionnaire"
                   element={<CreateQuestionnaire />}
                 />
-                <Route path="/questionnaire" element={<Questionnaire />} />
+                <Route path="/questionnaire" element={<NewQuestionnaire />} />
               </Routes>
             )}
           </Router>

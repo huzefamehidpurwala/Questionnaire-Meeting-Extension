@@ -17,5 +17,5 @@ appPackage/build
 /devTools/
 
 # extras
-/.extras
+# /.extras
 /certs

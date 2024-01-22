@@ -8,6 +8,7 @@ module.exports = {
       backgroundColor: {
         "teams-bg-1": tokens.colorNeutralBackground1,
         "teams-bg-3": tokens.colorNeutralBackground3,
+        "teams-bg-colorBrandBg": tokens.colorBrandBackground,
       },
       color: {
         "teams-fg-1": tokens.colorNeutralForeground1,

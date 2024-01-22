@@ -1,0 +1,317 @@
+[
+    {
+        "@odata.etag": "\"683b0dae-73ca-42d7-917b-af7adf6d0d47,1\"",
+        "createdDateTime": "2023-11-23T11:24:35Z",
+        "eTag": "\"683b0dae-73ca-42d7-917b-af7adf6d0d47,1\"",
+        "id": "1",
+        "lastModifiedDateTime": "2023-11-23T11:24:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/New%20Questionnaire/1_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "d5552d7f-43d7-48ff-a94a-a7f2b59fd828",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100183D1A4C8966AC4E926C54F59F4EA516",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('935b5475-6f44-4490-92bb-93f31e71bd27')/items('1')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"683b0dae-73ca-42d7-917b-af7adf6d0d47,1\"",
+            "Title": "xvzxzcv",
+            "Option1": "Bhopal",
+            "Option2": "Indore",
+            "Option3": "xvzxzcv",
+            "Option4": "Ratlam",
+            "correctOption": "Option3",
+            "id": "1",
+            "ContentType": "Item",
+            "Modified": "2023-11-23T11:24:35Z",
+            "Created": "2023-11-23T11:24:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "xvzxzcv",
+            "LinkTitle": "xvzxzcv",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"8ffbd1d3-9477-41b4-bcd4-507fe998cb85,1\"",
+        "createdDateTime": "2023-11-23T11:24:35Z",
+        "eTag": "\"8ffbd1d3-9477-41b4-bcd4-507fe998cb85,1\"",
+        "id": "2",
+        "lastModifiedDateTime": "2023-11-23T11:24:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/New%20Questionnaire/2_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "d5552d7f-43d7-48ff-a94a-a7f2b59fd828",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100183D1A4C8966AC4E926C54F59F4EA516",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('935b5475-6f44-4490-92bb-93f31e71bd27')/items('2')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"8ffbd1d3-9477-41b4-bcd4-507fe998cb85,1\"",
+            "Title": "ewwet",
+            "Option1": "Ahmedabad",
+            "Option2": "Mumbai",
+            "Option3": "Gandhinagar",
+            "Option4": "ewwet",
+            "correctOption": "Option4",
+            "id": "2",
+            "ContentType": "Item",
+            "Modified": "2023-11-23T11:24:35Z",
+            "Created": "2023-11-23T11:24:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "ewwet",
+            "LinkTitle": "ewwet",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"39fcf8e5-eae2-4e26-9b81-88f6c8218507,1\"",
+        "createdDateTime": "2023-11-23T11:24:35Z",
+        "eTag": "\"39fcf8e5-eae2-4e26-9b81-88f6c8218507,1\"",
+        "id": "3",
+        "lastModifiedDateTime": "2023-11-23T11:24:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/New%20Questionnaire/3_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "d5552d7f-43d7-48ff-a94a-a7f2b59fd828",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100183D1A4C8966AC4E926C54F59F4EA516",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('935b5475-6f44-4490-92bb-93f31e71bd27')/items('3')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"39fcf8e5-eae2-4e26-9b81-88f6c8218507,1\"",
+            "Title": "vbbvnmvb",
+            "Option1": "vbbvnmvb",
+            "Option2": "Mumbai",
+            "Option3": "Gandhinagar",
+            "Option4": "Rau",
+            "correctOption": "Option1",
+            "id": "3",
+            "ContentType": "Item",
+            "Modified": "2023-11-23T11:24:35Z",
+            "Created": "2023-11-23T11:24:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "vbbvnmvb",
+            "LinkTitle": "vbbvnmvb",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"944f62df-eb93-4f9b-a861-6334564471d4,1\"",
+        "createdDateTime": "2023-11-23T11:24:35Z",
+        "eTag": "\"944f62df-eb93-4f9b-a861-6334564471d4,1\"",
+        "id": "4",
+        "lastModifiedDateTime": "2023-11-23T11:24:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/New%20Questionnaire/4_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "d5552d7f-43d7-48ff-a94a-a7f2b59fd828",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100183D1A4C8966AC4E926C54F59F4EA516",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('935b5475-6f44-4490-92bb-93f31e71bd27')/items('4')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"944f62df-eb93-4f9b-a861-6334564471d4,1\"",
+            "Title": "asdfaasdf",
+            "Option1": "Indore",
+            "Option2": "asdfaasdf",
+            "Option3": "Hyderabad",
+            "Option4": "Sycanderabad",
+            "correctOption": "Option2",
+            "id": "4",
+            "ContentType": "Item",
+            "Modified": "2023-11-23T11:24:35Z",
+            "Created": "2023-11-23T11:24:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "asdfaasdf",
+            "LinkTitle": "asdfaasdf",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    },
+    {
+        "@odata.etag": "\"5ed2aa72-b2a7-4e6a-9229-7d37fb43101a,1\"",
+        "createdDateTime": "2023-11-23T11:24:35Z",
+        "eTag": "\"5ed2aa72-b2a7-4e6a-9229-7d37fb43101a,1\"",
+        "id": "5",
+        "lastModifiedDateTime": "2023-11-23T11:24:35Z",
+        "webUrl": "https://ygr11.sharepoint.com/sites/Questionnaire-Site/Lists/New%20Questionnaire/5_.000",
+        "createdBy": {
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "lastModifiedBy": {
+            "application": {
+                "id": "b0810270-5976-4c06-a2c8-d2bd3ee32b74",
+                "displayName": "Questionnaire-msg-ext-aad"
+            },
+            "user": {
+                "email": "Huzefa.M@ygr11.onmicrosoft.com",
+                "id": "1cc562b8-c0cd-472b-b5be-451d2758ed86",
+                "displayName": "Huzefa Mehidpurwala"
+            }
+        },
+        "parentReference": {
+            "id": "d5552d7f-43d7-48ff-a94a-a7f2b59fd828",
+            "siteId": "ygr11.sharepoint.com,29151005-7f34-4489-a82f-ff4a19cb537a,f1e12b00-f4e7-42f4-817e-f90361306f24"
+        },
+        "contentType": {
+            "id": "0x0100183D1A4C8966AC4E926C54F59F4EA516",
+            "name": "Item"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('29151005-7f34-4489-a82f-ff4a19cb537a')/lists('935b5475-6f44-4490-92bb-93f31e71bd27')/items('5')/fields/$entity",
+        "fields": {
+            "@odata.etag": "\"5ed2aa72-b2a7-4e6a-9229-7d37fb43101a,1\"",
+            "Title": "457645754",
+            "Option1": "c",
+            "Option2": "457645754",
+            "Option3": "c",
+            "Option4": "c",
+            "correctOption": "Option2",
+            "id": "5",
+            "ContentType": "Item",
+            "Modified": "2023-11-23T11:24:35Z",
+            "Created": "2023-11-23T11:24:35Z",
+            "AuthorLookupId": "9",
+            "EditorLookupId": "9",
+            "_UIVersionString": "1.0",
+            "Attachments": false,
+            "Edit": "",
+            "LinkTitleNoMenu": "457645754",
+            "LinkTitle": "457645754",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "7",
+            "AppEditorLookupId": "7"
+        }
+    }
+]

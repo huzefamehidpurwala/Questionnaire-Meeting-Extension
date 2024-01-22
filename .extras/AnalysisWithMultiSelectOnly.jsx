@@ -1,12 +1,7 @@
 import { useData } from "@microsoft/teamsfx-react";
 import { TeamsFxContext } from "../Context";
 import { useContext, useState, useEffect } from "react";
-import {
-  compareObjects,
-  getListItems,
-  handleStringSort,
-  toTitleCase,
-} from "../../lib/utils";
+import { compareObjects, getListItems, toTitleCase } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
 import { Button, Checkbox, Text } from "@fluentui/react-components";
 import HChart from "./HChart";
@@ -17,9 +12,13 @@ const Analysis = () => {
 
   const [needConsent, setNeedConsent] = useState(false);
   const [attendeeNameArr, setAttendeeNameArr] = useState([]);
+  // const [dateTimeArr, setDateTimeArr] = useState([]);
+  // const [selectedDateTime, setSelectedDateTime] = useState("");
   const [selectedAttendeeNameArr, setSelectedAttendeeNameArr] = useState([]);
   const [questionnaireObjArr, setQuestionnaireObjArr] = useState([]);
   const [selectedQuestionnaireArr, setSelectedQuestionnaireArr] = useState([]);
+  // const [selectedQuestionnaireIdArr, setSelectedQuestionnaireIdArr] = useState([]);
+  // const [selectedQuestionnaireNameArr, setSelectedQuestionnaireNameArr] = useState([]);
   const [initatedquestionnaireIdArr, setInitatedQuestionnaireIdArr] = useState(
     []
   );
@@ -46,7 +45,7 @@ const Analysis = () => {
 
       return analyticsOfQuestionnaire;
     } catch (error) {
-      console.error("error in useData analytics api", error);
+      console.error("error in useData analysis api", error);
       if (error.message.includes("Access Denied")) {
         setNeedConsent(true);
       }
@@ -75,7 +74,7 @@ const Analysis = () => {
 
       return questionnaireRootList;
     } catch (error) {
-      console.error("error in useData ques api in analytics component", error);
+      console.error("error in useData ques api in analysis component", error);
       if (error.message.includes("Access Denied")) {
         setNeedConsent(true);
       }
@@ -89,14 +88,11 @@ const Analysis = () => {
         ? tempSet.add({
             questionnaireName: row.fields.Title,
             questionnaireId: row.fields.idOfLists,
-          })
+          }) // tempSet.add(row.fields.Title)
         : ""
     );
-    setQuestionnaireObjArr(
-      [...tempSet].sort((a, b) =>
-        handleStringSort(a.questionnaireName, b.questionnaireName)
-      )
-    );
+    // console.log("tempSet", tempSet);
+    setQuestionnaireObjArr([...tempSet]);
   };
 
   const updateAttendeeNameArr = () => {
@@ -106,10 +102,28 @@ const Analysis = () => {
       tempSetAtt.add(row.fields.attendeeName);
       tempSetId.add(row.fields.questionnaireListId);
     });
-
-    setAttendeeNameArr([...tempSetAtt].sort(handleStringSort));
+    // console.log("bhag bhiya", tempSetAtt, tempSetId);
+    setAttendeeNameArr([...tempSetAtt]);
     setInitatedQuestionnaireIdArr([...tempSetId]);
   };
+
+  // const updateDateTimeArr = () => {
+  //   let tempSetDate = new Set();
+  //   analyticsOfQuestionnaireData.graphClientMessage.value.forEach((row) => {
+  //     const id = row.fields.questionnaireListId;
+  //     const date = row.fields.dateTheAttendeeGaveAns;
+  //     JSON.stringify(selectedQuestionnaireArr).includes(id) &&
+  //       tempSetDate.add(date);
+  //   });
+  //   // console.log("bhag bhiya", tempSetDate, tempSetId);
+  //   setDateTimeArr([...tempSetDate]);
+  // };
+
+  // useEffect(() => {
+  //   !!selectedQuestionnaireArr.length && updateDateTimeArr();
+  //   return;
+  //   // eslint-disable-next-line
+  // }, [selectedQuestionnaireArr]);
 
   useEffect(() => {
     analyticsOfQuestionnaireData && updateAttendeeNameArr();
@@ -143,6 +157,7 @@ const Analysis = () => {
     return -1;
   };
 
+  // console.log("in analytics global==", dateTimeArr);
   return (
     <>
       {!!questionnaireRootListError ||
@@ -180,35 +195,21 @@ const Analysis = () => {
         </SmallPopUp>
       ) : (
         <>
-          {/* no data exists */}
-          <SmallPopUp
-            open={
-              !(
-                analyticsOfQuestionnaireLoading || questionnaireRootListLoading
-              ) &&
-              !analyticsOfQuestionnaireData?.graphClientMessage.value.length
-            }
-            activeActions={false}
-            spinner={false}
-            modalType="alert"
-          >
-            <div className="error">
-              <Text size={800}>No Data Exists!</Text>
-            </div>
-          </SmallPopUp>
-
-          <SmallPopUp
-            className="loading"
-            msg={"Preparing things..."}
-            open={
-              analyticsOfQuestionnaireLoading || questionnaireRootListLoading
-            }
-            spinner={true}
-            activeActions={false}
-            modalType="alert"
-          />
-
-          {!!analyticsOfQuestionnaireData?.graphClientMessage.value.length &&
+          {!analyticsOfQuestionnaireData?.graphClientMessage.value.length ? (
+            <SmallPopUp
+              open={
+                !analyticsOfQuestionnaireData?.graphClientMessage.value.length
+              }
+              // onOpenChange={(e, data) => setSuccessCreate(data.open)}
+              activeActions={false}
+              spinner={false}
+              modalType="alert"
+            >
+              <div className="error">
+                <Text size={800}>No Data Exists!</Text>
+              </div>
+            </SmallPopUp>
+          ) : (
             !!questionnaireRootListData &&
             !!analyticsOfQuestionnaireData && (
               <>
@@ -216,6 +217,7 @@ const Analysis = () => {
                   <div className="sub-container1">
                     <div>
                       <Button
+                        // appearance="transparent"
                         onClick={(e) => {
                           setSelectedAttendeeNameArr([]);
                           setSelectedQuestionnaireArr([]);
@@ -232,6 +234,7 @@ const Analysis = () => {
                       {attendeeNameArr.length > 1 && (
                         <Checkbox
                           label={<Text size={200}>Select All Attedees</Text>}
+                          // size="large"
                           checked={
                             !!selectedAttendeeNameArr.length
                               ? attendeeNameArr.length >
@@ -241,6 +244,7 @@ const Analysis = () => {
                               : false
                           }
                           onChange={(e, data) => {
+                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedAttendeeNameArr([...attendeeNameArr])
                               : setSelectedAttendeeNameArr([]);
@@ -249,12 +253,14 @@ const Analysis = () => {
                       )}
                       {attendeeNameArr.map((attendeeName, key) => (
                         <Checkbox
-                          label={attendeeName}
+                          label={attendeeName} // <Text size={400}>{attendeeName}</Text>
+                          // value={attendeeName}
                           key={key}
                           checked={selectedAttendeeNameArr.includes(
                             attendeeName
                           )}
                           onChange={(e, data) => {
+                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedAttendeeNameArr((t) => [
                                   ...t,
@@ -262,6 +268,7 @@ const Analysis = () => {
                                 ])
                               : setSelectedAttendeeNameArr((t) => {
                                   t.splice(t.indexOf(attendeeName), 1);
+                                  // console.log("in state", t);
                                   return [...t];
                                 });
                           }}
@@ -278,6 +285,7 @@ const Analysis = () => {
                           label={
                             <Text size={200}>Select All Questionnaires</Text>
                           }
+                          // size="large"
                           checked={
                             !!selectedQuestionnaireArr.length
                               ? questionnaireObjArr.length >
@@ -287,6 +295,7 @@ const Analysis = () => {
                               : false
                           }
                           onChange={(e, data) => {
+                            // console.log("onChange == ", data.checked/* , "---", e */);
                             data.checked
                               ? setSelectedQuestionnaireArr([
                                   ...questionnaireObjArr,
@@ -297,13 +306,16 @@ const Analysis = () => {
                       )}
                       {questionnaireObjArr.map((obj, key) => (
                         <Checkbox
-                          label={toTitleCase(obj.questionnaireName)}
+                          label={toTitleCase(obj.questionnaireName)} // <Text size={400}>{toTitleCase(obj.questionnaireName)}</Text>
+                          // value={obj.questionnaireName}
+                          // id={obj.questionnaireId}
                           key={key}
                           checked={checkPresenceOfObj(
                             selectedQuestionnaireArr,
                             obj
                           )}
                           onChange={(e, data) => {
+                            // console.log("onChange == ", data.checked/* , "---", e */);
                             const newObj = {
                               questionnaireName: obj.questionnaireName, // e.target.value
                               questionnaireId: obj.questionnaireId, // e.target.id
@@ -315,6 +327,7 @@ const Analysis = () => {
                                 ])
                               : setSelectedQuestionnaireArr((t) => {
                                   t.splice(getIndex(t, newObj), 1);
+                                  // console.log("in state", t);
                                   return [...t];
                                 });
                           }}
@@ -322,38 +335,83 @@ const Analysis = () => {
                       ))}
                     </div>
 
-                    {/* // *date here */}
+                    {/* // *date */}
+                    <>
+                      {/* {!!selectedQuestionnaireArr.length && (
+                      <div className="checkbox-container">
+                        <Text size={400} weight="bold">
+                          Select Date:
+                        </Text>
+                        {dateTimeArr.length > 1 && (
+                          <Checkbox
+                            label={<Text size={200}>Select All Dates</Text>}
+                            // size="large"
+                            // checked={
+                            //   !!selectedAttendeeNameArr.length
+                            //     ? attendeeNameArr.length >
+                            //       selectedAttendeeNameArr.length
+                            //       ? "mixed"
+                            //       : true
+                            //     : false
+                            // }
+                            // onChange={(e, data) => {
+                            //   // console.log("onChange == ", data.checked);
+                            //   data.checked
+                            //     ? setSelectedAttendeeNameArr([...attendeeNameArr])
+                            //     : setSelectedAttendeeNameArr([]);
+                            // }}
+                          />
+                        )}
+                        {dateTimeArr.map((date, key) => (
+                          <Checkbox
+                            label={convertDateTime(date)} // <Text size={400}>{toTitleCase(obj.questionnaireName)}</Text>
+                            key={key}
+                            checked={selectedDateTime.includes(date)}
+                            onChange={(e, data) => {
+                              data.checked
+                                ? setSelectedDateTime(date)
+                                : setSelectedDateTime("");
+                            }}
+                          />
+                        ))}
+                      </div>
+                    )} */}
+                    </>
                   </div>
                   <div className="sub-container2">
                     {!!selectedAttendeeNameArr.length &&
                       !!selectedQuestionnaireArr.length &&
-                      selectedQuestionnaireArr
-                        .sort((a, b) =>
-                          handleStringSort(
-                            a.questionnaireName,
-                            b.questionnaireName
-                          )
-                        )
-                        .map((obj) => {
-                          return (
-                            <HChart
-                              key={obj.questionnaireId}
-                              questionnaireId={obj.questionnaireId}
-                              questionnaireName={toTitleCase(
-                                obj.questionnaireName
-                              )}
-                              selectedAttendeeNameArr={selectedAttendeeNameArr}
-                              chartType={"column"}
-                              analyticsOfQuestionnaireData={
-                                analyticsOfQuestionnaireData
-                              }
-                            />
-                          );
-                        })}
+                      // selectedDateTime &&
+                      selectedQuestionnaireArr.map((obj, key) => (
+                        <HChart
+                          key={key}
+                          questionnaireId={obj.questionnaireId}
+                          questionnaireName={toTitleCase(obj.questionnaireName)}
+                          selectedAttendeeNameArr={selectedAttendeeNameArr}
+                          chartType={"column"}
+                          // selectedDateTime={selectedDateTime}
+                          // questionnaireRootListData={questionnaireRootListData}
+                          analyticsOfQuestionnaireData={
+                            analyticsOfQuestionnaireData
+                          }
+                        />
+                      ))}
                   </div>
                 </div>
               </>
-            )}
+            )
+          )}
+
+          <SmallPopUp
+            className="loading"
+            msg={"Preparing things..."}
+            open={
+              analyticsOfQuestionnaireLoading || questionnaireRootListLoading
+            }
+            spinner={true}
+            activeActions={false}
+            modalType="alert"
+          />
         </>
       )}
     </>

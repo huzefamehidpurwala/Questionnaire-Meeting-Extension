@@ -8,12 +8,14 @@ import {
 import { LiveShareHost, app } from "@microsoft/teams-js";
 import { useData } from "@microsoft/teamsfx-react";
 import { TeamsFxContext } from "../Context";
+// eslint-disable-next-line
 import { colNames, customPostAnswers, getListItems } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
 import { useSearchParams } from "react-router-dom";
 import QuestionnaireStage from "./QuestionnaireStage";
 import config from "../../lib/config";
 import { TeamsUserCredential } from "@microsoft/teamsfx";
+// eslint-disable-next-line
 import { ArrowLeft48Filled, ArrowRight48Filled } from "@fluentui/react-icons";
 
 const containerSchema = { initialObjects: { indOfQues: LiveState } };
@@ -87,6 +89,7 @@ const Questionnaire = () => {
     }
   };
 
+// eslint-disable-next-line
   const handleQuesNav = (method) => {
     if (method !== "add" && method !== "sub") return;
 
@@ -191,7 +194,7 @@ const Questionnaire = () => {
 
             await indOfQues.current.set(null);
             // console.log("console in useEffect ==", userRole,ansArr, questionObj);
-            await customPostAnswers(ansArr, questionObj.accessToken);
+            // await customPostAnswers(ansArr, questionObj.accessToken);
             // setAnsArr([]); // ! if this is enabled and above setAnsArr is commented then this api is run twice
             setShowQuitPopUp(
               `Quiz Completed${
