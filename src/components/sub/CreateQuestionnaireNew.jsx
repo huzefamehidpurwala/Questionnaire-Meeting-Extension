@@ -40,7 +40,7 @@ import { useCreateQuestionnaireCss } from "../../styles";
 const numOfOptions = [1, 2, 3, 4];
 const minValueOfId = 1000000001;
 const maxValueOfId = 9999999999;
-const numOfCards = 3;
+const numOfCards = 1;
 
 const CreateQuestionnaireNew = ({ persnolTab }) => {
   window.onbeforeunload = function () {
@@ -273,6 +273,8 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
     });
   };
 
+  const dummyFunc = (e) => e.preventDefault();
+
   return (
     <>
       {/* loading */}
@@ -386,7 +388,7 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
                   <React.Fragment key={valObj[propsOfStateObj[0]]}>
                     <div
                       id={valObj[propsOfStateObj[0]].toString()}
-                      className={`text-white bg-blue-400 hover:bg-blue-500 flex items-center`} // ${!valObj[propsOfStateObj[1]] ? "text-red-500" : ""}
+                      className={`text-white bg-[#5A80BE] hover:bg-blue-500 flex items-center`} // ${!valObj[propsOfStateObj[1]] ? "text-red-500" : ""}
                       // onDragEnter={(e) =>
                       //   halfOpacity(e, valObj[propsOfStateObj[0]])
                       // }
@@ -414,6 +416,7 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
                         }
                         wrap={false}
                         truncate
+                        onDragLeave={dummyFunc}
                         className={`px-3 py-2 grow bg-inherit ${
                           !valObj[propsOfStateObj[1]] && "text-red-600"
                         }`}
@@ -423,7 +426,10 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
                           "Please complete the question..!"}
                       </Text>
 
-                      <div className="flex bg-white px-1 py-1">
+                      <div
+                        className="flex bg-white px-1 py-1"
+                        onDragLeave={dummyFunc}
+                      >
                         {valueArrOfQues.length > 1 && (
                           <Tooltip
                             withArrow
@@ -494,7 +500,7 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
         </div>
 
         {/* // * QUESTION INPUT STAGE */}
-        <div className="bg-blue-400 w-full h-full flex-container">
+        <div className="bg-[#5A80BE] w-full h-full flex-container">
           <Toaster toasterId={"toasterId"} position="bottom" />
 
           {!selectedQuesForEdit ? (

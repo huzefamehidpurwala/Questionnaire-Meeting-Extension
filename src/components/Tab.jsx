@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { TeamsFxContext } from "./Context";
 import { getMeetingInfo, isAdmin } from "../lib/utils";
 import { Display, Text, mergeClasses } from "@fluentui/react-components";
@@ -9,6 +9,9 @@ import MeetingStarted from "./sub/MeetingStarted";
 import CreateQuestionnaireNew from "./sub/CreateQuestionnaireNew";
 import AdminSidePanel from "./sub/AdminSidePanel";
 import { Navigate } from "react-router-dom";
+import axios from "axios";
+import config from "../lib/config";
+import { TeamsUserCredential } from "@microsoft/teamsfx";
 
 const currentTime = new Date();
 
@@ -81,6 +84,42 @@ export default function Tab() {
       })
       .catch((err) => setCurrentUserRole("Not in Teams Env")); // eslint-disable-next-line
   }, []);
+
+  // *create site in sharepoint
+  // const [isQuestionnaireSitePresent, setIsQuestionnaireSitePresent] =
+  //   useState(true);
+  // // console.log("hello app.jsx", isQuestionnaireSitePresent);
+  // const teamsPageType = useRef("");
+  // useEffect(() => {
+  //   // Initialize teams app
+  //   app.initialize().then(async () => {
+  //     const authConfig = {
+  //       initiateLoginEndpoint: config.initiateLoginEndpoint,
+  //       clientId: config.clientId,
+  //     };
+  //     const credential = new TeamsUserCredential(authConfig);
+  //     const token = await credential.getToken([
+  //       "https://ygr11.sharepoint.com/Sites.ReadWrite.All",
+  //     ]);
+  //     // console.log("TOKEN------------->", token.token);
+
+  //     *api to create site in sharepoint
+  //     const res = axios.post(
+  //       "https://ygr11.sharepoint.com/_api/SPSiteManager/create", // * /create /delete  https://learn.microsoft.com/en-us/sharepoint/dev/apis/site-creation-rest
+  //       {
+  //         request: {
+  //           Title: "New Hidden Teams Site by API", // *name of the site
+  //           Description: "Site created b API", // *Desc of the site
+  //           WebTemplate: "STS#3", // *teams site -> "WebTemplate":"STS#3" (or) communication site -> "WebTemplate":"SITEPAGEPUBLISHING#0"
+  //           Url: "https://ygr11.sharepoint.com/sites/hteams1", // *url for that site
+  //         },
+  //       },
+  //       { headers: { Authorization: `Bearer ${token.token}` } }
+  //     );
+
+  //     app.notifySuccess();
+  //   });
+  // }, []);
 
   return (
     <div
