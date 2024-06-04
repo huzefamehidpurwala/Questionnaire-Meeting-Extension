@@ -388,7 +388,7 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
                   <React.Fragment key={valObj[propsOfStateObj[0]]}>
                     <div
                       id={valObj[propsOfStateObj[0]].toString()}
-                      className={`text-white bg-[#5A80BE] hover:bg-blue-500 flex items-center`} // ${!valObj[propsOfStateObj[1]] ? "text-red-500" : ""}
+                      className={`text-white bg-[#5a80be] hover:bg-[#6795dd] flex items-center`} // ${!valObj[propsOfStateObj[1]] ? "text-red-500" : ""}
                       // onDragEnter={(e) =>
                       //   halfOpacity(e, valObj[propsOfStateObj[0]])
                       // }
@@ -418,7 +418,7 @@ const CreateQuestionnaireNew = ({ persnolTab }) => {
                         truncate
                         onDragLeave={dummyFunc}
                         className={`px-3 py-2 grow bg-inherit ${
-                          !valObj[propsOfStateObj[1]] && "text-red-600"
+                          !valObj[propsOfStateObj[1]] && "text-red-500"
                         }`}
                       >
                         {`${index + 1}. `}

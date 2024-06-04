@@ -15,7 +15,7 @@ import { TeamsFxContext } from "./components/Context";
 import config from "./lib/config";
 import TabConfig from "./components/TabConfig";
 import NewQuestionnaire from "./components/sub/NewQuestionnaire";
-import Analysis from "./components/sub/Analysis";
+import AnalysisRadio from "./components/sub/AnalysisRadio";
 import ListQuestionnaire from "./components/sub/ListQuestionnaire";
 import CreateQuestionnaire from "./components/sub/CreateQuestionnaire";
 
@@ -59,7 +59,7 @@ export default function App() {
                 <Route path="/termsofuse" element={<TermsOfUse />} />
                 <Route path="/tab" element={<Tab />} />
                 <Route path="/config" element={<TabConfig />} />
-                <Route path="/analytics" element={<Analysis />} />
+                <Route path="/analytics" element={<AnalysisRadio />} />
                 <Route
                   path="/listQuestionnaire"
                   element={<ListQuestionnaire />}

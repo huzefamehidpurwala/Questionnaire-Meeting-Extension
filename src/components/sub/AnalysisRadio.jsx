@@ -8,12 +8,12 @@ import {
   toTitleCase,
 } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
-import { Button, Checkbox, Text } from "@fluentui/react-components";
+import { Button, Checkbox, RadioGroup, Text } from "@fluentui/react-components";
 import HChart from "./HChart";
 import config from "../../lib/config";
 import { useAnalysisCss } from "../../styles";
 
-const Analysis = () => {
+const AnalysisRadio = () => {
   const teamsUserCredential = useContext(TeamsFxContext).teamsUserCredential;
 
   const styles = useAnalysisCss();
@@ -22,7 +22,7 @@ const Analysis = () => {
   const [attendeeNameArr, setAttendeeNameArr] = useState([]);
   const [selectedAttendeeNameArr, setSelectedAttendeeNameArr] = useState([]);
   const [questionnaireObjArr, setQuestionnaireObjArr] = useState([]);
-  const [selectedQuestionnaireArr, setSelectedQuestionnaireArr] = useState([]);
+  const [selectedQuestionnaireArr, setSelectedQuestionnaireArr] = useState(null);
   const [initatedquestionnaireIdArr, setInitatedQuestionnaireIdArr] = useState(
     []
   );
@@ -90,9 +90,9 @@ const Analysis = () => {
     questionnaireRootListData.graphClientMessage.value.forEach((row) =>
       initatedquestionnaireIdArr.includes(row.fields.idOfLists)
         ? tempSet.add({
-            questionnaireName: row.fields.Title,
-            questionnaireId: row.fields.idOfLists,
-          })
+          questionnaireName: row.fields.Title,
+          questionnaireId: row.fields.idOfLists,
+        })
         : ""
     );
     setQuestionnaireObjArr(
@@ -149,8 +149,8 @@ const Analysis = () => {
   return (
     <>
       {!!questionnaireRootListError ||
-      !!analyticsOfQuestionnaireError ||
-      needConsent ? (
+        !!analyticsOfQuestionnaireError ||
+        needConsent ? (
         <SmallPopUp
           open={
             !!questionnaireRootListError ||
@@ -218,7 +218,7 @@ const Analysis = () => {
                 <div className="flex h-screen w-full">
                   {/* // * SIDE-BAR */}
                   <section className="w-1/3 p-6 flex flex-col gap-8">
-                  <div>
+                    <div>
                       <Button
                         size="large"
                         className={styles.clearBtn}
@@ -235,6 +235,7 @@ const Analysis = () => {
                       <Text size={400} weight="bold">
                         Select Attendee Name:
                       </Text>
+
                       {attendeeNameArr.length > 1 && (
                         <Checkbox
                           label={<Text size={200}>Select All Attedees</Text>}
@@ -255,6 +256,7 @@ const Analysis = () => {
                           }}
                         />
                       )}
+
                       {attendeeNameArr.map((attendeeName, key) => (
                         <Checkbox
                           label={attendeeName}
@@ -267,13 +269,13 @@ const Analysis = () => {
                           onChange={(e, data) => {
                             data.checked
                               ? setSelectedAttendeeNameArr((t) => [
-                                  ...t,
-                                  attendeeName,
-                                ])
+                                ...t,
+                                attendeeName,
+                              ])
                               : setSelectedAttendeeNameArr((t) => {
-                                  t.splice(t.indexOf(attendeeName), 1);
-                                  return [...t];
-                                });
+                                t.splice(t.indexOf(attendeeName), 1);
+                                return [...t];
+                              });
                           }}
                         />
                       ))}
@@ -283,54 +285,25 @@ const Analysis = () => {
                       <Text size={400} weight="bold">
                         Select Questionnaire:
                       </Text>
-                      {questionnaireObjArr.length > 1 && (
-                        <Checkbox
-                          label={
-                            <Text size={200}>Select All Questionnaires</Text>
-                          }
-                          labelPosition="before"
-                          className="justify-between"
-                          checked={
-                            !!selectedQuestionnaireArr.length
-                              ? questionnaireObjArr.length >
-                                selectedQuestionnaireArr.length
-                                ? "mixed"
-                                : true
-                              : false
-                          }
-                          onChange={(e, data) => {
-                            data.checked
-                              ? setSelectedQuestionnaireArr([
-                                  ...questionnaireObjArr,
-                                ])
-                              : setSelectedQuestionnaireArr([]);
-                          }}
-                        />
-                      )}
+
                       {questionnaireObjArr.map((obj, key) => (
                         <Checkbox
                           label={toTitleCase(obj.questionnaireName)}
                           labelPosition="before"
                           className="justify-between"
                           key={key}
-                          checked={checkPresenceOfObj(
-                            selectedQuestionnaireArr,
-                            obj
-                          )}
+                          checked={
+                            selectedQuestionnaireArr?.questionnaireId ===
+                            obj.questionnaireId
+                          }
                           onChange={(e, data) => {
                             const newObj = {
                               questionnaireName: obj.questionnaireName, // e.target.value
                               questionnaireId: obj.questionnaireId, // e.target.id
                             };
                             data.checked
-                              ? setSelectedQuestionnaireArr((t) => [
-                                  ...t,
-                                  newObj,
-                                ])
-                              : setSelectedQuestionnaireArr((t) => {
-                                  t.splice(getIndex(t, newObj), 1);
-                                  return [...t];
-                                });
+                              ? setSelectedQuestionnaireArr(newObj)
+                              : setSelectedQuestionnaireArr(null);
                           }}
                         />
                       ))}
@@ -343,30 +316,22 @@ const Analysis = () => {
                   <section className="grow bg-[#5A80BE] flex justify-center items-center">
                     {/* <div className="bg-red-300"> */}
                     {!!selectedAttendeeNameArr.length &&
-                      !!selectedQuestionnaireArr.length &&
-                      selectedQuestionnaireArr
-                        .sort((a, b) =>
-                          handleStringSort(
-                            a.questionnaireName,
-                            b.questionnaireName
-                          )
-                        )
-                        .map((obj) => {
-                          return (
-                            <HChart
-                              key={obj.questionnaireId}
-                              questionnaireId={obj.questionnaireId}
-                              questionnaireName={toTitleCase(
-                                obj.questionnaireName
-                              )}
-                              selectedAttendeeNameArr={selectedAttendeeNameArr}
-                              chartType={"column"}
-                              analyticsOfQuestionnaireData={
-                                analyticsOfQuestionnaireData
-                              }
-                            />
-                          );
-                        })}
+                      selectedQuestionnaireArr && (
+                        <HChart
+                          key={selectedQuestionnaireArr.questionnaireId}
+                          questionnaireId={
+                            selectedQuestionnaireArr.questionnaireId
+                          }
+                          questionnaireName={toTitleCase(
+                            selectedQuestionnaireArr.questionnaireName
+                          )}
+                          selectedAttendeeNameArr={selectedAttendeeNameArr}
+                          chartType={"column"}
+                          analyticsOfQuestionnaireData={
+                            analyticsOfQuestionnaireData
+                          }
+                        />
+                      )}
                     {/* </div> */}
                   </section>
                 </div>
@@ -378,4 +343,4 @@ const Analysis = () => {
   );
 };
 
-export default Analysis;
+export default AnalysisRadio;

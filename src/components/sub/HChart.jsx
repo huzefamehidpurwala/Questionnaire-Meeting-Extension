@@ -4,7 +4,7 @@ import exporting from "highcharts/modules/exporting";
 import { useContext, useState } from "react";
 import { TeamsFxContext } from "../Context";
 import { useData } from "@microsoft/teamsfx-react";
-import { getListItems } from "../../lib/utils";
+import { getListItems, handleStringSort } from "../../lib/utils";
 import SmallPopUp from "../SmallPopUp";
 import WhiteBgLoading from "../../assets/loading.gif";
 import { Button, Image, Text } from "@fluentui/react-components";
@@ -86,7 +86,10 @@ const HChart = ({
       enabled: true,
     },
     xAxis: {
-      categories: selectedAttendeeNameArr, // !Project Title here
+      // !Project Title here
+      categories: selectedAttendeeNameArr.sort((a, b) =>
+        handleStringSort(a, b)
+      ), 
       title: {
         text: "Name Of Students",
         // align: "low",

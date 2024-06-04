@@ -21,6 +21,21 @@ export const useGeneralCss = makeStyles({
   },
 });
 
+export const useAnalysisCss = makeStyles({
+  clearBtn: {
+    backgroundColor: "rgba(90,128,190, 1)",
+    "&:hover": {
+      backgroundColor: "rgba(90,128,190, 0.8)",
+    },
+    "&:hover:active": {
+      backgroundColor: "rgba(90,128,190, 0.8)",
+    },
+    // width: "70%",
+  },
+
+  // checkBox: {},
+});
+
 export const useCreateQuestionnaireCss = makeStyles({
   questionnaireName: {
     // width: "75%",
